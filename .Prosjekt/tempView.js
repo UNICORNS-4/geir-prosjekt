@@ -1,7 +1,6 @@
 updateView()
 function updateView(){
-    let html = /*HTML*/`
-    <div></div>`;
+    let html = /*HTML*/``;
     document.getElementById("app").innerHTML = html; 
    
 }
