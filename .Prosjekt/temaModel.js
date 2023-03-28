@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* oppg ID 1
 - svaralternaiv 1
 checked
@@ -31,3 +32,5 @@ checked
  checkec 
 
  relfeksjon  */
+=======
+>>>>>>> ce1d9281100f6d424740865fd7f462384e236c15
