@@ -1,4 +1,4 @@
-oppg ID 1
+/* oppg ID 1
 - svaralternaiv 1
 checked
 
@@ -30,4 +30,4 @@ checked
  svaraltvn 2 
  checkec 
 
- relfeksjon 
+ relfeksjon  */
