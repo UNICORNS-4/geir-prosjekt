@@ -1,3 +1,9 @@
+let newUserModel = {
+    
+}
+
+
+
 const model = {
     brukere: [
         {
@@ -67,7 +73,7 @@ const model = {
             isChecked: null, 
             temaId: 2,
         },
-[10:09 AM]Sandra N: {
+        {
             Oppgave: 5,
             Tittel: "Oppg 1: Hva er god selvkontroll?",
             Tekst: "",
