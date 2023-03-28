@@ -4,22 +4,23 @@ let newUserModel = {
         isAdmin: true,
     },
 
-    inputs:{
-        firstname:"",
-        lastname:"",
-        phoneNumber:"",
+    inputs: {
+        firstname: "",
+        lastname: "",
+        phoneNumber: "",
         postalCode: "",
-        eMail:"",
+        eMail: "",
         img: {
-            imgSrc:"",
-            imgName:"",
+            imgSrc: "",
+            imgName: "",
         }
     },
-    
+
     data: {
-        
+
     }
 }
+
 
 let chatModel = {
     app: {
@@ -27,26 +28,40 @@ let chatModel = {
         isAdmin: true,
     },
 
-    inputs:{
+    inputs: {
         newMessageInput: "",
     },
 
-    data:{
-        chat:[
+    data: {
+        chat: [
             {
-                userID:2,
+                userID: 2,
                 messageContent: "Hallo, hva er psykologisk trygghet?",
-                userImgSrc:"",
+                userImgSrc: "",
             },
-            {
-
-            }
         ],
-        inbox:[
-            
-        ]
-    }
+    },
+        inbox: [
+        {
+            UserId: 1,
+            name:"@FrideFletter",
+            isRead: true,
+            messages: [{}]
+        },
+        {
+            UserId: 2,
+            name:"@superStudent",
+            isRead: false,
+            messages: [{}]
+        }
+    ]
+
 }
+
+let
+
+
+
 
 const model = {
     brukere: [
@@ -59,25 +74,25 @@ const model = {
             userImgSrc: "",
         },
         {
-            userID: 2,
+            userID:2,
             name: "",
             module: "Start IT",
             email: "",
             img: {
-                imgSrc:"",
-                imgName:"",
+                imgSrc: "",
+                imgName: "",
             }
         },
     ],
     temaer: [
-        {id: 1, navn: 'Trygghet'},
-        {id: 2, navn: 'Selvkontroll'},
-        {id: 3, navn: 'skdjhfsd'},
-        {id: 4, navn: 'dflhdsk'},
+        { id: 1, navn: 'Trygghet' },
+        { id: 2, navn: 'Selvkontroll' },
+        { id: 3, navn: 'skdjhfsd' },
+        { id: 4, navn: 'dflhdsk' },
     ],
     utførteOppgaver: [
-        {oppgaveId: 0, temaId: 1, svar: 'fhjg', userId: 1},
-        {oppgaveId: 1, temaId: 1, svar: 'fhjg', userId: 1},
+        { oppgaveId: 0, temaId: 1, svar: 'fhjg', userId: 1 },
+        { oppgaveId: 1, temaId: 1, svar: 'fhjg', userId: 1 },
     ],
     oppgaver: [
         {
@@ -86,7 +101,7 @@ const model = {
             Tekst: "Trygghet er en viktig faktor for smidighet og godt sammarbeid i et team.",
             Type: "DropDown",
             hasCheckmark: false,
-            isChecked: null, 
+            isChecked: null,
             temaId: 1,
         },
         {
@@ -95,7 +110,7 @@ const model = {
             Tekst: "",
             Type: "DropDown",
             hasCheckmark: false,
-            isChecked: null, 
+            isChecked: null,
         },
         {
             Oppgave: 2,
@@ -103,7 +118,7 @@ const model = {
             Tekst: "",
             Type: "DropDown",
             hasCheckmark: false,
-            isChecked: null, 
+            isChecked: null,
         },
         {
             Oppgave: 3,
@@ -119,7 +134,7 @@ const model = {
             Tekst: "Hva er din definisjon av selvkontroll? Diskuter dette i gruppen, og skriv ned hva dere tenker.",
             Type: "Dropdown",
             hasCheckmark: false,
-            isChecked: null, 
+            isChecked: null,
             temaId: 2,
         },
         {
@@ -128,7 +143,7 @@ const model = {
             Tekst: "",
             Type: "Dropdown",
             hasCheckmark: true,
-            isChecked: null, 
+            isChecked: null,
         },
         {
             Oppgave: 2,
@@ -136,7 +151,7 @@ const model = {
             Tekst: "",
             Type: "Dropdown",
             hasCheckmark: true,
-            isChecked: null, 
+            isChecked: null,
         },
         {
             Oppgave: 3,
@@ -144,22 +159,22 @@ const model = {
             Tekst: "",
             Type: "Dropdown",
             hasCheckmark: true,
-            isChecked: null, 
+            isChecked: null,
         }
     ]
 };
 
-function hentOppgaverForTema(temaId){
+function hentOppgaverForTema(temaId) {
     let oppgaver = [];
-    for(let oppgave of model.oppgaver){
-        if(oppgave.temaId == temaId){
+    for (let oppgave of model.oppgaver) {
+        if (oppgave.temaId == temaId) {
             oppgaver.push(oppgave);
         }
     }
     return oppgaver;
 }
 
-function sjekkStatusForTemaOgBruker(temaId, userId){
+function sjekkStatusForTemaOgBruker(temaId, userId) {
     let oppgaver = hentOppgaverForTema(temaId);
     return {
         userId: userId,
@@ -168,10 +183,10 @@ function sjekkStatusForTemaOgBruker(temaId, userId){
     };
 }
 
-function hentUtførteOppgaver(temaId, userId){
+function hentUtførteOppgaver(temaId, userId) {
     let oppgaver = [];
-    for(let oppgave of model.utførteOppgaver){
-        if(oppgave.temaId == temaId && oppgave.userId == userId){
+    for (let oppgave of model.utførteOppgaver) {
+        if (oppgave.temaId == temaId && oppgave.userId == userId) {
             oppgaver.push(oppgave);
         }
     }
