@@ -1,4 +1,4 @@
-let newUserModel = {
+const newUserModel = {
     app: {
         currentPage: "new_user",
         isAdmin: true,
@@ -23,9 +23,9 @@ let newUserModel = {
 }
 
 
-let chatModel = {
+const chatModel = {
     app: {
-        currentPage: "chatPage",
+        currentPage: "chat_page",
         isAdmin: true,
     },
 
@@ -56,13 +56,62 @@ let chatModel = {
             messages: [{}]
         }
     ]
+}
+
+
+const studentPageModel = {
+    app: {
+        currentPage: "profilePage",
+        isAdmin: true || false,
+    },
+
+    data: {
+        
+    }
+}
+
+
+const studentListModel = {
+    app: {
+        currentPage: "studentList_page",
+        isAdmin: true || false,
+    },
+    inputs:{
+        searchBar: "", 
+    },
+    data:{
+        currentFilter: "Start IT",
+    }
 
 }
 
-let studentPageModel = {
-    
+const dashboardModelAdmin = {
+    app:{
+        currentPage: "dashboard_admin",
+        isAdmin: true,
+    },
+    inputs: {
+        
+    },
+    data: {
+        inbox:[],
+          
+    }
 }
 
+
+const dashboardModelElever = {
+    app:{
+        currentPage: "dashboard_student",
+        isAdmin: false,
+    },
+    inputs:{
+
+    },
+    data:{
+        
+    }
+}
 
 
 
