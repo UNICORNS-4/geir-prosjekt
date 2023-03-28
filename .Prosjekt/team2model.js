@@ -1,3 +1,53 @@
+let newUserModel = {
+    app: {
+        currentPage: "new_user",
+        isAdmin: true,
+    },
+
+    inputs:{
+        firstname:"",
+        lastname:"",
+        phoneNumber:"",
+        postalCode: "",
+        eMail:"",
+        img: {
+            imgSrc:"",
+            imgName:"",
+        }
+    },
+    
+    data: {
+        
+    }
+}
+
+let chatModel = {
+    app: {
+        currentPage: "chatPage",
+        isAdmin: true,
+    },
+
+    inputs:{
+        newMessageInput: "",
+    },
+
+    data:{
+        chat:[
+            {
+                userID:2,
+                messageContent: "Hallo, hva er psykologisk trygghet?",
+                userImgSrc:"",
+            },
+            {
+
+            }
+        ],
+        inbox:[
+            
+        ]
+    }
+}
+
 const model = {
     brukere: [
         {
@@ -6,12 +56,17 @@ const model = {
             module: "Start IT",
             email: "alex@Wiese.no",
             totalLvl: 1,
+            userImgSrc: "",
         },
         {
             userID: 2,
             name: "",
             module: "Start IT",
             email: "",
+            img: {
+                imgSrc:"",
+                imgName:"",
+            }
         },
     ],
     temaer: [
@@ -67,7 +122,7 @@ const model = {
             isChecked: null, 
             temaId: 2,
         },
-[10:09 AM]Sandra N: {
+        {
             Oppgave: 5,
             Tittel: "Oppg 1: Hva er god selvkontroll?",
             Tekst: "",
