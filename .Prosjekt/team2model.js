@@ -10,6 +10,7 @@ let newUserModel = {
         phoneNumber: "",
         postalCode: "",
         eMail: "",
+        klasse: "", //Start IT, Get IT
         img: {
             imgSrc: "",
             imgName: "",
@@ -58,7 +59,9 @@ let chatModel = {
 
 }
 
-let
+let studentPageModel = {
+    
+}
 
 
 
