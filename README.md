@@ -7,12 +7,13 @@
 1. Lag en ny branch i GitHub Desktop **ELLER** lag ny branch i VSCode (knapp i nedre venstre hjørne ofte markert __main__).
 
 ## git_commands
-git branch //viser tilgjenglige branches
-git checkout <navn> //velger hvilken branch du jobber på
-git status// status på git(om du er bak eller forrant i synkronisering)
-git pull // drar inn endringer i din branch fra online branch
-git add --all // "stage all commits"
-git commit -m <din commit tekst>
+```git branch //viser tilgjenglige branches
+   git checkout <navn> //velger hvilken branch du jobber på
+   git status// status på git(om du er bak eller forrant i synkronisering)
+   git pull // drar inn endringer i din branch fra online branch
+   git add --all // "stage all commits"
+   git commit -m <din commit tekst>
+  ```
 
 ### Links
 - Figma design: [Wireframe Design](https://www.figma.com/file/UFpxEF41wAbzKmsv7U8VQ7/DESIGN_FORSLAG_TIL_GEIR?t=q47PgzgDWi82nMJg-0)
