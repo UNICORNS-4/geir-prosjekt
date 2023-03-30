@@ -1,12 +1,12 @@
 
 let loggModel = {
     inputs:{
-        weeks: 0,
-        day: 0,
+        weeks: 2,
+        day: 3,
         learnToday:"",
-        mood: 0,
-        communication: 0,
-        teamMood: 0,
+        mood: 3,
+        communication: 5,
+        teamMood: 6,
     }
 }
 
