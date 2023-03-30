@@ -7,6 +7,7 @@ let loggModel = {
         mood: 3,
         communication: 5,
         teamMood: 6,
+        isDone: false,
     }
 }
 
