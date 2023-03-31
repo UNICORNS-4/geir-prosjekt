@@ -11,3 +11,22 @@ let loggModel = {
     }
 }
 
+
+
+const model = {
+    inputs:{
+        logg:{
+            tekstBoks:"",
+            answers:[]
+        },
+        Login:{
+            
+        }
+
+    }, 
+    data:{
+      questions:[
+         {question: "Hva har du lært i dag?",answers:[etc etc etc]}   
+      ]
+    }
+  }
