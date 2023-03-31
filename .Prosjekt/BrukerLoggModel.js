@@ -1,10 +1,7 @@
-const app = document.getElementById("app");
-
 //Malle
-
 //Seb
-
 //Alex
+const app = document.getElementById("app");
 
 brukerLoggView(); // Kallt på i tempView.js;
 function brukerLoggView() {
