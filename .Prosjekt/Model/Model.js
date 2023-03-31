@@ -26,8 +26,8 @@ const model = {
         chatPage: {
             newMessageInput: "",
         }, 
-        profilePage: {
-
+        profilePageElev: {
+            LoggDone: false,
         },
         studentListPage: {
             searchBar: "",
@@ -35,6 +35,9 @@ const model = {
         },
     },
     // data
+    DinFremgang: {
+        
+    },
     chatMessages: [
          {
                 fromUserId: 'terje',
