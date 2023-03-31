@@ -12,7 +12,7 @@
    git status// status på git(om du er bak eller forrant i synkronisering)
    git pull // drar inn endringer i din branch fra online branch
    git add --all // "stage all commits"
-   git commit -m <din commit tekst>
+   git commit -m <din commit tekst> // commiter alle dine endringer til git/github med din melding i <>
   ```
 
 ### Links
