@@ -19,3 +19,13 @@ function updateViewLoginPage() {
         <button onclick="logIn()">Logg inn</button>
     `;
 }
+
+function logIn(){
+    checkIfUserExist(user);
+    checkIfPasswordCorrect(bool);
+
+}
+
+function checkIfUserExist(){
+    
+}
