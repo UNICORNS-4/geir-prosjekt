@@ -1,3 +1,13 @@
+function goToLogPage() {
+  model.app.currentPage = "logPage";
+  model.inputs.logPage = {
+    whatHaveYouLearnedToday: "",
+    selectedWeek: 1,
+    selectedDay: 1,
+    answers: [],
+  };
+}
+
 function updateViewLogPage() {
   document.getElementById("app").innerHTML = /*HTML*/ `    
         <h2>Logg</h2>
