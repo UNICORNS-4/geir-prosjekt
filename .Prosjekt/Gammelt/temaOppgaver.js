@@ -210,7 +210,7 @@ function hentOppgaverForTema(temaId) {
     if (oppgave.temaId == temaId) {
       oppgaver.push(oppgave);
     }
-  }
+  }tema
   return oppgaver;
 }
 
