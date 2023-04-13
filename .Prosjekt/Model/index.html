@@ -16,6 +16,7 @@
     <script src="logPageView.js"></script>
     <script src="common.js"></script>
     <script src="menupage.js"></script>
+    <script src="newUserPage.js"></script>
 </head>
 
 <body>
@@ -25,24 +26,23 @@
 
     <script>
 
-        function mainView() {
-            let html = "";
-
-            if (model.currentPage == "loginPage") html = loginPage();
-            if (model.currentPage == "loggPage") html = updateViewLogPage();
-            if (model.currentPage == "") html = ();
-            if (model.currentPage == "") html = ();
-
-            document.getElementById("app").innerHTML = html;
+        updateView();
+        function updateView() {
+            if (model.app.currentPage == 'loginPage') updateViewLoginPage();
+            else if (model.app.currentPage == 'logPage') updateViewLogPage();
+            else document.getElementById('app').innerHTML = model.app.currentPage;
         }
 
-        function byttSide(denneSiden) {
-            model.currentPage = denneSiden;
-            hovedSide();
-
-
-
-
+        function goToLogPage() {
+            model.app.currentPage = 'logPage';
+            model.inputs.logPage = {
+                whatHaveYouLearnedToday: '',
+                selectedWeek: 1,
+                selectedDay: 1,
+                answers: []
+            };
+            updateView();
+        }
 
     </script>
 </body>
