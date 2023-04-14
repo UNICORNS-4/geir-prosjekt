@@ -10,6 +10,7 @@ function updateDashboard(){
         </div>
     </div>
     <button onclick="updateViewLoginPage()">Login Page</button>
+    <button onclick="updateViewLogPage()">Log Page</button>
     `;
 return html;
 }
