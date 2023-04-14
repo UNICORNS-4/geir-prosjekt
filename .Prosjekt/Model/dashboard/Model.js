@@ -2,7 +2,7 @@ const model = {
   app: {
     currentPage: "loginPage",
     isAdmin: true,
-    loggedInUser: "admin",
+    loggedInUser: "elev",
   },
 
   inputs: {
@@ -62,12 +62,12 @@ const model = {
   users: [
     {
       userId: "admin",
-      firstname: "admin1st",
-      lastname: "admin2nd",
+      firstname: "Ola",
+      lastname: "Nordmann",
       phoneNumber: "77633743",
       postalCode: "4621",
       eMail: "admin@admin.com",
-      klasse: "Lærer", //Start IT, Get IT
+      klasse: "Admin", //Start IT, Get IT
       img: {
         imgSrc: "",
         imgName: "",
@@ -76,12 +76,12 @@ const model = {
     },
     {
       userId:"elev",
-      firstname: "elevn",
-      lastname: "elevesen",
-      phoneNumber: "",
-      postalCode: "",
-      eMail: "",
-      klasse: "", //Start IT, Get IT
+      firstname: "Elev",
+      lastname: "K. Elevesen",
+      phoneNumber: "74368216",
+      postalCode: "1613",
+      eMail: "fskdjfhds@gmail.com",
+      klasse: "Start IT", //Start IT, Get IT
       img: {
         imgSrc: "",
         imgName: "",
@@ -89,7 +89,7 @@ const model = {
       password: "elev",
     },
     {
-      userId:"elev",
+      userId:"",
       firstname: "elevn",
       lastname: "elevesen",
       phoneNumber: "",
