@@ -8,8 +8,8 @@ function updateDashboard(){
           <div class="navBarUser">${findUser(model.app.loggedInUser).firstname} ${findUser(model.app.loggedInUser).lastname}</div>
           <div class="navBarUserClassID">${findUser(model.app.loggedInUser).klasse}</div>
         </div>
-    
     </div>
+    <button onclick="updateViewLoginPage()">Login Page</button>
     `;
 return html;
 }
