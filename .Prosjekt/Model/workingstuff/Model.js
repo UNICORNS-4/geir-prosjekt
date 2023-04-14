@@ -68,11 +68,11 @@ const model = {
       postalCode: "4621",
       eMail: "admin@admin.com",
       klasse: "Admin", //Start IT, Get IT
+      password: "admin",
       img: {
         imgSrc: "",
         imgName: "",
       },
-      password: "admin",
     },
     {
       userId:"elev",
@@ -82,11 +82,11 @@ const model = {
       postalCode: "1613",
       eMail: "fskdjfhds@gmail.com",
       klasse: "Start IT", //Start IT, Get IT
+      password: "elev",
       img: {
         imgSrc: "",
         imgName: "",
       },
-      password: "elev",
     },
     {
       userId:"",
@@ -96,11 +96,11 @@ const model = {
       postalCode: "",
       eMail: "",
       klasse: "", //Start IT, Get IT
+      password: "elev",
       img: {
         imgSrc: "",
         imgName: "",
       },
-      password: "elev",
     },
     
   ],

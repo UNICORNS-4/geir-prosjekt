@@ -21,5 +21,5 @@ function findUser(userID) {
         return user;
       }
     }
-    return null;
+    return "";
   }

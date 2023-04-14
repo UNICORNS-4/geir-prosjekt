@@ -1,18 +1,29 @@
 function logIn() {
+  model.inputs.loginPage.errorMessage = "";
   if (
-    model.inputs.loginPage.userId == "terje" &&
-    model.inputs.loginPage.password == "hemmelig"
+    model.inputs.loginPage.userId == findUser(model.inputs.loginPage.userId).userId &&
+    model.inputs.loginPage.password == findUser(model.inputs.loginPage.userId).password //!log in eksisterende bruker
   ) {
-    goToLogPage();
-  } else if (
-    model.inputs.loginPage.userId == "Elev" &&
-    model.inputs.loginPage.password == "Elev123"
-  ) {
-    goToMenuPage();
-  } else {
-    model.inputs.loginPage.errorMessage = "feil brukernavn eller passord";
-    updateView();
+    model.app.loggedInUser = findUser(model.inputs.loginPage.userId);
+    model.inputs.loginPage.errorMessage = "logget inn";
+    console.log("logget inn som -->", model.app.loggedInUser) //? CONSOLE.LOG
+    updateViewLoginPage();
+  } if (
+    model.inputs.loginPage.userId == findUser(model.inputs.loginPage.userId).userId &&
+    model.inputs.loginPage.password != findUser(model.inputs.loginPage.userId).password //!feil brukernavn eller pass
+    ) {
+    model.inputs.loginPage.errorMessage = "feil brukernavn eller passord.";
+    console.log("feil brukernavn eller passord",) //? CONSOLE.LOG
+    updateViewLoginPage();
+  } if (
+    model.inputs.loginPage.userId != findUser(model.inputs.loginPage.userId).userId
+  )
+  {
+    console.log("ingen bruker funnet.",) //? CONSOLE.LOG 
+    model.inputs.loginPage.errorMessage = "ingen bruker funnet."; //!ingen bruker funnet
+    updateViewLoginPage();
   }
+  
 }
 /* 
 function newLogIn(inputName) {
