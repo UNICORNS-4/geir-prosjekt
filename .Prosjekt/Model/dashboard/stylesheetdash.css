@@ -30,6 +30,7 @@
 }
 .navBarItem:active {
     background: #919191;
+    color: white;
 
 }
 .navBarUser {
