@@ -4,7 +4,7 @@ function updateDashboard(){
         <div class="navBarItem">Hjem</div>
         <div class="navBarItem">Temaer</div>
         <div class="navBarItem">Meldinger</div>
-        <div class="navBarItem navBarUser">${model.app.loggedInUser}</div>
+        <div class="navBarUser">${model.app.loggedInUser}</div>
     </div>
     `;
 return html;
