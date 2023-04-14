@@ -36,8 +36,19 @@
 .navBarUser {
     margin: 7px 30px 7px 7px;
     padding: 5px;
-    
+    text-align: center;
     text-transform: uppercase;
     font-weight: bold;
-
+    margin-bottom: 0px;
+}
+.navBarUserClassID {
+    text-transform: uppercase;
+    position: relative;
+    top:-12px;
+    font-size: 0.7rem;
+    text-align: center;
+    margin-top: 0px;
+    color: orange;
+    padding: 0px;
+    height: 1px;
 }
