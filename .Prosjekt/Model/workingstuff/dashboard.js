@@ -5,7 +5,7 @@ function updateDashboard(){
         <div class="navBarItem">Temaer</div>
         <div class="navBarItem">Meldinger</div>
         <div>
-          <div class="navBarUser">${findUser(model.app.loggedInUser).firstname} ${findUser(model.app.loggedInUser).lastname}</div>
+          <div class="navBarUser">${model.app.loggedInUser.firstname} ${model.app.loggedInUser.lastname}</div>
           <div class="navBarUserClassID">${findUser(model.app.loggedInUser).klasse}</div>
         </div>
     </div>
