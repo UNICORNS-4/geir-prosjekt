@@ -8,6 +8,7 @@ function updateProfilepageView() {
   <div id="StartIT">START IT</div>
   <div id="Progressbars"></div>
   <div id="Bars">${updateBars()}</div>
+  <button id="homepage">Home</button>
   `;
   return html;
 }
@@ -22,4 +23,8 @@ function updateBars(){
   <progress id = "bar3" value="96" max="100"></progress>
 `
   return html;
+}
+
+function updateBar1(){
+  
 }
