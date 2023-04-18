@@ -1,16 +1,18 @@
 function updateDashboard(){
+  console.log("#DASH_UPDATED")
     let html = /*HTML*/`
     <div class="navBar dashboard">
-        <div class="navBarItem">Hjem</div>
+        <div class="navBarItem" onclick="updateDashboard()">Hjem</div>
         <div class="navBarItem">Temaer</div>
         <div class="navBarItem">Meldinger</div>
         <div>
           <div class="navBarUser">${model.app.loggedInUser.firstname} ${model.app.loggedInUser.lastname}</div>
-          <div class="navBarUserClassID">${findUser(model.app.loggedInUser).klasse}</div>
+          <div class="navBarUserClassID">${model.app.loggedInUser.klasse}</div>
         </div>
+        <div class="navBarItem logOutBtn" onclick="logOut()">Log ut</div>
     </div>
     <button onclick="updateViewLoginPage()">Login Page</button>
-    <button onclick="updateViewLogPage()">Log Page</button>
+    <button onclick="updateViewLogPage()">Logg Page</button>
     `;
 return html;
 }
@@ -23,3 +25,7 @@ function findUser(userID) {
     }
     return "";
   }
+  function logOut () {
+    model.app.loggedInUser = false;
+    updateViewLoginPage(); // skal endres til currentPage i ferdig produkt.
+    }

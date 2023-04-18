@@ -6,7 +6,7 @@ function updateDashboard(){
         <div class="navBarItem">Meldinger</div>
         <div>
           <div class="navBarUser">${model.app.loggedInUser.firstname} ${model.app.loggedInUser.lastname}</div>
-          <div class="navBarUserClassID">${model.app.loggedInUser.klasse}</div>
+          <div class="navBarUserClassID">${model.app.loggedInUser.klasse} </div>
         </div>
     <div class="navBarItem" onclick="logOut()">Logg ut</div>
     </div>

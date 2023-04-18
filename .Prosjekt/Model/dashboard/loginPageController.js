@@ -7,7 +7,7 @@ function logIn() {
     model.app.loggedInUser = findUser(model.inputs.loginPage.userId);
     model.inputs.loginPage.errorMessage = "logget inn";
     console.log("logget inn som -->", model.app.loggedInUser) //? CONSOLE.LOG
-    
+    updateDashboard();
   } if (
     model.inputs.loginPage.userId == findUser(model.inputs.loginPage.userId).userId &&
     model.inputs.loginPage.password != findUser(model.inputs.loginPage.userId).password //!feil brukernavn eller pass

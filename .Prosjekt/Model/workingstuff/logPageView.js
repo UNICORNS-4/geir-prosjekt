@@ -9,7 +9,19 @@ function goToLogPage() {
 }
 
 function updateViewLogPage() {
-  document.getElementById("app").innerHTML = /*HTML*/ `    
+  console.log("#LOG_UPDATED")
+  document.getElementById("app").innerHTML = /*HTML*/ `
+  <div class="navBar dashboard">
+  <div class="navBarItem" onclick="updateDashboard()">Hjem</div>
+  <div class="navBarItem">Temaer</div>
+  <div class="navBarItem">Meldinger</div>
+  <div>
+    <div class="navBarUser">${model.app.loggedInUser.firstname} ${model.app.loggedInUser.lastname}</div>
+    <div class="navBarUserClassID">${model.app.loggedInUser.klasse}</div>
+  </div>
+</div>
+<button onclick="updateViewLoginPage()">Login Page</button>
+<button onclick="updateViewLogPage()">Logg Page</button>    
         <h2>Logg</h2>
         <div>
             ${createWeeksHtml()}

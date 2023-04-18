@@ -70,7 +70,7 @@ const model = {
       eMail: "admin@admin.com",
       klasse: "Administrator", //Start IT, Get IT
       img: {
-        imgSrc: "",
+        imgSrc: "admin.jpg",
         imgName: "",
       },
       password: "admin",
