@@ -20,8 +20,8 @@ function updateProfilepageView() {
 <button onclick="updateViewLogPage()">Logg Page</button>    
 
   <div id="ProfilePic" ><img id="img1" style="width:150px" src="img/img1.jpeg"></div>
-  <div id="ProfileName">@SuperStudent</div>
-  <div id="StartIT">START IT</div>
+  <div id="ProfileName">${model.app.loggedInUser.firstname} ${model.app.loggedInUser.lastname}</div>
+  <div id="StartIT">${model.app.loggedInUser.klasse}</div>
   <div id="Progressbars"></div>
   <div id="Bars">${updateBars()}</div>
   
@@ -41,7 +41,6 @@ function updateBars(){
 `
   return html;
 }
-
 
 
 
