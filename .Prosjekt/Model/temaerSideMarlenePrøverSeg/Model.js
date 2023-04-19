@@ -2,7 +2,7 @@ const model = {
   app: {
     currentPage: "loginPage",
     isAdmin: true,
-    loggedInUser: "elev",
+    loggedInUser: false,
   },
 
   inputs: {
@@ -67,7 +67,7 @@ const model = {
       phoneNumber: "77633743",
       postalCode: "4621",
       eMail: "admin@admin.com",
-      klasse: "Admin", //Start IT, Get IT
+      klasse: "Administrator", //Start IT, Get IT
       password: "admin",
       img: {
         imgSrc: "",
@@ -117,7 +117,6 @@ const model = {
   oppgaver: [
     {
       id: 0,
-      Tema: "Tema 1: Trygghet",
       Tittel: "Intro til trygghet",
       Tekst:
         "Trygghet er en viktig faktor for smidighet og godt sammarbeid i et team.",
@@ -128,7 +127,7 @@ const model = {
     },
     {
       id: 1,
-      Tittel: "Oppg 1: Hva er trygghet?",
+      Tittel: "Oppg 1: Hva er trygghet",
       Tekst: "",
       Type: "DropDown",
       hasCheckmark: false,
@@ -137,10 +136,10 @@ const model = {
     {
       Oppgave: 2,
       Tittel: "Oppg 2: Hvorfor er trygghet viktig?",
-      Tekst: "Hvilke påstander er riktig om psykologisk trygghet? (Flere svaralternativ mulig)",
-      Type: "DropDown",
+      Tekst: "",
       SvarAlt: ["Det handler om hvordan man fremstår ovenfor andre","Det handler om hvordan man fremstår ovenfor andre",
                 "Det handler om hvordan man fremstår ovenfor andre", "Det handler om hvordan man fremstår ovenfor andre"],
+      Type: "DropDown",
       hasCheckmark: false,
       isChecked: null,
     },
@@ -154,7 +153,6 @@ const model = {
     },
     {
       Oppgave: 4,
-      Tema: "Tema 2: Selvkontroll",
       Tittel: "Intro til Selvkontroll",
       Tekst:
         "Hva er din definisjon av selvkontroll? Diskuter dette i gruppen, og skriv ned hva dere tenker.",
@@ -172,7 +170,7 @@ const model = {
       isChecked: null,
     },
     {
-      Oppgave: 6,
+      Oppgave: 2,
       Tittel: "Oppg 2: Når får du bruk for selvkontroll?",
       Tekst: "",
       Type: "Dropdown",
@@ -180,7 +178,7 @@ const model = {
       isChecked: null,
     },
     {
-      Oppgave: 7,
+      Oppgave: 3,
       Tittel: "Oppg 3: Refleksjonsoppgave",
       Tekst: "",
       Type: "Dropdown",
