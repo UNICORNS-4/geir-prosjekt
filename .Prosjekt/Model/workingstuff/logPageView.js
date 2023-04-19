@@ -12,13 +12,14 @@ function updateViewLogPage() {
   console.log("#LOG_UPDATED")
   document.getElementById("app").innerHTML = /*HTML*/ `
   <div class="navBar dashboard">
-  <div class="navBarItem" onclick="updateDashboard()">Hjem</div>
+  <div class="navBarItem" onclick=" document.getElementById('app').innerHTML = updateDashboard();">Hjem</div>
   <div class="navBarItem">Temaer</div>
   <div class="navBarItem">Meldinger</div>
   <div>
     <div class="navBarUser">${model.app.loggedInUser.firstname} ${model.app.loggedInUser.lastname}</div>
     <div class="navBarUserClassID">${model.app.loggedInUser.klasse}</div>
   </div>
+  <div class="navBarItem logOutBtn" onclick="logOut()">Log ut</div>
 </div>
 <button onclick="updateViewLoginPage()">Login Page</button>
 <button onclick="updateViewLogPage()">Logg Page</button>    

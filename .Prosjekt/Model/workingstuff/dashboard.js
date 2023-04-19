@@ -2,7 +2,7 @@ function updateDashboard(){
   console.log("#DASH_UPDATED")
     let html = /*HTML*/`
     <div class="navBar dashboard">
-        <div class="navBarItem" onclick="updateDashboard()">Hjem</div>
+        <div class="navBarItem" onclick=" document.getElementById('app').innerHTML = updateDashboard();">Hjem</div>
         <div class="navBarItem">Temaer</div>
         <div class="navBarItem">Meldinger</div>
         <div>
