@@ -5,6 +5,7 @@ function updateDashboard(){
         <div class="navBarItem" onclick=" document.getElementById('app').innerHTML = updateDashboard();">Hjem</div>
         <div class="navBarItem">Temaer</div>
         <div class="navBarItem">Meldinger</div>
+        <div class="navBarItem" onclick="updateProfilepageView()">Min Side</div>
         <div>
           <div class="navBarUser">${model.app.loggedInUser.firstname} ${model.app.loggedInUser.lastname}</div>
           <div class="navBarUserClassID">${model.app.loggedInUser.klasse}</div>
@@ -14,6 +15,7 @@ function updateDashboard(){
     <button onclick="updateViewLoginPage()">Login Page</button>
     <button onclick="updateViewLogPage()">Logg Page</button>
     <button onclick="updateViewNewUserPage()">Ny bruker</button>
+    <button onclick="updateProfilepageView()">Min Side</button>
     `;
 return html;
 }
