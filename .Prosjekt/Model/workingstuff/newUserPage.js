@@ -1,11 +1,11 @@
 //VIEW
 
 //byttSide(newUserPage);
-function newUserPage() {
+function updateViewNewUserPage() {
   //let pissName = model.inputs.newUserPage.firstname;
   //let JævligPåRiktig = IlleBraDetSeMarlene;
   
-  let html = /*html*/ `
+  document.getElementById('app').innerHTML = /*html*/ `
 <h2>Legg til ny bruker</h2>
 
 <div class="newUserPageBox">
@@ -15,13 +15,19 @@ function newUserPage() {
 <b>Postnr</b><input onchange="model.inputs.newUserPage.postalCode = this.value" type="text"><br>
 <b>E-post</b><input onchange="model.inputs.newUserPage.eMail = this.value" type="email"><br>
 <b>Klasse</b><input onchange="model.inputs.newUserPage.klasse = this.value" type="text"><br>
-<b>Passord</b><input onchange="model.inputs.newUserPage.passord = this.value" type="text"><br>
+<b>Passord</b><input onchange="model.inputs.newUserPage.password = this.value" type="text"><br>
+<b>Bilde</b><input onchange="model.inputs.newUserPage.img = this.value" type="text"><br>
 </div>
 
 <img class="newUserPagePicture" src="" alt="">
 <div class="newUserPageButtons">
 <button onclick="lagreBruker()">Lagre</button>
 <button onclick="velgBilde()">Velg bilde</button>
+<form action="/action_page.php">
+        <label for="img_file">Velg bilde</label>
+        <input type="file" id="img_file" name="img_file" accept="image/*">
+        <input type="submit">
+    </form>
 </div>
 `;
 

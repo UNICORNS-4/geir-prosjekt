@@ -11,6 +11,7 @@ function updateDashboard(){
     </div>
     <button onclick="updateViewLoginPage()">Login Page</button>
     <button onclick="updateViewLogPage()">Log Page</button>
+    <button onclick="updateViewNewUserPage()">Ny bruker</button>
     `;
 return html;
 }
