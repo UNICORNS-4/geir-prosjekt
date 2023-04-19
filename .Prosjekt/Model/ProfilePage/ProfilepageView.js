@@ -27,4 +27,9 @@ function updateBars(){
 
 function updateBar1(){
   
+
 }
+
+
+
+
