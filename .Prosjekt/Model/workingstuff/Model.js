@@ -73,9 +73,49 @@ const model = {
         imgSrc: "",
         imgName: "",
       },
+      utførteOppgaver: [
+        { oppgaveId: 0, svar: "fhjg", userId: 1, timeStamp: "2023..." },
+        { oppgaveId: 1, svar: "fhjg", userId: 1, timeStamp: "" },
+      ],
+      oppgaver: [
+        {
+          id: 0,
+          Tittel: "Intro til trygghet",
+          Tekst:
+            "Trygghet er en viktig faktor for smidighet og godt sammarbeid i et team.",
+          Type: "DropDown",
+          hasCheckmark: false,
+          isChecked: null,
+          temaId: 1,
+        },
+        {
+          id: 1,
+          Tittel: "Oppg 1: Hva er trygghet",
+          Tekst: "",
+          Type: "DropDown",
+          hasCheckmark: false,
+          isChecked: null,
+        },
+        {
+          Oppgave: 2,
+          Tittel: "Oppg 2: Hvorfor er trygghet viktig?",
+          Tekst: "",
+          Type: "DropDown",
+          hasCheckmark: false,
+          isChecked: null,
+        },
+        {
+          Oppgave: 3,
+          Tittel: "Refleksjonsoppgave",
+          Tekst: "Reflekter på hva du har gjort idag",
+          Type: "Egentekst",
+          hasCheckmark: true,
+          isChecked: null,
+        }
+      ],
     },
     {
-      userId:"elev",
+      userId: "elev",
       firstname: "Elev",
       lastname: "K. Elevesen",
       phoneNumber: "74368216",
@@ -89,7 +129,7 @@ const model = {
       },
     },
     {
-      userId:"",
+      userId: "",
       firstname: "elevn",
       lastname: "elevesen",
       phoneNumber: "",
@@ -102,7 +142,7 @@ const model = {
         imgName: "",
       },
     },
-    
+
   ],
   temaer: [
     { id: 1, navn: "Trygghet" },
