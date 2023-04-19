@@ -4,9 +4,6 @@ function mainView() {
   if (model.currentPage == "loginPage") html = loginPage();
   if (model.currentPage == "loggPage") html = updateViewLogPage();
   if (model.currentPage == "newUserPage") html = newUserPage();
-  if (model.currentPage == "") html = ();
-  if (model.currentPage == "") html = ();
-
   document.getElementById("app").innerHTML = html;
 }
 
