@@ -7,6 +7,7 @@ function updateViewTopic1(){
         </h4> </div>
         <div>Informasjon/video/linker til trygghet</div>
     </div>
+    
     <div>
         <div>${model.oppgaver[1].Tittel}</div>
         <div>${model.oppgaver[1].Tekst}<div>
