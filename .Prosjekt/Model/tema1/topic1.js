@@ -1,38 +1,33 @@
 function updateViewTopic1(){
     let html = /*html*/ `
-   <h2>Tema 1: Trygghet</h2>
+   <h2>${model.oppgaver[0].Tema}</h2>
     <div>
-        <div>${model.oppgaver.Tittel}</div>
+        <div>
+        <h4>${model.oppgaver[0].Tittel}
+        </h4> </div>
         <div>Informasjon/video/linker til trygghet</div>
     </div>
     <div>
-        <div>Oppg 1: Hva er trygghet?</div>
-        <div>Hvilke påstander er riktig om psykologisk trygghet? (Flere svaralternativ mulig)
-            <div>
+        <div>${model.oppgaver[1].Tittel}</div>
+        <div>${model.oppgaver[1].Tekst}<div>
+
+        <div>${model.oppgaver[2].Tittel}<div>
+        <div>${model.oppgaver[2].Tekst}<div>
             <input id="t1s1" type="checkbox">
-            <label for="t1s1">Det handler om hvordan man fremstår ovenfor andre</label>
+            <label for="t1s1">${model.oppgaver[2].SvarAlt[0]}</label>
             <input id="t1s2" type="checkbox">
-            <label for="t1s2">Det handler om hvordan man fremstår ovenfor andre</label>
+            <label for="t1s2">${model.oppgaver[2].SvarAlt[1]}</label>
             <input id="t1s3" type="checkbox">
-            <label for="t1s3">Det handler om hvordan man fremstår ovenfor andre</label>
+            <label for="t1s3">${model.oppgaver[2].SvarAlt[2]}</label>
             <input id="t1s4" type="checkbox">
-            <label for="t1s4">Det handler om hvordan man fremstår ovenfor andre</label>
+            <label for="t1s4">${model.oppgaver[2].SvarAlt[3]}</label>
             </div>
         </div>
     <div>
-        <div>Oppg 2: Hvorfor er trygghet viktig?</div>
-        <div>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit modi eum totam at molestiae minima harum. Quasi hic quas fugit odit quae repellendus similique libero magni quis dicta, placeat nostrum?</div>
-
-    </div>
-    <div>
-        <div>Oppg 3: Refleksjonsoppgave</div>
-        <div>Hva er dine tanker etter å ha jobbet med emnet?</div>
-        <div>Fyll ut ditt svar her:
-            <textarea name="refleksjonsOppgaveTema1" id="refleksjonsOppgaveTema1" cols="30" rows="10"></textarea>
-        </div>
-    </div>
-    </div>
-
-   `;
+        <div>${model.oppgaver[3].Tittel}</div>
+        <div>${model.oppgaver[3].Tekst}<div>
+        <textarea name="refleksjonsOppgaveTema1" id="refleksjonsOppgaveTema1" cols="30" rows="10"></textarea>
+        <button onclick="">Lagre</button>
+    `; 
    return html;
 };
