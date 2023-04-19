@@ -5,10 +5,10 @@ function updateDashboard(){
         <div class="navBarItem">Temaer</div>
         <div class="navBarItem">Meldinger</div>
         <div>
-          <div class="navBarUser">${findUser(model.app.loggedInUser).firstname} ${findUser(model.app.loggedInUser).lastname}</div>
-          <div class="navBarUserClassID">${findUser(model.app.loggedInUser).klasse}</div>
+          <div class="navBarUser">${model.app.loggedInUser.firstname} ${model.app.loggedInUser.lastname}</div>
+          <div class="navBarUserClassID">${model.app.loggedInUser.klasse} </div>
         </div>
-    
+    <div class="navBarItem" onclick="logOut()">Logg ut</div>
     </div>
     `;
 return html;
@@ -22,3 +22,8 @@ function findUser(userID) {
     }
     return null;
   }
+  
+function logOut () {
+model.app.loggedInUser = [];
+updateViewLoginPage(); // skal endres til currentPage i ferdig produkt.
+}

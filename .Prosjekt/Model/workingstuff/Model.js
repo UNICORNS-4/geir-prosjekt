@@ -2,7 +2,7 @@ const model = {
   app: {
     currentPage: "loginPage",
     isAdmin: true,
-    loggedInUser: "elev",
+    loggedInUser: false,
   },
 
   inputs: {
@@ -67,7 +67,7 @@ const model = {
       phoneNumber: "77633743",
       postalCode: "4621",
       eMail: "admin@admin.com",
-      klasse: "Admin", //Start IT, Get IT
+      klasse: "Administrator", //Start IT, Get IT
       password: "admin",
       img: {
         imgSrc: "",

@@ -2,8 +2,7 @@ const model = {
   app: {
     currentPage: "loginPage",
     isAdmin: true,
-    loggedInUser: [],
-    
+    loggedInUser: "elev",
   },
 
   inputs: {
@@ -68,9 +67,9 @@ const model = {
       phoneNumber: "77633743",
       postalCode: "4621",
       eMail: "admin@admin.com",
-      klasse: "Administrator", //Start IT, Get IT
+      klasse: "Admin", //Start IT, Get IT
       img: {
-        imgSrc: "admin.jpg",
+        imgSrc: "",
         imgName: "",
       },
       password: "admin",
@@ -102,20 +101,6 @@ const model = {
         imgName: "",
       },
       password: "elev",
-    },
-    {
-      userId: "Bobkå",
-      firstname: "Bob Kåre",
-      lastname: "Knutsen",
-      phoneNumber: "13374200",
-      postalCode: "6969",
-      eMail: "bobkåknu@getacademy.no",
-      klasse: "Start IT", //Start IT, Get IT
-      img: {
-        imgSrc: "",
-        imgName: "",
-      },
-      password: "okok",
     },
     
   ],
