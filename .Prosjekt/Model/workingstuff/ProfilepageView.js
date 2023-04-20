@@ -2,10 +2,10 @@ let Progressbar1 = 0;
 let Progressbar2 = 0;
 let Progressbar3 = 0;
 
-document.getElementById('app').innerHTML = updateProfilepageView();
+document.getElementById('app').innerHTML
 
 function updateProfilepageView() {
-  let html = /* Html */ `
+  document.getElementById('app').innerHTML = /* Html */ `
   <div class="navBar dashboard">
   <div class="navBarItem" onclick=" document.getElementById('app').innerHTML = updateDashboard();">Hjem</div>
   <div class="navBarItem">Temaer</div>
@@ -26,7 +26,7 @@ function updateProfilepageView() {
   <div id="Bars">${model.app.loggedInUser? updateBars(): ""}</div>
   
   `;
-return html;
+/* return html; */
 }
 
 function updateBars() {
