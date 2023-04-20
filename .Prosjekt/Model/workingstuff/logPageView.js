@@ -10,9 +10,9 @@ function goToLogPage() {
 
 function updateViewLogPage() {
   console.log("#LOG_UPDATED")
-  document.getElementById("app").innerHTML = /*HTML*/ `
+  let html= /*HTML*/ `
   <div class="navBar dashboard">
-  <div class="navBarItem" onclick=" document.getElementById('app').innerHTML = updateDashboard();">Hjem</div>
+  <div class="navBarItem" onclick="byttSide('frontPage')">Hjem</div>
   <div class="navBarItem">Temaer</div>
   <div class="navBarItem">Meldinger</div>
   <div>
@@ -38,6 +38,7 @@ function updateViewLogPage() {
         </div>
         <button onclick="saveLog()">Lagre</button>
     `;
+    return;
 }
 
 function createWeeksHtml() {

@@ -2,7 +2,7 @@ function updateViewLoginPage() {
     model.inputs.loginPage.userId = "";
     model.inputs.loginPage.password = "";
     console.log("#loginPageView_UPDATED")
-  document.getElementById("app").innerHTML = /*HTML*/ `
+  return /*HTML*/ `
         Brukernavn:<br/>
         <input 
             type="text" 

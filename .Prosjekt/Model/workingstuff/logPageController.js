@@ -30,3 +30,8 @@ function saveLog() {
   // model.app.currentPage = 'showLogs';
   updateViewLogPage();
 }
+
+function byttSide(incomingPage){
+    model.app.currentPage=incomingPage;
+    updateView();
+}

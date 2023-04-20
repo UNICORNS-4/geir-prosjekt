@@ -31,7 +31,6 @@ function updateViewNewUserPage() {
 </div>
 `;
 
-return html;
 }
 
 
