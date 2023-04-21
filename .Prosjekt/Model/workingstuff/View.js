@@ -1,6 +1,6 @@
 const app=document.getElementById("app");
 
-updateView();
+
 
 
 function updateView(){
@@ -22,3 +22,4 @@ function updateView(){
             break;
     }
 }
+window.onload = updateView();
