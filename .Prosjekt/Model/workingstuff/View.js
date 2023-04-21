@@ -17,5 +17,8 @@ function updateView(){
         case"profilePage":
             app.innerHTML= updateProfilepageView();
             break;
+        case"newUserPage":
+            app.innerHTML= updateViewNewUserPage();
+            break;
     }
 }

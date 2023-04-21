@@ -5,7 +5,7 @@ function updateViewNewUserPage() {
   //let pissName = model.inputs.newUserPage.firstname;
   //let JævligPåRiktig = IlleBraDetSeMarlene;
   
-  document.getElementById('app').innerHTML = /*html*/ `
+  let html = /*html*/ `
 <h2>Legg til ny bruker</h2>
 
 <div class="newUserPageBox">
@@ -30,7 +30,7 @@ function updateViewNewUserPage() {
     </form>
 </div>
 `;
-
+return html;
 }
 
 
