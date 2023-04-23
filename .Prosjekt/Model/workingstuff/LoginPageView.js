@@ -1,4 +1,6 @@
 function updateViewLoginPage() {
+    model.app.loggedInUser = false;
+    console.log('model.app.loggedInUser = False')
     model.inputs.loginPage.userId = "";
     model.inputs.loginPage.password = "";
     console.log("#loginPageView_UPDATED")

@@ -1,5 +1,6 @@
 function logIn() {
   console.log("#LOGIN_RUN")
+  
   model.inputs.loginPage.errorMessage = "";
   if (
     model.inputs.loginPage.userId == findUser(model.inputs.loginPage.userId).userId &&
