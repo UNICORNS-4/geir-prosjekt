@@ -9,20 +9,32 @@ function goToLogPage() {
 }
 
 function updateViewLogPage() {
-  console.log("#LOG_UPDATED")
-  let html= /*HTML*/ `
-  <div class="navBar dashboard">
-  <div class="navBarItem" onclick="byttSide('frontPage')">Hjem</div>
-  <div class="navBarItem">Temaer</div>
-  <div class="navBarItem">Meldinger</div>
-  <div>
-    <div class="navBarUser">${model.app.loggedInUser.firstname} ${model.app.loggedInUser.lastname}</div>
-    <div class="navBarUserClassID">${model.app.loggedInUser.klasse}</div>
-  </div>
-  <div class="navBarItem logOutBtn" onclick="logOut()">Log ut</div>
-</div>
-<button onclick="updateViewLoginPage()">Login Page</button>
-<button onclick="updateViewLogPage()">Logg Page</button>    
+  if (model.app.loggedInUser.klasse === "Admin") {
+    //console.log("#LOG_UPDATED")
+    //model.users?
+  
+    let html = /*HTML*/ `
+    ${lagEnAnnenElevListe()}
+    
+        <h2>Elev logg</h2>
+        <div>
+            ${createWeeksHtml()}
+        </div>
+        <div>
+            ${createDaysHtml()}
+        </div>
+        <textarea 
+            oninput="model.inputs.logPage.whatHaveYouLearnedToday=this.value"
+            >${model.inputs.logPage.whatHaveYouLearnedToday}</textarea>
+        <div>
+            ${createQuestionsHtml()}
+        </div>
+        <button onclick="saveLog()">Lagre</button>
+    `;
+    return html;
+  } else {
+    let html = /*HTML*/ `
+    <div id="baba"></div>
         <h2>Logg</h2>
         <div>
             ${createWeeksHtml()}
@@ -38,8 +50,24 @@ function updateViewLogPage() {
         </div>
         <button onclick="saveLog()">Lagre</button>
     `;
-    return;
+    return html;
+  }
 }
+
+
+//spørsmål til mandag: 
+//1. problem med index, folk synes ikke på admin sin loggside
+//
+function lagEnAnnenElevListe(){
+  let enElev = "";
+  for (let index = 0; index <= model.users.length; index++) {
+  let enElev  = document.createElement("li");
+enElev.innerHTML = /* html */`${model.users[index].firstname}  ${model.users[index].lastname}`;
+document.getElementById("baba").appendChild("elele");
+return enElev;
+}
+}
+
 //hvis bruker er admin vis studenter og utfylt logg
 //hvis bruker er elev vis loggside og current loggutfylling
 function createWeeksHtml() {

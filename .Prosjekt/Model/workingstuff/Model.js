@@ -7,7 +7,7 @@ const model = {
 
   inputs: {
     logPage: {
-      whatHaveYouLearnedToday: "sdfsdfsd",
+      whatHaveYouLearnedToday: "",
       selectedWeek: 1,
       selectedDay: 5,
       answers: [1, 2, 3],
