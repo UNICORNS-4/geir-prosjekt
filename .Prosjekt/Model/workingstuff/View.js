@@ -23,7 +23,9 @@ function updateView(){
         case"topicPage":
             app.innerHTML= updateDashboard() + updateViewTopicPage();
             break;
-        
+        case"elevListePage":
+            app.innerHTML= updateDashboard() + updateElevListeView();
+            break;
     }
 }
 window.onload = updateView();
