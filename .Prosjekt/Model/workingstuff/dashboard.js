@@ -28,7 +28,7 @@ function updateDashboard() {
                   <div class="navBarUser">${model.app.loggedInUser.firstname} ${model.app.loggedInUser.lastname}</div>
                   <div class="navBarUserClassIDAdmin">${model.app.loggedInUser.klasse}</div>
               </div>
-    <div class="navBarItem logOutBtn" onclick="logOut()"> ${loggOutSvg}</div>
+    <div class="navBarItem logOutBtn" onclick="logOut()">Log ut${loggOutSvg}</div>
     </div>`;
     return html;
 
