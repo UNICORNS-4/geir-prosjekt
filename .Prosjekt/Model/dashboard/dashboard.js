@@ -20,8 +20,8 @@ function byttSide(denneSiden){
 
 function updateDashboard() {
   console.log("#DASH_UPDATED")
-  if (model.app.loggedInUser.klasse === "Administrator") {
-    console.log("--> administrator dashboard")
+  if (model.app.loggedInUser.klasse === "Admin") {
+    console.log("--> Admin dashboard")
     let html = /*HTML*/`
     <div class="navBar dashboard">
               <div class="navBarItem" onclick="byttSide('frontPage')">Hjem</div>
@@ -61,11 +61,6 @@ function updateDashboard() {
 }
 
 
-function handleMainDashView() {
-
-  return html;
-}
-
 function findUser(userID) {
   for (let user of model.users) {
     if (user.userId == userID) {
@@ -76,5 +71,5 @@ function findUser(userID) {
 }
 function logOut() {
   model.app.loggedInUser = false;
-  updateViewLoginPage(); // skal endres til currentPage i ferdig produkt.
+  updateView(); // skal endres til currentPage i ferdig produkt.
 }

@@ -2,7 +2,7 @@ const model = {
   app: {
     currentPage: "loginPage",
     isAdmin: true,
-    loggedInUser: "elev",
+    loggedInUser: false,
   },
 
   inputs: {
