@@ -12,16 +12,16 @@ function updateView(){
             app.innerHTML= updateViewLoginPage();
             break;
         case"logPage":
-            app.innerHTML= updateViewLogPage();
+            app.innerHTML= updateDashboard() + updateViewLogPage();
             break;
         case"profilePage":
-            app.innerHTML= updateProfilepageView();
+            app.innerHTML= updateDashboard() + updateProfilepageView();
             break;
         case"newUserPage":
-            app.innerHTML= updateViewNewUserPage();
+            app.innerHTML= updateDashboard() + updateViewNewUserPage();
             break;
         case"topicPage":
-            app.innerHTML= updateViewTopicPage();
+            app.innerHTML= updateDashboard() + updateViewTopicPage();
             break;
         
     }

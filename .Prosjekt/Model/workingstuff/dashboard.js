@@ -20,7 +20,7 @@ function updateDashboard() {
     let html = /*HTML*/`
     <div class="navBar dashboard">
               <div class="navBarItem" onclick="byttSide('frontPage')">Hjem</div>
-              <div class="navBarItem" onclick="byttSide('')">Temaer</div>
+              <div class="navBarItem" onclick="byttSide('topicPage')">Temaer</div>
               <div class="navBarItem" onclick="byttSide('')">Meldinger</div>
               <div class="navBarItem" onclick="byttSide('newUserPage')">Ny Bruker</div>
               <div class="navBarItem" onclick="byttSide('logPage')">Logg</div>

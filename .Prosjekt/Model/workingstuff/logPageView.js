@@ -40,7 +40,8 @@ function updateViewLogPage() {
     `;
     return;
 }
-
+//hvis bruker er admin vis studenter og utfylt logg
+//hvis bruker er elev vis loggside og current loggutfylling
 function createWeeksHtml() {
   let html = "";
   for (let weekNo = 1; weekNo < 9; weekNo++) {
