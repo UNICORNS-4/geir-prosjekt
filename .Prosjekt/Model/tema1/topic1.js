@@ -1,4 +1,4 @@
-function upview() {
+function updateViewTopicPage() {
   document.getElementById("app").innerHTML = updateViewTopic1();
 }
 

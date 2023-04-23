@@ -20,6 +20,10 @@ function updateView(){
         case"newUserPage":
             app.innerHTML= updateViewNewUserPage();
             break;
+        case"topicPage":
+            app.innerHTML= updateViewTopicPage();
+            break;
+        
     }
 }
 window.onload = updateView();

@@ -1,8 +1,4 @@
-function upview() {
-  document.getElementById("app").innerHTML = updateViewTopic1();
-}
-
-function updateViewTopic1() {
+function updateViewTopicPage() {
   let oppgaver = nytesthehe();
   console.log(oppgaver);
   let html = ``;
@@ -53,7 +49,7 @@ function nytesthehe() {
 
 function changeTopicForLoop() {
   model.nåverendeTema++;
-  upview();
+  updateViewTopicPage();
 }
 //CONTROLLER
 //funksjon laget til tema knapper:

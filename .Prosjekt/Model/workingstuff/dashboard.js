@@ -16,6 +16,7 @@ function updateDashboard() {
     <button onclick="byttSide('logPage')">Logg Page</button>
     <button onclick="byttSide('newUserPage')">Ny bruker</button>
     <button onclick="byttSide('profilePage')">Min Side</button>
+    <button onclick="byttSide('topicPage')">Temaer</button>
     `;
   return html;
 }
