@@ -5,25 +5,11 @@ let Progressbar3 = 0;
 
 function updateProfilepageView() {
   return /* Html */ `
-  <div class="navBar dashboard">
-  <div class="navBarItem" onclick=" document.getElementById('app').innerHTML = updateDashboard();">Hjem</div>
-  <div class="navBarItem">Temaer</div>
-  <div class="navBarItem">Meldinger</div>
-  <div>
-    <div class="navBarUser">${model.app.loggedInUser.firstname} ${model.app.loggedInUser.lastname}</div>
-    <div class="navBarUserClassID">${model.app.loggedInUser.klasse}</div>
-  </div>
-  <div class="navBarItem logOutBtn" onclick="logOut()">Log ut</div>
-</div>
-<button onclick="updateViewLoginPage()">Login Page</button>
-<button onclick="byttSide('logPage')">Logg Page</button>    
-
   <div id="ProfilePic" ><img id="img1" style="width:150px" src="img/img1.jpeg"></div>
   <div id="ProfileName">${model.app.loggedInUser.firstname} ${model.app.loggedInUser.lastname}</div>
   <div id="StartIT">${model.app.loggedInUser.klasse}</div>
   <div id="Progressbars"></div>
   <div id="Bars">${updateBars()}</div>
-  
   `;
   
 }
@@ -37,7 +23,7 @@ function updateBars(){
   <progress id = "bar2" value="12" max="100"></progress>
   <label for="bar3">Tema 3:</label>
   <progress id = "bar3" value="96" max="100"></progress>
-`
+`;
   return html;
 }
 
