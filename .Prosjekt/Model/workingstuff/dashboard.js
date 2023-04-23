@@ -25,6 +25,7 @@ function updateDashboard() {
               <div class="navBarItem" onclick="byttSide('newUserPage')">Ny Bruker</div>
               <div class="navBarItem" onclick="byttSide('logPage')">Logg</div>
               <div class="navBarItem" onclick="byttSide('profilePage')">Min Side</div>
+              <div class="navBarItem" onclick="byttSide('elevListePage')">Elev liste</div>
               <div>   
                   <div class="navBarUser">${model.app.loggedInUser.firstname} ${model.app.loggedInUser.lastname}</div>
                   <div class="navBarUserClassIDAdmin">${model.app.loggedInUser.klasse}</div>

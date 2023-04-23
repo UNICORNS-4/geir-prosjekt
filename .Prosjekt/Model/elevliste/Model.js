@@ -2,12 +2,12 @@ const model = {
   app: {
     currentPage: "loginPage",
     isAdmin: true,
-    loggedInUser: "terje",
+    loggedInUser: false,
   },
 
   inputs: {
     logPage: {
-      whatHaveYouLearnedToday: "sdfsdfsd",
+      whatHaveYouLearnedToday: "",
       selectedWeek: 1,
       selectedDay: 5,
       answers: [1, 2, 3],
@@ -61,32 +61,75 @@ const model = {
   ],
   users: [
     {
-      firstname: "admin",
-      lastname: "",
-      phoneNumber: "",
-      postalCode: "",
-      eMail: "",
-      klasse: "", //Start IT, Get IT
+      userId: "admin",
+      firstname: "Ola",
+      lastname: "Nordmann",
+      phoneNumber: "77633743",
+      postalCode: "4621",
+      eMail: "admin@admin.com",
+      klasse: "Admin", //Start IT, Get IT
+      password: "admin",
       img: {
         imgSrc: "",
         imgName: "",
       },
-      password: "admin",
     },
     {
-      firstname: "elev",
-      lastname: "",
-      phoneNumber: "",
-      postalCode: "",
-      eMail: "",
-      klasse: "", //Start IT, Get IT
+      userId: "elev",
+      firstname: "Elev1",
+      lastname: "Student1",
+      phoneNumber: "74368216",
+      postalCode: "1613",
+      eMail: "fskdjfhds@gmail.com",
+      klasse: "Start IT", //Start IT, Get IT
+      password: "elev",
       img: {
         imgSrc: "",
         imgName: "",
       },
-      password: "elev",
     },
-    
+    {
+      userId: "",
+      firstname: "Elev2",
+      lastname: "Student2",
+      phoneNumber: "",
+      postalCode: "",
+      eMail: "",
+      klasse: "Start IT", //Start IT, Get IT
+      password: "elev",
+      img: {
+        imgSrc: "",
+        imgName: "",
+      },
+    },
+    {
+      userId: "elev",
+      firstname: "Elev3",
+      lastname: "Student3",
+      phoneNumber: "12345678",
+      postalCode: "1337",
+      eMail: "knutknut@gmail.com",
+      klasse: "Get IT", //Start IT, Get IT
+      password: "elev",
+      img: {
+        imgSrc: "",
+        imgName: "",
+      },
+    },
+    {
+      userId: "elev",
+      firstname: "Elev4",
+      lastname: "Student4",
+      phoneNumber: "12345678",
+      postalCode: "1337",
+      eMail: "knutknut@gmail.com",
+      klasse: "Get IT", //Start IT, Get IT
+      password: "elev",
+      img: {
+        imgSrc: "",
+        imgName: "",
+      },
+    },
   ],
   temaer: [
     { id: 1, navn: "Trygghet" },
@@ -111,30 +154,40 @@ const model = {
     },
     {
       id: 1,
-      Tittel: "Oppg 1: Hva er trygghet",
+      Tittel: "Oppg 1: Hva er trygghet?",
       Tekst: "",
       Type: "DropDown",
       hasCheckmark: false,
       isChecked: null,
+      temaId: 1,
     },
     {
-      Oppgave: 2,
+      id: 2,
       Tittel: "Oppg 2: Hvorfor er trygghet viktig?",
-      Tekst: "",
+      Tekst:
+        "Hvilke påstander er riktig om psykologisk trygghet? (Flere svaralternativ mulig)",
       Type: "DropDown",
+      SvarAlt: [
+        "Det handler om hvordan man fremstår ovenfor andre",
+        "Det handler om hvordan man fremstår ovenfor andre",
+        "Det handler om hvordan man fremstår ovenfor andre",
+        "Det handler om hvordan man fremstår ovenfor andre",
+      ],
       hasCheckmark: false,
       isChecked: null,
+      temaId: 1,
     },
     {
-      Oppgave: 3,
+      id: 3,
       Tittel: "Refleksjonsoppgave",
       Tekst: "Reflekter på hva du har gjort idag",
       Type: "Egentekst",
       hasCheckmark: true,
       isChecked: null,
+      temaId: 1,
     },
     {
-      Oppgave: 4,
+      id: 4,
       Tittel: "Intro til Selvkontroll",
       Tekst:
         "Hva er din definisjon av selvkontroll? Diskuter dette i gruppen, og skriv ned hva dere tenker.",
@@ -144,28 +197,38 @@ const model = {
       temaId: 2,
     },
     {
-      Oppgave: 5,
+      id: 5,
       Tittel: "Oppg 1: Hva er god selvkontroll?",
       Tekst: "",
       Type: "Dropdown",
       hasCheckmark: true,
       isChecked: null,
+      temaId: 2,
     },
     {
-      Oppgave: 2,
+      id: 6,
       Tittel: "Oppg 2: Når får du bruk for selvkontroll?",
       Tekst: "",
       Type: "Dropdown",
+      SvarAlt: [
+        "Det handler om hvordan man fremstår ovenfor andre",
+        "Det handler om hvordan man fremstår ovenfor andre",
+        "Det handler om hvordan man fremstår ovenfor andre",
+        "Det handler om hvordan man fremstår ovenfor andre",
+      ],
       hasCheckmark: true,
       isChecked: null,
+      temaId: 2,
     },
     {
-      Oppgave: 3,
-      Tittel: "Oppg 3: Refleksjonsoppgave",
+      id: 7,
+      Tittel: "Oppg 2: Refleksjonsoppgave",
       Tekst: "",
       Type: "Dropdown",
       hasCheckmark: true,
       isChecked: null,
+      temaId: 2,
     },
   ],
+  nåverendeTema: 1,
 };
