@@ -1,11 +1,13 @@
 function updateViewLoginPage() {
-    model.app.loggedInUser = false;
-    console.log('model.app.loggedInUser = False')
-    model.inputs.loginPage.userId = "";
-    model.inputs.loginPage.password = "";
+    
     console.log("#loginPageView_UPDATED")
-    return /*HTML*/ `
+    let html = /*HTML*/ `
+<div class="loginPageHeader">NØKKELKOMPETANSE</div>
 <div id ="loginPageView"> 
+<div class="loginPageUndertittel">Log in med Get Academy Bruker</div>
+<div class="loginPageErrorMsg">
+            ${model.inputs.loginPage.errorMessage}
+        </div>
         <input 
         class="loginPageInputs" 
 
@@ -25,9 +27,8 @@ function updateViewLoginPage() {
             /><br/>
 
 
-        <div style="color:red">
-            ${model.inputs.loginPage.errorMessage || ""}
-        </div>
+        
         <button class="loginPageBtns" onclick="logIn()">Logg inn</button>
 `;
+return html;
 }
