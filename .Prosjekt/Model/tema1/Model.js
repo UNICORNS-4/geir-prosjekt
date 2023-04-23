@@ -75,7 +75,7 @@ const model = {
       },
     },
     {
-      userId:"elev",
+      userId: "elev",
       firstname: "Elev",
       lastname: "K. Elevesen",
       phoneNumber: "74368216",
@@ -89,7 +89,7 @@ const model = {
       },
     },
     {
-      userId:"",
+      userId: "",
       firstname: "elevn",
       lastname: "elevesen",
       phoneNumber: "",
@@ -102,7 +102,6 @@ const model = {
         imgName: "",
       },
     },
-    
   ],
   temaer: [
     { id: 1, navn: "Trygghet" },
@@ -117,7 +116,6 @@ const model = {
   oppgaver: [
     {
       id: 0,
-      Tema: "Tema 1: Trygghet",
       Tittel: "Intro til trygghet",
       Tekst:
         "Trygghet er en viktig faktor for smidighet og godt sammarbeid i et team.",
@@ -133,28 +131,35 @@ const model = {
       Type: "DropDown",
       hasCheckmark: false,
       isChecked: null,
+      temaId: 1,
     },
     {
-      Oppgave: 2,
+      id: 2,
       Tittel: "Oppg 2: Hvorfor er trygghet viktig?",
-      Tekst: "Hvilke påstander er riktig om psykologisk trygghet? (Flere svaralternativ mulig)",
+      Tekst:
+        "Hvilke påstander er riktig om psykologisk trygghet? (Flere svaralternativ mulig)",
       Type: "DropDown",
-      SvarAlt: ["Det handler om hvordan man fremstår ovenfor andre","Det handler om hvordan man fremstår ovenfor andre",
-                "Det handler om hvordan man fremstår ovenfor andre", "Det handler om hvordan man fremstår ovenfor andre"],
+      SvarAlt: [
+        "Det handler om hvordan man fremstår ovenfor andre",
+        "Det handler om hvordan man fremstår ovenfor andre",
+        "Det handler om hvordan man fremstår ovenfor andre",
+        "Det handler om hvordan man fremstår ovenfor andre",
+      ],
       hasCheckmark: false,
       isChecked: null,
+      temaId: 1,
     },
     {
-      Oppgave: 3,
+      id: 3,
       Tittel: "Refleksjonsoppgave",
       Tekst: "Reflekter på hva du har gjort idag",
       Type: "Egentekst",
       hasCheckmark: true,
       isChecked: null,
+      temaId: 1,
     },
     {
-      Oppgave: 4,
-      Tema: "Tema 2: Selvkontroll",
+      id: 4,
       Tittel: "Intro til Selvkontroll",
       Tekst:
         "Hva er din definisjon av selvkontroll? Diskuter dette i gruppen, og skriv ned hva dere tenker.",
@@ -164,28 +169,38 @@ const model = {
       temaId: 2,
     },
     {
-      Oppgave: 5,
+      id: 5,
       Tittel: "Oppg 1: Hva er god selvkontroll?",
       Tekst: "",
       Type: "Dropdown",
       hasCheckmark: true,
       isChecked: null,
+      temaId: 2,
     },
     {
-      Oppgave: 6,
+      id: 6,
       Tittel: "Oppg 2: Når får du bruk for selvkontroll?",
       Tekst: "",
       Type: "Dropdown",
+      SvarAlt: [
+        "Det handler om hvordan man fremstår ovenfor andre",
+        "Det handler om hvordan man fremstår ovenfor andre",
+        "Det handler om hvordan man fremstår ovenfor andre",
+        "Det handler om hvordan man fremstår ovenfor andre",
+      ],
       hasCheckmark: true,
       isChecked: null,
+      temaId: 2,
     },
     {
-      Oppgave: 7,
-      Tittel: "Oppg 3: Refleksjonsoppgave",
+      id: 7,
+      Tittel: "Oppg 2: Refleksjonsoppgave",
       Tekst: "",
       Type: "Dropdown",
       hasCheckmark: true,
       isChecked: null,
+      temaId: 2,
     },
   ],
+  nåverendeTema: 1,
 };

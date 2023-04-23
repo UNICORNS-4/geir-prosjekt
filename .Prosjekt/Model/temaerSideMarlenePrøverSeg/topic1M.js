@@ -1,9 +1,9 @@
-function updateViewTopic1(){
-    let html = /*html*/ `
-   <h2>${model.oppgaver[0].Tema}</h2>
+function updateViewTopic1() {
+  let html = /*html*/ `
+   <h2>${model.oppgaver[4].Tema}</h2>
     <div>
         <div>
-        <h4>${model.oppgaver[0].Tittel}
+        <h4>${model.oppgaver[4].Tittel}
         </h4> </div>
         <div>Informasjon/video/linker til trygghet</div>
     </div>
@@ -29,6 +29,6 @@ function updateViewTopic1(){
         <div>${model.oppgaver[3].Tekst}<div>
         <textarea name="refleksjonsOppgaveTema1" id="refleksjonsOppgaveTema1" cols="30" rows="10"></textarea>
         <button onclick="">Lagre</button>
-    `; 
-   return html;
-};
+    `;
+  return html;
+}

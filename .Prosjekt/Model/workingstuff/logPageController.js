@@ -25,13 +25,8 @@ function saveLog() {
     userId: model.app.loggedInUser,
     module: user.currentModule,
   });
-  console.log("#LOG_SAVED")
-  console.log(model.log)
+  console.log("#LOG_SAVED");
+  console.log(model.log);
   // model.app.currentPage = 'showLogs';
   updateViewLogPage();
-}
-
-function byttSide(incomingPage){
-    model.app.currentPage=incomingPage;
-    updateView();
 }

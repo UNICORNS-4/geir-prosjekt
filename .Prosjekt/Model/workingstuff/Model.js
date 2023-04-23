@@ -1,8 +1,8 @@
 const model = {
   app: {
-    currentPage: "loginPage",
+    currentPage: "frontPage",
     isAdmin: true,
-    loggedInUser: false,
+    loggedInUser: true,
   },
 
   inputs: {
@@ -111,7 +111,7 @@ const model = {
           Type: "Egentekst",
           hasCheckmark: true,
           isChecked: null,
-        }
+        },
       ],
     },
     {
@@ -142,7 +142,6 @@ const model = {
         imgName: "",
       },
     },
-
   ],
   temaer: [
     { id: 1, navn: "Trygghet" },

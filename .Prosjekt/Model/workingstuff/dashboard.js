@@ -1,6 +1,6 @@
-function updateDashboard(){
-  console.log("#DASH_UPDATED")
-    let html = /*HTML*/`
+function updateDashboard() {
+  console.log("#DASH_UPDATED");
+  let html = /*HTML*/ `
     <div class="navBar dashboard">
         <div class="navBarItem" onclick="byttSide('frontPage')">Hjem</div>
         <div class="navBarItem">Temaer</div>
@@ -13,22 +13,22 @@ function updateDashboard(){
         <div class="navBarItem logOutBtn" onclick="logOut()">Log ut</div>
     </div>
     <button onclick="byttSide('loginPage')">Login Page</button>
-    <button onclick="byttSide('loggPage')">Logg Page</button>
+    <button onclick="byttSide('logPage')">Logg Page</button>
     <button onclick="byttSide('newUserPage')">Ny bruker</button>
     <button onclick="byttSide('profilePage')">Min Side</button>
     `;
-return html;
+  return html;
 }
 
 function findUser(userID) {
-    for (let user of model.users) {
-      if (user.userId == userID) {
-        return user;
-      }
+  for (let user of model.users) {
+    if (user.userId == userID) {
+      return user;
     }
-    return "";
   }
-  function logOut () {
-    model.app.loggedInUser = false;
-    updateViewLoginPage(); // skal endres til currentPage i ferdig produkt.
-    }
+  return "";
+}
+function logOut() {
+  model.app.loggedInUser = false;
+  updateViewLoginPage(); // skal endres til currentPage i ferdig produkt.
+}
