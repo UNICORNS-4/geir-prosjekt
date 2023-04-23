@@ -15,7 +15,7 @@ viewBox="0 0 490.3 490.3" xml:space="preserve">
 
 function byttSide(denneSiden){
   model.app.currentPage = denneSiden;
-  updateView();
+  updateDashboard();
 }
 
 function updateDashboard() {
