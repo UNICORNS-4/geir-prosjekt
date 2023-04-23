@@ -55,9 +55,7 @@ function updateViewLogPage() {
 }
 
 
-//spørsmål til mandag: 
-//1. problem med index, folk synes ikke på admin sin loggside
-//
+
 function lagEnAnnenElevListe(){
   let enElev = "";
   for (let index = 0; index <= model.users.length; index++) {
