@@ -3,11 +3,13 @@ function updateViewTopicPage() {
   console.log(oppgaver);
   let html = ``;
   html += /* html */ `
-  <button onclick="changeTopicForLoop()">Bytt til tema 2</button>
+  <button onclick="changeTopicLast()">Forrige tema</button>
+  <button onclick="changeTopicNext()">Neste tema</button>
     <div id="colum0">
         <div>${model.temaer[model.nåverendeTema - 1].navn}</div>
         <div>${oppgaver[0].Tittel}</div> 
         <div>${oppgaver[0].Tekst}</div>
+        <div>Se videoen under for å lære mer om tema:<br>${oppgaver[0].videoLink||''}</div>
     </div>
         
     <div id="colum1">
@@ -47,8 +49,12 @@ function nytesthehe() {
   return OppgaverFilter;
 }
 
-function changeTopicForLoop() {
+function changeTopicNext() {
   model.nåverendeTema++;
+  updateView();
+}
+function changeTopicLast() {
+  model.nåverendeTema--;
   updateView();
 }
 //CONTROLLER
