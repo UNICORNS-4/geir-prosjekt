@@ -4,7 +4,7 @@ function updateViewLoginPage() {
     let html = /*HTML*/ `
 <div class="loginPageHeader">NØKKELKOMPETANSE</div>
 <div id ="loginPageView"> 
-<div class="loginPageUndertittel">Log in med Get Academy Bruker</div>
+<div class="loginPageUndertittel">Logg in med Get Academy Bruker</div>
 <div class="loginPageErrorMsg">
             ${model.inputs.loginPage.errorMessage}
         </div>

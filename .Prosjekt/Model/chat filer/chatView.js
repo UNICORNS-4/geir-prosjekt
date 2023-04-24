@@ -13,7 +13,7 @@ function updateChatView(){
     }
     return html;
   }
-  
+
     if (model.chatMessages.isRead = true){
       let html = "";
       html += /*html*/`
@@ -35,14 +35,7 @@ function updateChatView(){
 
 
 
-function åpneChat(){
-  //åpner meldingsboks, pluss setter feltet med innkommende mld til lest status/endrer CSS til annen farge
-    let html = '';
-    let meldingsTekst = model.chatMessages[0].messageContent;
-    for (let i = 0; i < model.chatMessages.messageContent.length; i++)
-    html += /*html*/ `
-    <div>${model.chatMessages[i].fromUserId}</div>
-    `;}
+
 /* const model = {
     app: {
       currentPage: "chatPage",
