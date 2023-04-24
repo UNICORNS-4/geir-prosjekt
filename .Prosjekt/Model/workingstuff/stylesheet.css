@@ -48,27 +48,6 @@ button{
     background: #919191;
     color: white;
 }
-.navBarLogo {
-
-    text-transform: uppercase;
-    user-select: none;
-    font-size: xx-large;
-    text-align: center;
-    margin-right:25px;
-    margin:auto;
-    padding: 5px;
-    
-    border-radius: 5px;
-    box-shadow: none;
-}
-.navBarLogo:hover {
-    cursor: pointer;
-    color:white;
-
-}
-.navBarLogo:active {
-    color: white;
-}
 
 .navBarUser {
     font-family: ;
