@@ -1,9 +1,10 @@
+let mldStatus = ['lest', 'ulest']
 function updateChatView(){
     let html = "";
     for (let i = 0; i < model.users.length; i++) {
-    html += /*HTML*/ `
-    <div onclick="åpneChat(${i})">Ulest fra:
-    <ul>
+      html += /*HTML*/ `
+    <div id="ulest">${mldStatus[0]}:
+    <ul onclick="åpneChat(${i})">
         ${model.users[i].firstname} ${model.users[i].lastname}
     </div>
     </ul>
@@ -14,8 +15,28 @@ function updateChatView(){
 }
 
 function åpneChat(){
-    model.chatMessages.isRead = true;
-    if ()
+  //åpner meldingsboks, pluss setter feltet med innkommende mld til lest status/endrer CSS til annen farge
+    let html = '';
+    let meldingsTekst = model.chatMessages[0].messageContent;
+    for (let i = 0; i < model.chatMessages.messageContent.length; i++)
+    html += /*html*/ `
+    <div>${model.chatMessages[i].fromUserId}</div>
+    `;
+    
+    
+
+
+
+  
+    if (model.chatMessages.isRead = true){
+      let html = "";
+      html += /*html*/`
+      <div id="ulest">Lest:</div>
+      `
+    }else{
+      let html = "";
+    }
+    updateChatView();
         //ulest sin tekst settes til lest
 }
 
