@@ -49,7 +49,7 @@ function nytesthehe() {
 
 function changeTopicForLoop() {
   model.nåverendeTema++;
-  updateViewTopicPage();
+  updateView();
 }
 //CONTROLLER
 //funksjon laget til tema knapper:

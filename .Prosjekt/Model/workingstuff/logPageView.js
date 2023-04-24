@@ -14,7 +14,8 @@ function updateViewLogPage() {
     //model.users?
   
     let html = /*HTML*/ `
-    ${lagEnAnnenElevListe()}
+    
+    ${enElevListe()}
     
         <h2>Elev logg</h2>
         <div>
@@ -34,7 +35,7 @@ function updateViewLogPage() {
     return html;
   } else {
     let html = /*HTML*/ `
-    <div id="baba"></div>
+    
         <h2>Logg</h2>
         <div>
             ${createWeeksHtml()}
@@ -58,15 +59,20 @@ function updateViewLogPage() {
 //spørsmål til mandag: 
 //1. problem med index, folk synes ikke på admin sin loggside
 //
-function lagEnAnnenElevListe(){
-  let enElev = "";
-  for (let index = 0; index <= model.users.length; index++) {
-  let enElev  = document.createElement("li");
-enElev.innerHTML = /* html */`${model.users[index].firstname}  ${model.users[index].lastname}`;
-document.getElementById("baba").appendChild("elele");
-return enElev;
+function enElevListe(){
+
+  let html = "";
+  for (let i = 0; i < model.users.length; i++) {
+    html +=
+    ` <ul onclick="">${model.users[i].firstname}  ${model.users[i].lastname}</ul>`
+  
+  }
+return html
 }
-}
+
+
+
+
 
 //hvis bruker er admin vis studenter og utfylt logg
 //hvis bruker er elev vis loggside og current loggutfylling
