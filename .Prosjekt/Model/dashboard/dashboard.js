@@ -1,4 +1,4 @@
-let loggOutSvg = `<svg fill="#000000" height="30px" width="30px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+let loggOutSvg = `<svg fill="#000000" height="20px" width="20px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
 viewBox="0 0 490.3 490.3" xml:space="preserve">
 <g>
 <g>
@@ -13,27 +13,24 @@ viewBox="0 0 490.3 490.3" xml:space="preserve">
 </g>
 </svg>`;
 
-function byttSide(denneSiden){
-  model.app.currentPage = denneSiden;
-  updateDashboard();
-}
-
 function updateDashboard() {
   console.log("#DASH_UPDATED")
   if (model.app.loggedInUser.klasse === "Admin") {
     console.log("--> Admin dashboard")
     let html = /*HTML*/`
     <div class="navBar dashboard">
-              <div class="navBarItem" onclick="byttSide('frontPage')">Hjem</div>
-              <div class="navBarItem" onclick="byttSide('')">Temaer</div>
+              <div class="navBarLogo" onclick="byttSide('frontPage')">NK</div>
+              <div class="navBarItem" onclick="byttSide('topicPage')">Temaer</div>
               <div class="navBarItem" onclick="byttSide('')">Meldinger</div>
               <div class="navBarItem" onclick="byttSide('newUserPage')">Ny Bruker</div>
               <div class="navBarItem" onclick="byttSide('logPage')">Logg</div>
+              <div class="navBarItem" onclick="byttSide('profilePage')">Min Side</div>
+              <div class="navBarItem" onclick="byttSide('elevListePage')">Elev liste</div>
               <div>   
                   <div class="navBarUser">${model.app.loggedInUser.firstname} ${model.app.loggedInUser.lastname}</div>
                   <div class="navBarUserClassIDAdmin">${model.app.loggedInUser.klasse}</div>
               </div>
-    <div class="navBarItem logOutBtn" onclick="logOut()"> ${loggOutSvg}</div>
+    <div class="navBarItem logOutBtn" onclick="logOut()">${loggOutSvg}</div>
     </div>`;
     return html;
 
@@ -42,10 +39,11 @@ function updateDashboard() {
     console.log("--> elev dashboard")
     let html = /*HTML*/`
               <div class="navBar dashboard">
-              <div class="navBarItem" onclick="byttSide('frontPage')">Hjem</div>
-              <div class="navBarItem" onclick="byttSide('')">Temaer</div>
+              <div class="navBarLogo" onclick="byttSide('frontPage')">NK</div>
+              <div class="navBarItem" onclick="byttSide('topicPage')">Temaer</div>
               <div class="navBarItem" onclick="byttSide('')">Meldinger</div>
               <div class="navBarItem" onclick="byttSide('logPage')">Logg</div>
+              <div class="navBarItem" onclick="byttSide('profilePage')">Min Side</div>
               <div>   
                   <div class="navBarUser">${model.app.loggedInUser.firstname} ${model.app.loggedInUser.lastname}</div>
                   <div class="navBarUserClassIDUser">${model.app.loggedInUser.klasse}</div>
@@ -71,5 +69,6 @@ function findUser(userID) {
 }
 function logOut() {
   model.app.loggedInUser = false;
+  byttSide('loginPage')
   updateView(); // skal endres til currentPage i ferdig produkt.
 }
