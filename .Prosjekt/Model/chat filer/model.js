@@ -56,7 +56,10 @@ const model = {
         toUserId: "admin",
         messageContent: "Hallo, hva er psykologisk trygghet?",
         timeStamp: "2023-03-31 15:03", // t = '2023-03-31 15:03'; new Date(t)    .toLocaleTimeString()
-        isRead: false,
+        isRead: [
+                  {false},
+                  {true},
+        ],
       },
     ],
     users: [
