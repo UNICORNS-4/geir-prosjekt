@@ -70,11 +70,11 @@ button{
 }
 
 .navBarUser {
-    margin: 7px 7px 7px 7px;
+    margin: 1px 7px 7px 7px;
     padding: 5px;
     text-align: center;
     margin-bottom: 0px;
-    padding-bottom: 13px;
+    padding-bottom: 16px;
 }
 .navBarUserClassIDUser {
     font-size: 14px;
