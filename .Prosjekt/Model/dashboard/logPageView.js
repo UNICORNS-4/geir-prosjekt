@@ -9,20 +9,33 @@ function goToLogPage() {
 }
 
 function updateViewLogPage() {
-  console.log("#LOG_UPDATED")
-  document.getElementById("app").innerHTML = /*HTML*/ `
-  <div class="navBar dashboard">
-  <div class="navBarItem" onclick=" document.getElementById('app').innerHTML = updateDashboard();">Hjem</div>
-  <div class="navBarItem">Temaer</div>
-  <div class="navBarItem">Meldinger</div>
-  <div>
-    <div class="navBarUser">${model.app.loggedInUser.firstname} ${model.app.loggedInUser.lastname}</div>
-    <div class="navBarUserClassID">${model.app.loggedInUser.klasse}</div>
-  </div>
-  <div class="navBarItem logOutBtn" onclick="logOut()">Log ut</div>
-</div>
-<button onclick="updateViewLoginPage()">Login Page</button>
-<button onclick="updateViewLogPage()">Logg Page</button>    
+  if (model.app.loggedInUser.klasse === "Admin") {
+    //console.log("#LOG_UPDATED")
+    //model.users?
+  
+    let html = /*HTML*/ `
+    
+    ${enElevListe()}
+    
+        <h2>Elev logg</h2>
+        <div>
+            ${createWeeksHtml()}
+        </div>
+        <div>
+            ${createDaysHtml()}
+        </div>
+        <textarea 
+            oninput="model.inputs.logPage.whatHaveYouLearnedToday=this.value"
+            >${model.inputs.logPage.whatHaveYouLearnedToday}</textarea>
+        <div>
+            ${createQuestionsHtml()}
+        </div>
+        <button onclick="saveLog()">Lagre</button>
+    `;
+    return html;
+  } else {
+    let html = /*HTML*/ `
+    
         <h2>Logg</h2>
         <div>
             ${createWeeksHtml()}
@@ -38,8 +51,31 @@ function updateViewLogPage() {
         </div>
         <button onclick="saveLog()">Lagre</button>
     `;
+    return html;
+  }
 }
 
+
+//spørsmål til mandag: 
+//1. problem med index, folk synes ikke på admin sin loggside
+//
+function enElevListe(){
+
+  let html = "";
+  for (let i = 0; i < model.users.length; i++) {
+    html +=
+    ` <ul onclick="">${model.users[i].firstname}  ${model.users[i].lastname}</ul>`
+  
+  }
+return html
+}
+
+
+
+
+
+//hvis bruker er admin vis studenter og utfylt logg
+//hvis bruker er elev vis loggside og current loggutfylling
 function createWeeksHtml() {
   let html = "";
   for (let weekNo = 1; weekNo < 9; weekNo++) {

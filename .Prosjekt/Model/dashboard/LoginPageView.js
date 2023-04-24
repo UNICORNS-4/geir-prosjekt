@@ -1,26 +1,34 @@
 function updateViewLoginPage() {
-    model.inputs.loginPage.userId = "";
-    model.inputs.loginPage.password = "";
+    
     console.log("#loginPageView_UPDATED")
-  document.getElementById("app").innerHTML = /*HTML*/ `
-        Brukernavn:<br/>
+    let html = /*HTML*/ `
+<div class="loginPageHeader">NØKKELKOMPETANSE</div>
+<div id ="loginPageView"> 
+<div class="loginPageUndertittel">Log in med Get Academy Bruker</div>
+<div class="loginPageErrorMsg">
+            ${model.inputs.loginPage.errorMessage}
+        </div>
         <input 
+        class="loginPageInputs" 
+
+            placeholder="brukernavn"
             type="text" 
             value="${model.inputs.loginPage.userId || ""}"
             oninput="model.inputs.loginPage.userId = this.value"
             /><br/>
-        Passord:<br/>
+
+
         <input 
+            placeholder="passord"
+            class="loginPageInputs" 
             type="password" 
             value="${model.inputs.loginPage.password || ""}"
             oninput="model.inputs.loginPage.password = this.value"
             /><br/>
 
-        <div style="color:red">
-            ${model.inputs.loginPage.errorMessage || ""}
-        </div>
-        <button onclick="logIn()">Logg inn</button>
-    
-    <button onclick="updateBarView()">Progressbars</button>
-        `;
+
+        
+        <button class="loginPageBtns" onclick="logIn()">Logg inn</button>
+`;
+return html;
 }
