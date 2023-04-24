@@ -16,7 +16,7 @@ function updateProfilepageView() {
 
 function updateBars(){
   let theme1progression = (model.app.loggedInUser.utførteOppgaver/model.app.loggedInUser.oppgaver)/100;
-  let html = `
+  let html = /* html */`
   <label for="bar1">Tema 1:</label>
   <progress id = "bar1" value="${model.app.loggedInUser.utførteOppgaver}" max="${model.app.loggedInUser.oppgaver}"></progress>
   <label for="bar2">Tema 2:</label>
