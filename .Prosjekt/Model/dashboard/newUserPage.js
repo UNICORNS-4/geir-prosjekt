@@ -9,14 +9,14 @@ function updateViewNewUserPage() {
 <h2>Legg til ny bruker</h2>
 
 <div class="newUserPageBox">
-<b>Fornavn</b> <input onchange="model.inputs.newUserPage.firstname = this.value" type="text"><br>
-<b>Etternavn</b><input onchange="model.inputs.newUserPage.lastname = this.value" type="text"><br>
-<b>Telefon</b><input onchange="model.inputs.newUserPage.phoneNumber = this.value" type="tel"><br>
-<b>Postnr</b><input onchange="model.inputs.newUserPage.postalCode = this.value" type="text"><br>
-<b>E-post</b><input onchange="model.inputs.newUserPage.eMail = this.value" type="email"><br>
-<b>Klasse</b><input onchange="model.inputs.newUserPage.klasse = this.value" type="text"><br>
-<b>Passord</b><input onchange="model.inputs.newUserPage.password = this.value" type="text"><br>
-<b>Bilde</b><input onchange="model.inputs.newUserPage.img = this.value" type="text"><br>
+<div class="newUserInputs">Fornavn<input onchange="model.inputs.newUserPage.firstname = this.value" type="text"> </div> <br>
+<div class="newUserInputs">Etternavn<input onchange="model.inputs.newUserPage.lastname = this.value" type="text"></div><br>
+<div class="newUserInputs">Telefon<input onchange="model.inputs.newUserPage.phoneNumber = this.value" type="tel"></div><br>
+<div class="newUserInputs">Postnr<input onchange="model.inputs.newUserPage.postalCode = this.value" type="text"></div><br>
+<div class="newUserInputs">E-post<input onchange="model.inputs.newUserPage.eMail = this.value" type="email"></div><br>
+<div class="newUserInputs">Klasse<input onchange="model.inputs.newUserPage.klasse = this.value" type="text"></div><br>
+<div class="newUserInputs">Passord<input onchange="model.inputs.newUserPage.password = this.value" type="text"></div><br>
+<div class="newUserInputs">Bilde<input onchange="model.inputs.newUserPage.img = this.value" type="text"></div><br>
 </div>
 
 <img class="newUserPagePicture" src="" alt="">

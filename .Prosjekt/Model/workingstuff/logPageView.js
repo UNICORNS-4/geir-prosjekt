@@ -12,67 +12,70 @@ function updateViewLogPage() {
   if (model.app.loggedInUser.klasse === "Admin") {
     //console.log("#LOG_UPDATED")
     //model.users?
-  
+
     let html = /*HTML*/ `
     
     ${enElevListe()}
     
-        <h2>Elev logg</h2>
-        <div>
-            ${createWeeksHtml()}
-        </div>
-        <div>
-            ${createDaysHtml()}
-        </div>
-        <textarea 
+    <h2>Elev logg</h2>
+    <div>
+      ${createWeeksHtml()}
+    </div>
+    
+    <div>
+      ${createDaysHtml()}
+    </div>
+        
+    <textarea 
             oninput="model.inputs.logPage.whatHaveYouLearnedToday=this.value"
-            >${model.inputs.logPage.whatHaveYouLearnedToday}</textarea>
-        <div>
-            ${createQuestionsHtml()}
-        </div>
-        <button onclick="saveLog()">Lagre</button>
+            >${model.inputs.logPage.whatHaveYouLearnedToday}
+    </textarea>
+        
+    <div>
+      ${createQuestionsHtml()}
+    </div>
+        
+    <button onclick="saveLog()">Lagre</button>
+    
     `;
     return html;
   } else {
     let html = /*HTML*/ `
-    
-        <h2>Logg</h2>
-        <div>
-            ${createWeeksHtml()}
-        </div>
-        <div>
-            ${createDaysHtml()}
-        </div>
-        <textarea 
-            oninput="model.inputs.logPage.whatHaveYouLearnedToday=this.value"
-            >${model.inputs.logPage.whatHaveYouLearnedToday}</textarea>
-        <div>
-            ${createQuestionsHtml()}
-        </div>
-        <button onclick="saveLog()">Lagre</button>
+  <div class="LoggPage-container">
+
+
+    <h2 id="LoggOverskrift">Logg</h2>
+
+
+    <div class="ukerogdagervalg-container">
+      <div>${createWeeksHtml()}</div>
+      <div>${createDaysHtml()}</div>
+    </div>
+
+    <div id = "textfield-logPage">
+      <textarea oninput="model.inputs.logPage.whatHaveYouLearnedToday=this.value"
+            >${model.inputs.logPage.whatHaveYouLearnedToday}
+      </textarea>
+    </div>
+        
+      <div>${createQuestionsHtml()}</div>
+      <button onclick="saveLog()">Send inn dagens logg</button>
+  </div>
     `;
     return html;
   }
 }
 
-
-//spørsmål til mandag: 
+//spørsmål til mandag:
 //1. problem med index, folk synes ikke på admin sin loggside
 //
-function enElevListe(){
-
+function enElevListe() {
   let html = "";
   for (let i = 0; i < model.users.length; i++) {
-    html +=
-    ` <ul onclick="">${model.users[i].firstname}  ${model.users[i].lastname}</ul>`
-  
+    html += ` <ul onclick="">${model.users[i].firstname}  ${model.users[i].lastname}</ul>`;
   }
-return html
+  return html;
 }
-
-
-
-
 
 //hvis bruker er admin vis studenter og utfylt logg
 //hvis bruker er elev vis loggside og current loggutfylling
