@@ -5,7 +5,7 @@ let Progressbar3 = 0;
 
 function updateProfilepageView() {
   return /* Html */ `
-  <div id="ProfilePic" ><img id="img1" style="width:150px" src="img/img1.jpeg"></div>
+  <div id="ProfilePic" ><img id="img1" style="width:150px" src="img/${model.app.loggedInUser.imgSrc}"></div>
   <div id="ProfileName">${model.app.loggedInUser.firstname} ${model.app.loggedInUser.lastname}</div>
   <div id="StartIT">${model.app.loggedInUser.klasse}</div>
   <div id="Progressbars"></div>
@@ -13,6 +13,7 @@ function updateProfilepageView() {
   `;
   
 }
+
 
 function updateBars(){
   let theme1progression = (model.app.loggedInUser.utførteOppgaver/model.app.loggedInUser.oppgaver)/100;

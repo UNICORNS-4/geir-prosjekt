@@ -68,6 +68,13 @@ const model = {
       timeStamp: "2023-03-31 15:03", // t = '2023-03-31 15:03'; new Date(t)    .toLocaleTimeString()
       isRead: false,
     },
+    {
+      fromUserId: "terje",
+      toUserId: "per",
+      messageContent: "Hallo, hva er psykologisk trygghet?",
+      timeStamp: "2023-03-31 15:03", // t = '2023-03-31 15:03'; new Date(t)    .toLocaleTimeString()
+      isRead: false,
+    },
   ],
   users: [
     {
@@ -76,13 +83,10 @@ const model = {
       lastname: "Nordmann",
       phoneNumber: "77633743",
       postalCode: "4621",
-      eMail: "admin@admin.com",
+      eMail: "admin@getacademy.no",
       klasse: "Admin", //Start IT, Get IT
       password: "admin",
-      img: {
-        imgSrc: "",
-        imgName: "",
-      },
+      imgSrc: "img0.jpeg",
     },
     {
       userId: "elev",
@@ -90,27 +94,54 @@ const model = {
       lastname: "K. Elevesen",
       phoneNumber: "74368216",
       postalCode: "1613",
-      eMail: "fskdjfhds@gmail.com",
+      eMail: "elevelevesen@getacademy.no",
       klasse: "Start IT", //Start IT, Get IT
       password: "elev",
-      img: {
-        imgSrc: "",
-        imgName: "",
-      },
+      imgSrc: "img1.jpeg",
     },
     {
-      userId: "",
-      firstname: "elevn",
-      lastname: "elevesen",
-      phoneNumber: "",
-      postalCode: "",
-      eMail: "",
-      klasse: "", //Start IT, Get IT
-      password: "elev",
-      img: {
-        imgSrc: "",
-        imgName: "",
-      },
+      userId: "Knut",
+      firstname: "Knut",
+      lastname: "Knutsen",
+      phoneNumber: "90523412",
+      postalCode: "3234",
+      eMail: "knutknutsen@getacademy.no",
+      klasse: "Start IT", //Start IT, Get IT
+      password: "Knut",
+      imgSrc: "img2.jpeg",
+    },
+    {
+      userId: "Per",
+      firstname: "Per",
+      lastname: "Persson",
+      phoneNumber: "93451250",
+      postalCode: "2736",
+      eMail: "perpersson@getacademy.no",
+      klasse: "Start IT", //Start IT, Get IT
+      password: "Per",
+      imgSrc: "img3.jpeg",
+    },
+    {
+      userId: "Guri",
+      firstname: "Guri",
+      lastname: "Olsen",
+      phoneNumber: "47623409",
+      postalCode: "3213",
+      eMail: "guriolsen@getacademy.no",
+      klasse: "Start IT", //Start IT, Get IT
+      password: "Guri",
+      imgSrc: "img4.jpeg",
+    },
+    {
+      userId: "Henriette",
+      firstname: "Henriette",
+      lastname: "Nilsen",
+      phoneNumber: "45783210",
+      postalCode: "3030",
+      eMail: "henriettennilsen@getacademy.no",
+      klasse: "Start IT", //Start IT, Get IT
+      password: "Henriette",
+      imgSrc: "img5.jpeg",
     },
   ],
   temaer: [
