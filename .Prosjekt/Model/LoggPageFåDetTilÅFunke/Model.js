@@ -2,15 +2,15 @@ const model = {
   app: {
     currentPage: "frontPage",
     isAdmin: true,
-    loggedInUser: false,
+    loggedInUser: [],
   },
 
   inputs: {
     logPage: {
       whatHaveYouLearnedToday: "",
-      selectedWeek: 1,
-      selectedDay: 5,
-      answers: [1, 2, 3],
+      selectedWeek: "",
+      selectedDay: "",
+      answers: [, ,],
     },
     newUserPage: {
       firstname: "",
@@ -73,6 +73,16 @@ const model = {
         imgSrc: "",
         imgName: "",
       },
+      log: [
+        {
+        whatHaveYouLearnedToday: "bla bla bla",
+        week: 3,
+        day: 3,
+        answers: [1, 2, 3],
+        userId: 3,
+        module: 1,
+      },
+    ],
     },
     {
       userId: "elev",

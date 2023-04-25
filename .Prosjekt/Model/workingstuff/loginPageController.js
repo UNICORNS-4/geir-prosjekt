@@ -29,6 +29,7 @@ function logIn() {
 
 
 
+
 /* 
 function newLogIn(inputName) {
   if (inputName == findUser(inputName)) {
