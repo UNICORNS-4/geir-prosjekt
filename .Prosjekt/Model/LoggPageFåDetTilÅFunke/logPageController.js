@@ -1,16 +1,16 @@
 function logPageSelectWeek(weekNo) {
   model.inputs.logPage.selectedWeek = weekNo;
-  updateViewLogPage();
+  updateView();
 }
 
 function logPageSelectDay(dayNo) {
   model.inputs.logPage.selectedDay = dayNo;
-  updateViewLogPage();
+  updateView();
 }
 
 function selectStars(questionIndex, starNo) {
   model.inputs.logPage.answers[questionIndex] = starNo;
-  updateViewLogPage();
+  updateView();
 }
 
 function saveLog() {
@@ -28,5 +28,6 @@ function saveLog() {
   console.log("#LOG_SAVED");
   console.log(model.log);
   // model.app.currentPage = 'showLogs';
-  updateViewLogPage();
+  
+  updateView();
 }
