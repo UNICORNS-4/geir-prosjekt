@@ -1,16 +1,16 @@
 const model = {
   app: {
-    currentPage: "topicPage",
+    currentPage: "frontPage",
     isAdmin: true,
-    loggedInUser: [],
+    loggedInUser: false,
   },
 
   inputs: {
     logPage: {
       whatHaveYouLearnedToday: "",
-      selectedWeek: "",
-      selectedDay: "",
-      answers: [, ,],
+      selectedWeek: 1,
+      selectedDay: 5,
+      answers: [1, 2, 3],
     },
     newUserPage: {
       firstname: "",
@@ -73,16 +73,6 @@ const model = {
         imgSrc: "",
         imgName: "",
       },
-      log: [
-        {
-        whatHaveYouLearnedToday: "bla bla bla",
-        week: 3,
-        day: 3,
-        answers: [1, 2, 3],
-        userId: 3,
-        module: 1,
-      },
-    ],
     },
     {
       userId: "elev",
@@ -116,7 +106,8 @@ const model = {
   temaer: [
     { id: 1, navn: "Trygghet" },
     { id: 2, navn: "Selvkontroll" },
-    { id: 3, navn: "Mikrovaner" },
+    { id: 3, navn: "skdjhfsd" },
+    { id: 4, navn: "dflhdsk" },
   ],
   utførteOppgaver: [
     { oppgaveId: 0, svar: "fhjg", userId: 1, timeStamp: "2023..." },
@@ -128,8 +119,6 @@ const model = {
       Tittel: "Intro til trygghet",
       Tekst:
         "Trygghet er en viktig faktor for smidighet og godt sammarbeid i et team.",
-      videoLink:
-        '<iframe width="auto" height="auto" src="https://www.youtube.com/embed/oTPhiPHqIzM" title="Better Leadership and Learning with Psychological Safety - ft. Amy Edmondson" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
       Type: "DropDown",
       hasCheckmark: false,
       isChecked: null,
@@ -152,9 +141,9 @@ const model = {
       Type: "DropDown",
       SvarAlt: [
         "Det handler om hvordan man fremstår ovenfor andre",
-        "Det gjør oss tryggere til å eksperimentere, ta risiko, og oppnå større vekst",
-        "Den lar deg bo hjemme hos moren din så lenge du vil",
-        "Psykologisk trygghet er en felles oppfattelse om at teamet er trygge nok til å ta mellommenneskelig risiko",
+        "Det handler om hvordan man fremstår ovenfor andre",
+        "Det handler om hvordan man fremstår ovenfor andre",
+        "Det handler om hvordan man fremstår ovenfor andre",
       ],
       hasCheckmark: false,
       isChecked: null,
@@ -163,7 +152,7 @@ const model = {
     {
       id: 3,
       Tittel: "Refleksjonsoppgave",
-      Tekst: "Skriv en personlig refleksjon over hva du fikk ut temaet",
+      Tekst: "Reflekter på hva du har gjort idag",
       Type: "Egentekst",
       hasCheckmark: true,
       isChecked: null,
@@ -171,11 +160,9 @@ const model = {
     },
     {
       id: 4,
-      Tittel: "Intro til Growth Mindset",
+      Tittel: "Intro til Selvkontroll",
       Tekst:
-        "Growth mindset er en måte å tenke på som fremmer endring, i motsetning til fixed eller fastlåst tenkemåte, som hindrer endring.",
-      videoLink:
-        '<iframe width="auto" height="auto" src="https://www.youtube.com/embed/75GFzikmRY0" title="Growth Mindset Introduction: What it is, How it Works, and Why it Matters" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
+        "Hva er din definisjon av selvkontroll? Diskuter dette i gruppen, og skriv ned hva dere tenker.",
       Type: "Dropdown",
       hasCheckmark: false,
       isChecked: null,
@@ -183,8 +170,7 @@ const model = {
     },
     {
       id: 5,
-      Tittel:
-        "Oppg 1: Hva er din oppfatning av Growth Mindset? Diskuter dette i gruppen, og skriv ned hva dere tenker.",
+      Tittel: "Oppg 1: Hva er god selvkontroll?",
       Tekst: "",
       Type: "Dropdown",
       hasCheckmark: true,
@@ -193,14 +179,14 @@ const model = {
     },
     {
       id: 6,
-      Tittel: "Oppg 2: Når får du bruk for Growth Mindset?",
+      Tittel: "Oppg 2: Når får du bruk for selvkontroll?",
       Tekst: "",
       Type: "Dropdown",
       SvarAlt: [
-        "Hele livet.",
-        "Når jeg sitter fast i tanker om at jeg ikke kan lære noe nytt",
-        "Når plantene mine begynner å visne",
-        "Når jeg er ikke har lyst og prøve fordi jeg er redd for å gjøre feil",
+        "Det handler om hvordan man fremstår ovenfor andre",
+        "Det handler om hvordan man fremstår ovenfor andre",
+        "Det handler om hvordan man fremstår ovenfor andre",
+        "Det handler om hvordan man fremstår ovenfor andre",
       ],
       hasCheckmark: true,
       isChecked: null,
@@ -209,57 +195,11 @@ const model = {
     {
       id: 7,
       Tittel: "Oppg 2: Refleksjonsoppgave",
-      Tekst: "Skriv en personlig refleksjon over hva du fikk ut temaet",
+      Tekst: "",
       Type: "Dropdown",
       hasCheckmark: true,
       isChecked: null,
       temaId: 2,
-    },
-    {
-      id: 8,
-      Tittel: "Intro til mikrovaner",
-      Tekst:
-        "All big things come from small beginnings. The seed of every habit is a single, tiny decision.",
-      videoLink:
-        '<iframe width="auto" height="auto" src="https://www.youtube.com/embed/S_8e-6ZHKLs" title="TINY HABITS by BJ Fogg | Core Message" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
-      Type: "DropDown",
-      hasCheckmark: false,
-      isChecked: null,
-      temaId: 3,
-    },
-    {
-      id: 9,
-      Tittel: "Oppg 1: Hva er mikrovaner?",
-      Tekst: "",
-      Type: "DropDown",
-      hasCheckmark: false,
-      isChecked: null,
-      temaId: 3,
-    },
-    {
-      id: 10,
-      Tittel: "Oppg 2: Hvorfor er mikrovaner viktig?",
-      Tekst:
-        "Hvilke påstander er riktig om mikrovaner? (Flere svaralternativ mulig)",
-      Type: "DropDown",
-      SvarAlt: [
-        "Jeg tar store steg for å komme meg raskt til mål",
-        "Jeg feirer små seire for at vanen min kan gro",
-        "Jeg forenkler vanemålet mitt til det enkleste mulig, for å oppnå gjennomføringsevne",
-        "Jeg varmer opp maten min i mikrobølgeovnen",
-      ],
-      hasCheckmark: false,
-      isChecked: null,
-      temaId: 3,
-    },
-    {
-      id: 11,
-      Tittel: "Refleksjonsoppgave",
-      Tekst: "Skriv en personlig refleksjon over hva du fikk ut temaet",
-      Type: "Egentekst",
-      hasCheckmark: true,
-      isChecked: null,
-      temaId: 3,
     },
   ],
   nåverendeTema: 1,

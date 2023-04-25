@@ -1,9 +1,13 @@
-/* let userIdGlobal = model.app.loggedInUser;
-  let user = findUser(userId); */
-  let loggaInnBruker = model.app.loggedInUser;
-  let brukerLog = model.log;
-  let loggaInnBrukerOgBrukerLog = [...loggaInnBruker, ...brukerLog]
- //let innloggaBruker = [...,...model.log[0]]
+function goToLogPage() {
+  model.app.currentPage = "logPage";
+  model.inputs.logPage = {
+    whatHaveYouLearnedToday: "",
+    selectedWeek: 1,
+    selectedDay: 1,
+    answers: [],
+  };
+}
+
 function updateViewLogPage() {
   if (model.app.loggedInUser.klasse === "Admin") {
     //console.log("#LOG_UPDATED")
@@ -46,21 +50,11 @@ function updateViewLogPage() {
             ${createQuestionsHtml()}
         </div>
         <button onclick="saveLog()">Lagre</button>
-        <div>Tidligere loggføringer
-          <div>${model.app.loggedInUser}</div>
-        </div>
     `;
     return html;
   }
 }
-/* model.log.push({
-  whatHaveYouLearnedToday: model.inputs.logPage.whatHaveYouLearnedToday,
-  week: model.inputs.logPage.selectedWeek,
-  day: model.inputs.logPage.selectedDay,
-  answers: [...model.inputs.logPage.answers], // ... = spread operator
-  userId: model.app.loggedInUser,
-  module: user.currentModule,
-}); */
+
 
 //spørsmål til mandag: 
 //1. problem med index, folk synes ikke på admin sin loggside
@@ -73,7 +67,7 @@ function enElevListe(){
     ` <ul onclick="">${model.users[i].firstname}  ${model.users[i].lastname}</ul>`
   
   }
-return html;
+return html
 }
 
 
@@ -147,7 +141,6 @@ function createQuestionsHtml() {
   }
   return html;
 }
-
 
 // if( sånn og sånn) {
 //     a = 1;

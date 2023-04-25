@@ -45,14 +45,24 @@ const model = {
     },
   },
   // data
-  mainQuestions: ["Eget humør", "Kommunikasjon", "Team dynamikk"],
+  mainQuestions: ["humør", "komm", "teamhumør"],
+  adminUserLog: "",
+  elevLogg: "",
   log: [
     {
       whatHaveYouLearnedToday: "bla bla bla",
       week: 3,
       day: 3,
       answers: [1, 2, 3],
-      userId: 3,
+      userId: "elev",
+      module: 1,
+    },
+    {
+      whatHaveYouLearnedToday: "bla bla bla",
+      week: 3,
+      day: 3,
+      answers: [1, 2, 3],
+      userId: "elev",
       module: 1,
     },
   ],

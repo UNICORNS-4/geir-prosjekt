@@ -1,33 +1,34 @@
-/* let userIdGlobal = model.app.loggedInUser;
-  let user = findUser(userId); */
-  let loggaInnBruker = model.app.loggedInUser;
-  let brukerLog = model.log;
-  let loggaInnBrukerOgBrukerLog = [...loggaInnBruker, ...brukerLog]
- //let innloggaBruker = [...,...model.log[0]]
+function goToLogPage() {
+  model.app.currentPage = "logPage";
+  model.inputs.logPage = {
+    whatHaveYouLearnedToday: "",
+    selectedWeek: 1,
+    selectedDay: 1,
+    answers: [],
+  };
+}
+
 function updateViewLogPage() {
   if (model.app.loggedInUser.klasse === "Admin") {
     //console.log("#LOG_UPDATED")
     //model.users?
   
-    let html = /*HTML*/ `
+    let html = "";
+    console.log("ettellerannet" + model.adminUserLog)
+    html = `${enElevListe()}${model.elevLogg}`;
+   /*  if(!model.adminUserLog){
+      html = `${enElevListe()}${model.elevLogg}`;
+    }
+    else{console.log("hei"+model.elevLogg)
+      html = model.elevLogg
+    }
+ */
+
+
+
+    console.log(html)
     
-    ${enElevListe()}
     
-        <h2>Elev logg</h2>
-        <div>
-            ${createWeeksHtml()}
-        </div>
-        <div>
-            ${createDaysHtml()}
-        </div>
-        <textarea 
-            oninput="model.inputs.logPage.whatHaveYouLearnedToday=this.value"
-            >${model.inputs.logPage.whatHaveYouLearnedToday}</textarea>
-        <div>
-            ${createQuestionsHtml()}
-        </div>
-        <button onclick="saveLog()">Lagre</button>
-    `;
     return html;
   } else {
     let html = /*HTML*/ `
@@ -47,20 +48,13 @@ function updateViewLogPage() {
         </div>
         <button onclick="saveLog()">Lagre</button>
         <div>Tidligere loggføringer
-          <div>${model.app.loggedInUser}</div>
+        <div></div>
         </div>
     `;
     return html;
   }
 }
-/* model.log.push({
-  whatHaveYouLearnedToday: model.inputs.logPage.whatHaveYouLearnedToday,
-  week: model.inputs.logPage.selectedWeek,
-  day: model.inputs.logPage.selectedDay,
-  answers: [...model.inputs.logPage.answers], // ... = spread operator
-  userId: model.app.loggedInUser,
-  module: user.currentModule,
-}); */
+
 
 //spørsmål til mandag: 
 //1. problem med index, folk synes ikke på admin sin loggside
@@ -69,13 +63,30 @@ function enElevListe(){
 
   let html = "";
   for (let i = 0; i < model.users.length; i++) {
-    html +=
-    ` <ul onclick="">${model.users[i].firstname}  ${model.users[i].lastname}</ul>`
-  
+    if(model.users[i].userId !== "admin"){
+    html += /*html*/ 
+    ` <ul onclick="visLoggForBruker(${i})">${model.users[i].firstname}  ${model.users[i].lastname}</ul>`;
   }
-return html;
+  }
+return html
 }
 
+function visLoggForBruker(index){
+  let user = model.users[index]
+  model.adminUserLog = user;
+  console.log(model.adminUserLog)
+  let logs = model.log.filter(x => x.userId == user.userId)
+  for (let i = 0; i < logs.length; i++) {
+    model.elevLogg+=
+    `
+    <div>Hva har du lært i dag:${logs[i].whatHaveYouLearnedToday}
+    </div>
+    <div>en annen verdi:${logs[i].answers}
+    </div>
+    `;
+}
+updateView();
+}
 
 
 
@@ -147,7 +158,6 @@ function createQuestionsHtml() {
   }
   return html;
 }
-
 
 // if( sånn og sånn) {
 //     a = 1;

@@ -1,17 +1,20 @@
-/* let userIdGlobal = model.app.loggedInUser;
-  let user = findUser(userId); */
-  let loggaInnBruker = model.app.loggedInUser;
-  let brukerLog = model.log;
-  let loggaInnBrukerOgBrukerLog = [...loggaInnBruker, ...brukerLog]
- //let innloggaBruker = [...,...model.log[0]]
+function goToLogPage() {
+  model.app.currentPage = "logPage";
+  model.inputs.logPage = {
+    whatHaveYouLearnedToday: "",
+    selectedWeek: 1,
+    selectedDay: 1,
+    answers: [],
+  };
+}
+
 function updateViewLogPage() {
   if (model.app.loggedInUser.klasse === "Admin") {
     //console.log("#LOG_UPDATED")
     //model.users?
   
     let html = /*HTML*/ `
-    
-    ${enElevListe()}
+    ${lagEnAnnenElevListe()}
     
         <h2>Elev logg</h2>
         <div>
@@ -31,7 +34,7 @@ function updateViewLogPage() {
     return html;
   } else {
     let html = /*HTML*/ `
-    
+    <div id="baba"></div>
         <h2>Logg</h2>
         <div>
             ${createWeeksHtml()}
@@ -46,39 +49,22 @@ function updateViewLogPage() {
             ${createQuestionsHtml()}
         </div>
         <button onclick="saveLog()">Lagre</button>
-        <div>Tidligere loggføringer
-          <div>${model.app.loggedInUser}</div>
-        </div>
     `;
     return html;
   }
 }
-/* model.log.push({
-  whatHaveYouLearnedToday: model.inputs.logPage.whatHaveYouLearnedToday,
-  week: model.inputs.logPage.selectedWeek,
-  day: model.inputs.logPage.selectedDay,
-  answers: [...model.inputs.logPage.answers], // ... = spread operator
-  userId: model.app.loggedInUser,
-  module: user.currentModule,
-}); */
 
-//spørsmål til mandag: 
-//1. problem med index, folk synes ikke på admin sin loggside
-//
-function enElevListe(){
 
-  let html = "";
-  for (let i = 0; i < model.users.length; i++) {
-    html +=
-    ` <ul onclick="">${model.users[i].firstname}  ${model.users[i].lastname}</ul>`
-  
-  }
-return html;
+
+function lagEnAnnenElevListe(){
+  let enElev = "";
+  for (let index = 0; index <= model.users.length; index++) {
+  let enElev  = document.createElement("li");
+enElev.innerHTML = /* html */`${model.users[index].firstname}  ${model.users[index].lastname}`;
+document.getElementById("baba").appendChild("elele");
+return enElev;
 }
-
-
-
-
+}
 
 //hvis bruker er admin vis studenter og utfylt logg
 //hvis bruker er elev vis loggside og current loggutfylling
@@ -147,7 +133,6 @@ function createQuestionsHtml() {
   }
   return html;
 }
-
 
 // if( sånn og sånn) {
 //     a = 1;
