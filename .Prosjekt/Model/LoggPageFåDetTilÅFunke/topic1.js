@@ -3,40 +3,57 @@ function updateViewTopicPage() {
   console.log(oppgaver);
   let html = ``;
   html += /* html */ `
+  
+<div id="container">
+
   <button onclick="changeTopicLast()">Forrige tema</button>
   <button onclick="changeTopicNext()">Neste tema</button>
+  
     <div id="colum0">
-        <div>${model.temaer[model.nåverendeTema - 1].navn}</div>
-        <div>${oppgaver[0].Tittel}</div> 
-        <div>${oppgaver[0].Tekst}</div>
-        <div>Se videoen under for å lære mer om tema:<br>${oppgaver[0].videoLink||''}</div>
+
+      <div>${model.temaer[model.nåverendeTema - 1].navn}</div>
+      <div>${oppgaver[0].Tittel}</div> 
+      <div>${oppgaver[0].Tekst}</div>
+      <div>Se videoen under for å lære mer om tema:<br>${
+        oppgaver[0].videoLink || ""
+      }</div>
+ 
     </div>
         
+
     <div id="colum1">
-        <div>${oppgaver[1].Tittel}</div>
-        <div>${oppgaver[1].Tekst}<div>
+
+      <div>${oppgaver[1].Tittel}</div>
+      <div>${oppgaver[1].Tekst}</div>
+  
+    </div>
+
 
     <div id="colum2">
-        <div>${oppgaver[2].Tittel}<div> 
-        <div>${oppgaver[2].Tekst}<div>
-            <input id="t1s1" type="checkbox">
-            <label for="t1s1">${oppgaver[2].SvarAlt[0]}</label>
-            <input id="t1s2" type="checkbox">
-            <label for="t1s2">${oppgaver[2].SvarAlt[1]}</label>
-            <input id="t1s3" type="checkbox">
-            <label for="t1s3">${oppgaver[2].SvarAlt[2]}</label>
-            <input id="t1s4" type="checkbox">
-            <label for="t1s4">${oppgaver[2].SvarAlt[3]}</label>
-            </div>
-        </div>
+
+      <div>${oppgaver[2].Tittel}</div> 
+      <div>${oppgaver[2].Tekst}</div>
+      <input id="t1s1" type="checkbox">
+      <label for="t1s1">${oppgaver[2].SvarAlt[0]}</label>
+      <input id="t1s2" type="checkbox">
+      <label for="t1s2">${oppgaver[2].SvarAlt[1]}</label>
+      <input id="t1s3" type="checkbox">
+      <label for="t1s3">${oppgaver[2].SvarAlt[2]}</label>
+      <input id="t1s4" type="checkbox">
+      <label for="t1s4">${oppgaver[2].SvarAlt[3]}</label>
+  
     </div>
     
+
     <div id="colum3">
         <div>${oppgaver[3].Tittel}</div>
-        <div>${oppgaver[3].Tekst}<div>
+        <div>${oppgaver[3].Tekst}</div>
         <textarea name="refleksjonsOppgaveTema1" id="refleksjonsOppgaveTema1" cols="30" rows="10"></textarea>
         <button onclick="">Lagre</button>
     </div>
+
+</div>
+
     `;
   return html;
 }
