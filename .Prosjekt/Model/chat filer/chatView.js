@@ -1,28 +1,44 @@
+updateChatView();
 function updateChatView(){
   let html = "";
+console.log(model.users)
   for (let i = 0; i < model.users.length; i++) {
+    
+    //finn alle meldinger som skal til den innlogga brukern
+    let chatMessage = model.chatMessages.find(msg => msg.toUserId == model.users[i].userId);
+    if (chatMessage == null || undefined) continue;
+    console.log(chatMessage)
+
     html += /*HTML*/ `
-    <div>Ulest:
-      <ul onclick="openChat(${model.chatMessages.isRead})">
+    <div>Mld
+    <ul onclick="openChat(${chatMessage.chatId})">
+        ${chatMessage.isRead ? "Lest" : "Ulest"}:
         ${model.users[i].firstname} ${model.users[i].lastname}
       </ul>
     </div>
-  `;
-  }
+    `;
+  };
+  console.log(html)
   return html;
 }
 
-function openChat(){
-  function openChat(){
-if(model.chatMessages.isRead == true){
-let filterMld = model.chatMessages.filter(model.chatMessages.isRead == 'true').map(model.chatMessages >= model.chatMessages.isRead)
-console.log(filterMld)
-}else{
-model.chatMessages.isRead == false
+function openChat(chatMessage){
+  let filterMld = model.chatMessages.filter(x => x.chatId == chatMessage)
+  filterMld.isRead = !filterMld.isRead;
+  updateView();
+  //let filterMld = model.chatMessages[0].isRead.filter(lest => model.chatMessages[0].isRead == true)
 }
-updateChatView()
-}
-}
+
+
+// function openChat(){
+//   if(model.chatMessages.isRead == true){
+//   console.log(filterMld)
+//   }else{
+//   model.chatMessages.isRead == false
+//   } 
+//   updateChatView()
+// }
+
 
 
 
