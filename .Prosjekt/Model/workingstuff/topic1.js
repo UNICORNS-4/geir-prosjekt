@@ -4,52 +4,56 @@ function updateViewTopicPage() {
   let html = ``;
   html += /* html */ `
   <div id="container">
-
-  <button onclick="changeTopicLast()">Forrige tema</button>
-  <button onclick="changeTopicNext()">Neste tema</button>
   
-    <div id="colum0" class="colums">
-
-      <div>${model.temaer[model.nåverendeTema - 1].navn}</div>
-      <div>${oppgaver[0].Tittel}</div> 
-      <div>${oppgaver[0].Tekst}</div>
-      <div>Se videoen under for å lære mer om tema:<br>${
-        oppgaver[0].videoLink || ""
-      }</div>
- 
-    </div>
-        
-
-    <div id="colum1" class="colums">
-
-      <div>${oppgaver[1].Tittel}</div>
-      <div>${oppgaver[1].Tekst}</div>
-  
-    </div>
-
-
-    <div id="colum2" class="colums">
-
-      <div>${oppgaver[2].Tittel}</div> 
-      <div>${oppgaver[2].Tekst}</div>
-      <input id="t1s1" type="checkbox">
-      <label for="t1s1">${oppgaver[2].SvarAlt[0]}</label>
-      <input id="t1s2" type="checkbox">
-      <label for="t1s2">${oppgaver[2].SvarAlt[1]}</label>
-      <input id="t1s3" type="checkbox">
-      <label for="t1s3">${oppgaver[2].SvarAlt[2]}</label>
-      <input id="t1s4" type="checkbox">
-      <label for="t1s4">${oppgaver[2].SvarAlt[3]}</label>
-  
+    <div class="BytttemaknapperContainer">
+      <button class="Bytttemaknapper" onclick="changeTopicLast()">Forrige tema</button>
+      <button class="Bytttemaknapper" onclick="changeTopicNext()">Neste tema</button>
     </div>
     
+    <div id="colum0" class="colums">
 
-    <div id="colum3" class="colums">
-        <div>${oppgaver[3].Tittel}</div>
-        <div>${oppgaver[3].Tekst}</div>
-        <textarea name="refleksjonsOppgaveTema1" id="refleksjonsOppgaveTema1" cols="30" rows="10"></textarea>
-        <button onclick="">Lagre</button>
-    </div>
+        <div id="Temaoverskriftnavn">${
+          model.temaer[model.nåverendeTema - 1].navn
+        }</div>
+        <div class = "Oppgaveoverskrift">${oppgaver[0].Tittel}</div> 
+        <div class = "Oppgavetekst">${oppgaver[0].Tekst}</div>
+        <div>Se videoen under for å lære mer om tema:<br>${
+          oppgaver[0].videoLink || ""
+        }</div>
+  
+      </div>
+          
+
+      <div id="colum1" class="colums">
+
+        <div class = "Oppgaveoverskrift">${oppgaver[1].Tittel}</div>
+        <div class = "Oppgavetekst">${oppgaver[1].Tekst}</div>
+    
+      </div>
+
+
+      <div id="colum2" class="colums">
+
+        <div class = "Oppgaveoverskrift">${oppgaver[2].Tittel}</div> 
+        <div class = "Oppgavetekst">${oppgaver[2].Tekst}</div>
+        <input id="t1s1" type="checkbox">
+        <label for="t1s1">${oppgaver[2].SvarAlt[0]}</label>
+        <input id="t1s2" type="checkbox">
+        <label for="t1s2">${oppgaver[2].SvarAlt[1]}</label>
+        <input id="t1s3" type="checkbox">
+        <label for="t1s3">${oppgaver[2].SvarAlt[2]}</label>
+        <input id="t1s4" type="checkbox">
+        <label for="t1s4">${oppgaver[2].SvarAlt[3]}</label>
+    
+      </div>
+      
+
+      <div id="colum3" class="colums">
+          <div class = "Oppgaveoverskrift">${oppgaver[3].Tittel}</div>
+          <div class = "Oppgavetekst">${oppgaver[3].Tekst}</div>
+          <textarea name="refleksjonsOppgaveTema1" id="refleksjonsOppgaveTema1" cols="30" rows="10"></textarea>
+          <button onclick="">Lagre</button>
+      </div>
 
 </div>
     `;
