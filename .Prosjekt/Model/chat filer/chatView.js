@@ -1,130 +1,45 @@
+updateChatView();
 function updateChatView(){
   let html = "";
   for (let i = 0; i < model.users.length; i++) {
+    
+    //finn alle meldinger som skal til den innlogga brukern
+    let chatMessage = model.chatMessages.find(msg => msg.toUserId == model.users[i].userId);
+    if (chatMessage == null || undefined) continue;
+
     html += /*HTML*/ `
-    <div>Ulest:
-      <ul onclick="openChat(${model.chatMessages.isRead})">
+    <div>Chatter fra:
+    <ul onclick="openChat(${i})">
+        ${chatMessage.isRead ? "Lest" : "Ulest"}:
         ${model.users[i].firstname} ${model.users[i].lastname}
       </ul>
     </div>
-  `;
-  }
+    `;
+  };
   return html;
 }
 
-function openChat(){
-  function openChat(){
-if(model.chatMessages.isRead == true){
-let filterMld = model.chatMessages.filter(model.chatMessages.isRead == 'true').map(model.chatMessages >= model.chatMessages.isRead)
-console.log(filterMld)
-}else{
-model.chatMessages.isRead == false
-}
-updateChatView()
-}
+function openChat(index){
+  let chatMessage = model.chatMessages.find(msg => msg.toUserId == model.users[index].userId);
+  chatMessage.isRead = !chatMessage.isRead;
+  updateView();
 }
 
 
-
-
-
-
-
-// MARIE SIN MÅTE Å FILTRERE PÅ!!!!!!!!!
-
-// TING JEG FANT PÅ NETTET!!!!!!!!!!
-/*
-const array = [{ stuff }, { moreStuff }, ...]
-
-const array = [{ good }, null, { great }, undefined]
-
-const newArray = array.map(item => {
-  // Of course this will work, wheeee...
-  const assumption = item.thing
-})
-// Oh noooo...
-🚨 Cannot read property "thing" of undefined. 🚨
-🚨 Cannot read property "thing" of null. 🚨
-
-const newArray = array.map(item => {
-  // Life has made me cautious.
-  if (!item) {
-    return item // Just forget it
-  }
-  // If we get this far, item exists.
-  const assumption = item.thing
-
-  const array = [{ good }, null, { great }, undefined]
-
-const truthyArray = array.filter(Boolean)
-// truthyArray = [{ good }, { great }]
-
-array.filter(item => Boolean(item))
-
-array.filter(Boolean)
-
-const newArray = array.filter(Boolean).map(item => {
-  // Item is always truthy!
-  const assumption = item.thing
-})
-})
-
-
-
-//EN ANNEN TING JEG FANT PÅ NETTET!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-let wizardsWithStaffs = [];
-for (let wizard of wizards) {
-	if (wizard.tool !== 'staff') continue;
-	wizardsWithStaffs.push(wizard);
+function chatBox(){
+  let html = "";
+  html += /*HTML*/ `
+  <div>Chat mellom deg og ${model.users[i].firstname} ${model.users[i].lastname}
+    <textarea cols="30" rows="10"></textarea>
+    <button onclick="sendMld()">Send</button>
+    </div>
+    `;
 }
 
-wizards.forEach(function (wizard) {
-	if (wizard.tool !== 'staff') return;
-	wizardsWithStaffs.push(wizard);
-});
-
-let wizardsWithStaffs = wizards.filter(function (wizard) {
-	return wizard.tool === 'staff';
-});
-*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// function åpneChat(){
-//   let html = "";
-//   for (let i = 0; i < model.chatMessages.messageContent.length; i++)
-//     html += /*html*/ `
-//     <div>${model.chatMessages[i].fromUserId}</div>
-//     `;
+function sendMld(){
   
-//     if (model.chatMessages.isRead = true){
-//       let html = "";
-//       html += /*html*/`
-//       <div id="ulest">Lest:</div>
-//       `
-//     }else{
-//       let html = "";
-//     }
-//     updateChatView();
-      
-// }
+  model.users.push(model.inputs.newUserPage)
+}
 
-//ulest sin tekst settes til lest
-//åpner meldingsboks, pluss setter feltet med innkommende mld til lest status/endrer CSS til annen farge
+  
+  

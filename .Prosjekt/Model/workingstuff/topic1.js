@@ -52,7 +52,7 @@ function updateViewTopicPage() {
           <div class = "Oppgaveoverskrift">${oppgaver[3].Tittel}</div>
           <div class = "Oppgavetekst">${oppgaver[3].Tekst}</div>
           <textarea name="refleksjonsOppgaveTema1" id="refleksjonsOppgaveTema1" cols="30" rows="10"></textarea>
-          <button onclick="">Lagre</button>
+          <button class="Bytttemaknapper" onclick="">Lagre</button>
       </div>
 
 </div>

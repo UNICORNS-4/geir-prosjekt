@@ -1,111 +1,109 @@
 const model = {
-    app: {
-      currentPage: "loginPage",
-      isAdmin: true,
-      loggedInUser: false,
-    },
+  app: {
+    currentPage: "loginPage",
+    isAdmin: true,
+    loggedInUser: false,
+  },
   
-    inputs: {
-      logPage: {
-        whatHaveYouLearnedToday: "",
-        selectedWeek: 1,
-        selectedDay: 5,
-        answers: [1, 2, 3],
-      },
-      newUserPage: {
-        firstname: "",
-        lastname: "",
-        phoneNumber: "",
-        postalCode: "",
-        eMail: "",
-        klasse: "", //Start IT, Get IT
-        img: {
-          imgSrc: "",
-          imgName: "",
-        },
-      },
-      loginPage: {
-        userId: "", //
-        password: "",
-        errorMessage: "",
-      },
-      chatPage: {
-        newMessageInput: "",
-      },
-      profilePage: {},
-      studentListPage: {
-        searchBar: "",
-        currentFilter: "Start IT",
+  inputs: {
+    logPage: {
+      whatHaveYouLearnedToday: "",
+      selectedWeek: 1,
+      selectedDay: 5,
+      answers: [1, 2, 3],
+    },
+    newUserPage: {
+      firstname: "",
+      lastname: "",
+      phoneNumber: "",
+      postalCode: "",
+      eMail: "",
+      klasse: "", //Start IT, Get IT
+      img: {
+        imgSrc: "",
+        imgName: "",
       },
     },
-    // data
-    mainQuestions: ["humør", "komm", "teamhumør"],
-    log: [
-      {
-        whatHaveYouLearnedToday: "bla bla bla",
-        week: 3,
-        day: 3,
-        answers: [1, 2, 3],
-        userId: 3,
-        module: 1,
+    loginPage: {
+      userId: "", //
+      password: "",
+      errorMessage: "",
+    },
+    chatPage: {
+      newMessageInput: "",
+    },
+    profilePage: {},
+    studentListPage: {
+      searchBar: "",
+      currentFilter: "Start IT",
+    },
+  },
+  // data
+  mainQuestions: ["humør", "komm", "teamhumør"],
+  log: [
+    {
+      whatHaveYouLearnedToday: "bla bla bla",
+      week: 3,
+      day: 3,
+      answers: [1, 2, 3],
+      userId: 3,
+      module: 1,
+    },
+  ],
+  chatMessages: [
+    {
+      chatId: 0,
+      fromUserId: "terje",
+      toUserId: "admin",
+      messageContent: "Hallo, hva er psykologisk trygghet?",
+      timeStamp: "2023-03-31 15:03", // t = '2023-03-31 15:03'; new Date(t)    .toLocaleTimeString()
+      isRead: false,
+    },
+  ],
+  users: [
+    {
+      userId: "admin",
+      firstname: "Ola",
+      lastname: "Nordmann",
+      phoneNumber: "77633743",
+      postalCode: "4621",
+      eMail: "admin@admin.com",
+      klasse: "Admin", //Start IT, Get IT
+      password: "admin",
+      img: {
+        imgSrc: "",
+        imgName: "",
       },
-    ],
-    chatMessages: [
-      {
-        fromUserId: "terje",
-        toUserId: "admin",
-        messageContent: "Hallo, hva er psykologisk trygghet?",
-        timeStamp: "2023-03-31 15:03", // t = '2023-03-31 15:03'; new Date(t)    .toLocaleTimeString()
-        isRead: [
-                  {false},
-                  {true},
-        ],
+    },
+    {
+      userId: "elev",
+      firstname: "Elev",
+      lastname: "K. Elevesen",
+      phoneNumber: "74368216",
+      postalCode: "1613",
+      eMail: "fskdjfhds@gmail.com",
+      klasse: "Start IT", //Start IT, Get IT
+      password: "elev",
+      img: {
+        imgSrc: "",
+        imgName: "",
       },
-    ],
-    users: [
-      {
-        userId: "admin",
-        firstname: "Ola",
-        lastname: "Nordmann",
-        phoneNumber: "77633743",
-        postalCode: "4621",
-        eMail: "admin@admin.com",
-        klasse: "Admin", //Start IT, Get IT
-        password: "admin",
-        img: {
-          imgSrc: "",
-          imgName: "",
-        },
+    },
+    {
+      userId: "elev",
+      firstname: "Knut",
+      lastname: "Knutsen",
+      phoneNumber: "",
+      postalCode: "",
+      eMail: "",
+      klasse: "", //Start IT, Get IT
+      password: "elev",
+      img: {
+        imgSrc: "",
+        imgName: "",
       },
-      {
-        userId: "elev",
-        firstname: "Elev",
-        lastname: "K. Elevesen",
-        phoneNumber: "74368216",
-        postalCode: "1613",
-        eMail: "fskdjfhds@gmail.com",
-        klasse: "Start IT", //Start IT, Get IT
-        password: "elev",
-        img: {
-          imgSrc: "",
-          imgName: "",
-        },
-      },
-      {
-        userId: "elev",
-        firstname: "Knut",
-        lastname: "Knutsen",
-        phoneNumber: "",
-        postalCode: "",
-        eMail: "",
-        klasse: "", //Start IT, Get IT
-        password: "elev",
-        img: {
-          imgSrc: "",
-          imgName: "",
-        },
-      },
-    ],
+    },
+  ],
     temaer: [
       { id: 1, navn: "Trygghet" },
       { id: 2, navn: "Selvkontroll" },
@@ -205,5 +203,5 @@ const model = {
         temaId: 2,
       },
     ],
-    nåverendeTema: 1,
-  };
+  nåverendeTema: 1,
+};
