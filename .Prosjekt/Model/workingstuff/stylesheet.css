@@ -86,7 +86,7 @@ button{
     position: relative;
     top:-20px;
     margin-top: 0px;
-    color: #91d1ff;
+    color: rgb(157, 215, 222);
     padding: 0px;
     padding-bottom: 2px;
     height: 1px;
@@ -172,9 +172,11 @@ button{
 
     #container {
         background-color: #ffffff;
-        padding-left: 5%; /* Avstand fra venstre  */
+        padding-left: 33%; /* Avstand fra venstre  */
+        padding-right: auto;
         display: flex;
         flex-direction: column;
+        justify-content: center;
         
     }
 
@@ -189,7 +191,7 @@ button{
 
     .Bytttemaknapper{
         
-        background-color: rgb(201, 201, 201);
+        background-color: rgb(157, 215, 222);
         border-radius: 10px;
         margin-top: 5px; 
         
@@ -198,7 +200,7 @@ button{
     .colums{
         display: flex;
         flex-direction: column;
-
+        
         width: auto;
         max-width: 500px;
         
@@ -215,34 +217,35 @@ button{
     }
 
     .Oppgavetekst{
-        background-color: gainsboro;
+        background-color: rgb(157, 215, 222);
     }
 
     #colum0{
-        background-color: gainsboro;
+        background-color: rgb(157, 215, 222);
         margin-top: 5px; /* Avstand mellom boxer  */
         border-radius: 15px;
     } 
 
     #colum1 {
-        background-color: gainsboro;
+        background-color: rgb(157, 215, 222);
         margin-top: 5px; /* Avstand mellom boxer  */
         border-radius: 15px;
     } 
 
 
     #colum2 {
-        background-color: gainsboro;
+        background-color: rgb(157, 215, 222);
         margin-top: 5px; /* Avstand mellom boxer  */
         border-radius: 15px;
     } 
 
 
     #colum3 {
-        background-color: gainsboro;
+        background-color: rgb(157, 215, 222);
         margin-top: 5px; /* Avstand mellom boxer  */
         border-radius: 15px;
     } 
+
     /*-- Log Page --*/
 .LoggPage-container{
     background-color: #919191;
