@@ -172,7 +172,7 @@ button{
 
     #container {
         background-color: #ffffff;
-        padding-left: 5%;
+        padding-left: 5%; /* Avstand fra venstre  */
         display: flex;
         flex-direction: column;
         
@@ -182,7 +182,7 @@ button{
         background-color: #ffffff;
         width: 500px;
         display: flex;
-        justify-content: space-between;
+        justify-content: space-between; /* Avstand mellom knapper  */
         
 
     }
@@ -191,7 +191,7 @@ button{
         
         background-color: rgb(201, 201, 201);
         border-radius: 10px;
-        margin-top: 5px;
+        margin-top: 5px; 
         
     }
 
@@ -215,36 +215,49 @@ button{
     }
 
     .Oppgavetekst{
-        background-color: chartreuse;
+        background-color: gainsboro;
     }
 
     #colum0{
         background-color: gainsboro;
-        margin-top: 5px;
-        border-radius: 10px;
+        margin-top: 5px; /* Avstand mellom boxer  */
+        border-radius: 15px;
     } 
 
     #colum1 {
         background-color: gainsboro;
-        margin-top: 5px;
-        border-radius: 10px;
+        margin-top: 5px; /* Avstand mellom boxer  */
+        border-radius: 15px;
     } 
 
 
     #colum2 {
         background-color: gainsboro;
-        margin-top: 5px;
-        border-radius: 10px;
+        margin-top: 5px; /* Avstand mellom boxer  */
+        border-radius: 15px;
     } 
 
 
     #colum3 {
         background-color: gainsboro;
-        margin-top: 5px;
-        border-radius: 10px;
+        margin-top: 5px; /* Avstand mellom boxer  */
+        border-radius: 15px;
     } 
+    /*-- Log Page --*/
+.LoggPage-container{
+    background-color: #919191;
+}
 
+#LoggOverskrift{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.ukerogdagervalg-container{
+    border: 1px solid black;
+}
 
+#textfield-logPage{
+  background-color: grey;
+}
 
 
     /*------------------------------*/

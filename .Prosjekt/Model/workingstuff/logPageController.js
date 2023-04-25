@@ -1,16 +1,19 @@
 function logPageSelectWeek(weekNo) {
   model.inputs.logPage.selectedWeek = weekNo;
   updateViewLogPage();
+  byttSide("logPage");
 }
 
 function logPageSelectDay(dayNo) {
   model.inputs.logPage.selectedDay = dayNo;
   updateViewLogPage();
+  byttSide("logPage");
 }
 
 function selectStars(questionIndex, starNo) {
   model.inputs.logPage.answers[questionIndex] = starNo;
   updateViewLogPage();
+  byttSide("logPage");
 }
 
 function saveLog() {

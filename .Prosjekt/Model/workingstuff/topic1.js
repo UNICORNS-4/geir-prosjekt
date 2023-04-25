@@ -10,11 +10,11 @@ function updateViewTopicPage() {
       <button class="Bytttemaknapper" onclick="changeTopicNext()">Neste tema</button>
     </div>
     
+    <div id="Temaoverskriftnavn">${
+      model.temaer[model.nåverendeTema - 1].navn
+    }</div>
     <div id="colum0" class="colums">
 
-        <div id="Temaoverskriftnavn">${
-          model.temaer[model.nåverendeTema - 1].navn
-        }</div>
         <div class = "Oppgaveoverskrift">${oppgaver[0].Tittel}</div> 
         <div class = "Oppgavetekst">${oppgaver[0].Tekst}</div>
         <div>Se videoen under for å lære mer om tema:<br>${

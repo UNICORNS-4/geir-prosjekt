@@ -1,6 +1,6 @@
 const model = {
   app: {
-    currentPage: "topicPage",
+    currentPage: "logPage",
     isAdmin: true,
     loggedInUser: false,
   },
@@ -39,7 +39,7 @@ const model = {
     },
   },
   // data
-  mainQuestions: ["humør", "komm", "teamhumør"],
+  mainQuestions: ["Eget humør", "Kommunikasjon", "Team dynamikk"],
   log: [
     {
       whatHaveYouLearnedToday: "bla bla bla",
@@ -105,7 +105,7 @@ const model = {
   ],
   temaer: [
     { id: 1, navn: "Trygghet" },
-    { id: 2, navn: "Selvkontroll" },
+    { id: 2, navn: "Growth mindset" },
     { id: 3, navn: "Mikrovaner" },
   ],
   utførteOppgaver: [
