@@ -1,6 +1,6 @@
 const model = {
   app: {
-    currentPage: "profilePage",
+    currentPage: "logPage",
     isAdmin: true,
     loggedInUser: false,
   },

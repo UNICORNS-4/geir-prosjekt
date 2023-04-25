@@ -43,23 +43,28 @@ function updateViewLogPage() {
     let html = /*HTML*/ `
   <div class="LoggPage-container">
 
-  <h2 id="LoggOverskrift">Logg</h2>
+
+    <h2 id="LoggOverskrift">Logg</h2>
 
   <div id="Ukerogdager-container">
-    <div class="ukervalg-container">${createWeeksHtml()}</div>
-    <div class="dagervalg-container">${createDaysHtml()}</div>
+      <div class="ukervalg-container">
+      <div>${createWeeksHtml()}</div>
+      </div>
+        
+      <div class="dagervalg-container">
+      <div>${createDaysHtml()}</div>
+      </div>
   </div>
 
     <div id = "textfield-logPage">
-      <textarea id = "textfield-logPage-textarea" oninput="model.inputs.logPage.whatHaveYouLearnedToday=this.value"
+      <textarea oninput="model.inputs.logPage.whatHaveYouLearnedToday=this.value"
             >${model.inputs.logPage.whatHaveYouLearnedToday}
       </textarea>
     </div>
         
       <div>${createQuestionsHtml()}</div>
-
-      <div id ="sendloggcontainer"><button id="sendloggknapp" onclick="saveLog()">Send inn dagens logg</button>
-  </div></div>
+      <button onclick="saveLog()">Send inn dagens logg</button>
+  </div>
     `;
     return html;
   }
