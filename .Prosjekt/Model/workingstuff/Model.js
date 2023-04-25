@@ -1,12 +1,6 @@
 const model = {
   app: {
-<<<<<<< HEAD
-
-
     currentPage: "profilePage",
-=======
-    currentPage: "topicPage",
->>>>>>> 2d9fefb5a9abce6ef4ff05a76cb62474f1c9f28f
     isAdmin: true,
     loggedInUser: false,
   },
