@@ -32,21 +32,26 @@ function updateViewLogPage() {
     return html;
   } else {
     let html = /*HTML*/ `
-    
-        <h2>Logg</h2>
-        <div>
-            ${createWeeksHtml()}
-        </div>
-        <div>
-            ${createDaysHtml()}
-        </div>
-        <textarea 
-            oninput="model.inputs.logPage.whatHaveYouLearnedToday=this.value"
-            >${model.inputs.logPage.whatHaveYouLearnedToday}</textarea>
-        <div>
-            ${createQuestionsHtml()}
-        </div>
-        <button onclick="saveLog()">Lagre</button>
+  <div class="LoggPage-container">
+
+
+    <h2 id="LoggOverskrift">Logg</h2>
+
+
+    <div class="ukerogdagervalg-container">
+      <div>${createWeeksHtml()}</div>
+      <div>${createDaysHtml()}</div>
+    </div>
+
+    <div id = "textfield-logPage">
+      <textarea oninput="model.inputs.logPage.whatHaveYouLearnedToday=this.value"
+            >${model.inputs.logPage.whatHaveYouLearnedToday}
+      </textarea>
+    </div>
+        
+      <div>${createQuestionsHtml()}</div>
+      <button onclick="saveLog()">Send inn dagens logg</button>
+  </div>
         <div>Tidligere loggføringer
         <div></div>
         </div>
@@ -55,12 +60,10 @@ function updateViewLogPage() {
   }
 }
 
-
-//spørsmål til mandag: 
+//spørsmål til mandag:
 //1. problem med index, folk synes ikke på admin sin loggside
 //
-function enElevListe(){
-
+function enElevListe() {
   let html = "";
   for (let i = 0; i < model.users.length; i++) {
     if(model.users[i].userId !== "admin"){
@@ -68,7 +71,7 @@ function enElevListe(){
     ` <ul onclick="visLoggForBruker(${i})">${model.users[i].firstname}  ${model.users[i].lastname}</ul>`;
   }
   }
-return html
+  return html;
 }
 
 function visLoggForBruker(index){

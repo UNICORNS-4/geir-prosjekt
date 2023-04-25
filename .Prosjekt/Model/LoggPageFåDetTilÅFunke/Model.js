@@ -1,6 +1,6 @@
 const model = {
   app: {
-    currentPage: "frontPage",
+    currentPage: "topicPage",
     isAdmin: true,
     loggedInUser: [],
   },
@@ -128,7 +128,8 @@ const model = {
       Tittel: "Intro til trygghet",
       Tekst:
         "Trygghet er en viktig faktor for smidighet og godt sammarbeid i et team.",
-      videoLink:'<iframe width="auto" height="auto" src="https://www.youtube.com/embed/oTPhiPHqIzM" title="Better Leadership and Learning with Psychological Safety - ft. Amy Edmondson" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
+      videoLink:
+        '<iframe width="auto" height="auto" src="https://www.youtube.com/embed/oTPhiPHqIzM" title="Better Leadership and Learning with Psychological Safety - ft. Amy Edmondson" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
       Type: "DropDown",
       hasCheckmark: false,
       isChecked: null,
@@ -171,8 +172,10 @@ const model = {
     {
       id: 4,
       Tittel: "Intro til Growth Mindset",
-      Tekst: "Growth mindset er en måte å tenke på som fremmer endring, i motsetning til fixed eller fastlåst tenkemåte, som hindrer endring.",
-      videoLink:'<iframe width="auto" height="auto" src="https://www.youtube.com/embed/75GFzikmRY0" title="Growth Mindset Introduction: What it is, How it Works, and Why it Matters" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
+      Tekst:
+        "Growth mindset er en måte å tenke på som fremmer endring, i motsetning til fixed eller fastlåst tenkemåte, som hindrer endring.",
+      videoLink:
+        '<iframe width="auto" height="auto" src="https://www.youtube.com/embed/75GFzikmRY0" title="Growth Mindset Introduction: What it is, How it Works, and Why it Matters" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
       Type: "Dropdown",
       hasCheckmark: false,
       isChecked: null,
@@ -180,7 +183,8 @@ const model = {
     },
     {
       id: 5,
-      Tittel: "Oppg 1: Hva er din oppfatning av Growth Mindset? Diskuter dette i gruppen, og skriv ned hva dere tenker.",
+      Tittel:
+        "Oppg 1: Hva er din oppfatning av Growth Mindset? Diskuter dette i gruppen, og skriv ned hva dere tenker.",
       Tekst: "",
       Type: "Dropdown",
       hasCheckmark: true,
@@ -216,8 +220,9 @@ const model = {
       Tittel: "Intro til mikrovaner",
       Tekst:
         "All big things come from small beginnings. The seed of every habit is a single, tiny decision.",
-      videoLink: '<iframe width="auto" height="auto" src="https://www.youtube.com/embed/S_8e-6ZHKLs" title="TINY HABITS by BJ Fogg | Core Message" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
-        Type: "DropDown",
+      videoLink:
+        '<iframe width="auto" height="auto" src="https://www.youtube.com/embed/S_8e-6ZHKLs" title="TINY HABITS by BJ Fogg | Core Message" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
+      Type: "DropDown",
       hasCheckmark: false,
       isChecked: null,
       temaId: 3,
