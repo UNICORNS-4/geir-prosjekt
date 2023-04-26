@@ -191,11 +191,12 @@ button{
 
     .Bytttemaknapper{
         
-        background-color: rgba(0, 0, 0, 0.557);
+        background-color: rgba(255, 128, 0);
         border-radius: 5px;
         margin-top: 15px; 
-        color: #ffffff;
-        
+        color: #000000;
+        font-family: cursive;
+       width: 200px;
     }
 
     .colums{
@@ -203,42 +204,50 @@ button{
         flex-direction: column;
        
         max-width: 500px;
-        border: 1px solid rgb(116, 116, 116);
+        border: 1px solid rgb(199, 192, 192);
     }
     #Temaoverskriftnavn{
        font-family: cursive;
        font-size: x-large;
-       margin-top: 5px;
+       margin-top: 15px;
+       text-align: left;
     }
 
+    #videoplayer{
+
+        align-self: center;
+    }
     .Oppgaveoverskrift{
         font-family: cursive;
        font-size: large;
     }
 
     .Oppgavetekst{
-        background-color: rgb(228, 230, 245);
+        background-color: rgb(211, 211, 211);
     }
 
     #colum0{
-        background-color: rgba(228, 230, 245);
+        background-color: rgba(211, 211, 211);
         margin-top: 5px; /* Avstand mellom boxer  */
         border-radius:7px;
         padding-left: 5px;
         padding-right: 5px;
+        padding-bottom: 10px;
     } 
 
     #colum1 {
-        background-color: rgb(228, 230, 245);
+        background-color: rgb(211, 211, 211);
         margin-top: 5px; /* Avstand mellom boxer  */
         border-radius: 7px;
         padding-left: 5px;
         padding-right: 5px;
+        padding-bottom: 10px;
+        padding-top: 5px;
     } 
 
 
     #colum2 {
-        background-color: rgb(228, 230, 245);
+        background-color: rgb(211, 211, 211);
         margin-top: 5px; /* Avstand mellom boxer  */
         border-radius: 7px;
         padding-left: 5px;
@@ -250,7 +259,7 @@ button{
 
 
     #colum3 {
-        background-color: rgb(228, 230, 245);
+        background-color: rgb(211, 211, 211);
         margin-top: 5px; /* Avstand mellom boxer  */
         border-radius: 7px;
         padding-left: 5px;
@@ -342,6 +351,18 @@ button{
             box-shadow: 5px 7px 5px gray;
         }
 
+/*TODO */
+        #VivilviseElevLista:nth-child(even){
+            background-color: #000000;
+            color: aliceblue;
+        }
+
+/*TODO */
+        #VivilviseElevLista:nth-child(odd){
+            background-color: #919191;
+            
+        }
+
 
     /*?------------------------------*/
         /*!-- Profile Page --*/
@@ -358,21 +379,22 @@ button{
             height: 500px;
             margin-left: 20px;
             margin-top: 20px;
-            border-radius: 10px;
+            
         }
         .ProfilepageContainAll{
             padding: 7%;
             max-width: 500px;
             border: 2px solid rgb(90, 90, 90);
-            border-radius: 30px;
+            border-radius: 100px;
             margin: 7%;
-            background-image: linear-gradient(to right, rgba(255, 194, 125, 0.206), rgb(245, 153, 61));
+            background-image: linear-gradient(to bottom, rgba(255, 136, 0, 0.145), rgb(218, 124, 0));
+            box-shadow: 0px 0px 20px;
         }
         #ProfilePic{
-            width: auto;
-            border-radius: 25%
+        width: auto;
         }
         #img1{
+            box-shadow: 10px 10px 10px;
             border: 2px solid rgb(90, 90, 90);
             width: 300px;
             image-rendering: optimizeQuality;
@@ -380,18 +402,20 @@ button{
         }
         #ProfileName{
             font-size: large;
+            font-family: cursive;
         }
         .ProfilePage-ProgressBars{
             display: flex;
             flex-direction: column;
+            font-family: ;
            
         }
         progress {
             height: 20px;
             width: 200px;
             background: rgb(255, 128, 0);
-            border: solid 1mm rgba(0, 0, 0, 0.807);
-            border-radius: 2cm;
+            border: solid 0.1mm rgba(0, 0, 0, 0.807);
+            border-radius: 9cm;
           }
           
           progress {

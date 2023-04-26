@@ -9,7 +9,7 @@ function goToLogPage() {
 }
 
 function updateViewLogPage() {
-  if (model.app.loggedInUser.klasse === "Admin") {
+  if (findUser(model.app.loggedInUser).klasse === "Admin") {
     //console.log("#LOG_UPDATED")
     //model.users?
 
@@ -17,7 +17,7 @@ function updateViewLogPage() {
     console.log("ettellerannet" + model.adminUserLog);
 
     html = /* Html */ `
-    <ul >
+    <ul id="VivilviseElevLista">
     ${enElevListe()}${model.elevLogg}
     </ul>
    

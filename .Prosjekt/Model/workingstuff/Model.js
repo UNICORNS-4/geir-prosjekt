@@ -2,7 +2,7 @@ const model = {
   app: {
     currentPage: "profilePage",
     isAdmin: true,
-    loggedInUser: false,
+    loggedInUser: "",
   },
 
   inputs: {
@@ -191,9 +191,24 @@ const model = {
   ],
   utførteOppgaver: [
     { oppgaveId: 0, svar: "Sett", userId: "elev", timeStamp: "2023..." },
-    { oppgaveId: 1, svar: "Vi skal tørre og være ærlige med hverandre, og si hva vi har behov for og hvordan vi lærer best. Så får vi et godt og trygt team.", userId: "elev", timeStamp: "" },
-    { oppgaveId: 2, svar: "isChecked: true, isChecked: true, isChecked: false, isChecked: false", userId: "elev", timeStamp: "" },
-    { oppgaveId: 3, svar: "Synes dette tema har vært veldig fint. Har lært meg og bli trygg og komfortabel i gruppa.", userId: "elev", timeStamp: "" },
+    {
+      oppgaveId: 1,
+      svar: "Vi skal tørre og være ærlige med hverandre, og si hva vi har behov for og hvordan vi lærer best. Så får vi et godt og trygt team.",
+      userId: "elev",
+      timeStamp: "",
+    },
+    {
+      oppgaveId: 2,
+      svar: "isChecked: true, isChecked: true, isChecked: false, isChecked: false",
+      userId: "elev",
+      timeStamp: "",
+    },
+    {
+      oppgaveId: 3,
+      svar: "Synes dette tema har vært veldig fint. Har lært meg og bli trygg og komfortabel i gruppa.",
+      userId: "elev",
+      timeStamp: "",
+    },
     { oppgaveId: 4, svar: "fhjg", userId: "elev", timeStamp: "" },
     { oppgaveId: 5, svar: "fhjg", userId: "elev", timeStamp: "" },
     { oppgaveId: 6, svar: "fhjg", userId: "elev", timeStamp: "" },
