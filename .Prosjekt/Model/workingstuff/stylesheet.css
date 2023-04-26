@@ -366,14 +366,14 @@ button{
         #elevListeRamme{
             border: 2px solid black;
             display: flex;
-        background-color: rgb(255, 255, 255);
-        width: 200px;
-        margin-left: 20px;
-        margin-top: 10px;
-        padding-bottom: 5px;
-        padding-top: 5px;
-        box-shadow: 5px 7px 5px gray;
-        border-radius: 10px;
+            background-color: rgb(255, 255, 255);
+            width: 200px;
+            margin-left: 20px;
+            margin-top: 10px;
+            padding-bottom: 5px;
+            padding-top: 5px;
+            box-shadow: 5px 7px 5px gray;
+            border-radius: 10px;
         }    
 
 
@@ -483,3 +483,25 @@ button{
 
 
      /*?------------------------------*/
+     /*!-- Chat Page --*/
+     .chatMellomDegOgMeg{
+        background-color: #ffffff;
+        color: rgb(0, 0, 0);
+        border: 2px solid black;
+        margin: 10px;
+        border-radius: 10px;
+        padding: 10px;
+     }
+     .chatPageContainer{
+        background-color: #fbc697;
+
+     }
+     .chatterFra{
+        background-color:#faa153;
+        height: 30px;
+        padding-left: 10px;
+        
+     }
+     .ulestFra{
+        background-color:#fbc697;
+     }

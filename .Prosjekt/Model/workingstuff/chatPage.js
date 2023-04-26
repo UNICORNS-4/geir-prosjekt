@@ -9,16 +9,18 @@ function updateChatView(){
     if (chatMessage1 == null || undefined) continue;
 
     html += /*HTML*/ `
-    <div>Chatter fra:
-    <ul onclick="openChat(${i}), sendMld(${i})">
+    <div class="chatPageContainer">
+    <div class="chatterFra">Chatter fra:
+    <ul class="ulestFra" onclick="openChat(${i}), sendMld(${i})">
         ${chatMessage.isRead ? "Lest" : "Ulest"}:
         ${model.users[i].firstname} ${model.users[i].lastname}
       </ul>
     </div>
 
-    <div>Chat mellom deg og ${model.users[i].firstname} ${model.users[i].lastname}
+    <div class="chatMellomDegOgMeg">Chat mellom deg og ${model.users[i].firstname} ${model.users[i].lastname}
     <input oninput="${model.inputs.chatPage.newMessageInput} = this.value" type="text">
     <button onclick="sendMld()">Send</button>
+    </div>
     </div>
     `;
   };
