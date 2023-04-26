@@ -1,10 +1,11 @@
-function updateViewFrontPage(){
-    let html = "";
-    html = /*html*/
+function updateViewFrontPage() {
+  let html = "";
+  html =
+    /*html*/
     `
-    <div><img src="img/level${findProg()}.png" width="500px"></div>
+    <div><img id="frontpageIMG" src="img/level${findProg()}.png"></div>
     `;
-    return html;
+  return html;
 }
 
 /* når en student er logget inn
