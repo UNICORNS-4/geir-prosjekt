@@ -13,7 +13,7 @@ function findUser(userID) {
 }
 
 function logOut() {
-  model.app.loggedInUser = false;
+  model.app.loggedInUser = "";
   byttSide('loginPage')
   updateView(); // skal endres til currentPage i ferdig produkt.
 }
