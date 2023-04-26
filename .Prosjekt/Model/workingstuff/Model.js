@@ -1,8 +1,8 @@
 const model = {
   app: {
-    currentPage: "logPage",
+    currentPage: "loginPage",
     isAdmin: true,
-    loggedInUser: false,
+    loggedInUser: "",
   },
 
   inputs: {
@@ -101,18 +101,27 @@ const model = {
   ],
   chatMessages: [
     {
-      fromUserId: "terje",
-      toUserId: "per",
-      messageContent: "Hallo, hva er psykologisk trygghet?",
+      chatId: 0,
+      fromUserId: "",
+      toUserId: "admin",
+      messageContent: "",
       timeStamp: "2023-03-31 15:03", // t = '2023-03-31 15:03'; new Date(t)    .toLocaleTimeString()
       isRead: false,
     },
     {
-      fromUserId: "per",
-      toUserId: "terje",
-      messageContent:
-        "Hei, så fint at du spør. Det skal jeg fortelle deg litt mer om:",
-      timeStamp: "2023-03-31 15:23", // t = '2023-03-31 15:03'; new Date(t)    .toLocaleTimeString()
+      chatId: 1,
+      fromUserId: "admin",
+      toUserId: "",
+      messageContent: "",
+      timeStamp: "2023-03-31 15:03", // t = '2023-03-31 15:03'; new Date(t)    .toLocaleTimeString()
+      isRead: false,
+    },
+    {
+      chatId: 2,
+      fromUserId: "admin",
+      toUserId: "",
+      messageContent: "",
+      timeStamp: "2023-03-31 15:03", // t = '2023-03-31 15:03'; new Date(t)    .toLocaleTimeString()
       isRead: false,
     },
   ],

@@ -26,6 +26,10 @@ function updateView(){
         case"elevListePage":
             app.innerHTML= updateDashboard() + updateElevListeView();
             break;
+        case"chatPage":
+            app.innerHTML= updateDashboard() + updateChatView();
+            break;
     }
 }
+
 window.onload = updateView();

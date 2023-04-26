@@ -1,4 +1,3 @@
-updateChatView();
 function updateChatView(){
   let html = "";
   for (let i = 0; i < model.users.length; i++) {
@@ -22,10 +21,10 @@ function updateChatView(){
     <button onclick="sendMld()">Send</button>
     </div>
     `;
-    
   };
   return html;
 }
+console.log("#chatfunction kjørt")
 
 function openChat(index){
   let chatMessage = model.chatMessages.find(msg => msg.toUserId == model.users[index].userId);
@@ -36,8 +35,9 @@ function openChat(index){
 }
 
 function sendMld(i){
-  let loggedInUser = findUser(model.app.loggedInUser)
-  loggedInUser.chatMessages.push(model.chatMessages)
+  //let loggedInUser = findUser(model.app.loggedInUser)
+  //loggedInUser.chatMessages.push(model.chatMessages)
+  let testbruker = model.users[i].userId
 }
 
   

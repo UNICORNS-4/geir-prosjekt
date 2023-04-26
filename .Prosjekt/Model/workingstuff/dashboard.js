@@ -21,7 +21,7 @@ function updateDashboard() {
     <div class="navBar dashboard">
               <div class="navBarLogo" onclick="byttSide('frontPage')">NK</div>
               <div class="navBarItem" onclick="byttSide('topicPage')">Temaer</div>
-              <div class="navBarItem" onclick="byttSide('')">Meldinger</div>
+              <div class="navBarItem" onclick="byttSide('chatPage')">Meldinger</div>
               <div class="navBarItem" onclick="byttSide('newUserPage')">Ny Bruker</div>
               <div class="navBarItem" onclick="byttSide('logPage')">Logg</div>
               <div class="navBarItem" onclick="byttSide('profilePage')">Min Side</div>
@@ -39,7 +39,7 @@ function updateDashboard() {
               <div class="navBar dashboard">
               <div class="navBarLogo" onclick="byttSide('frontPage')">NK</div>
               <div class="navBarItem" onclick="byttSide('topicPage')">Temaer</div>
-              <div class="navBarItem" onclick="byttSide('')">Meldinger</div>
+              <div class="navBarItem" onclick="byttSide('chatPage')">Meldinger</div>
               <div class="navBarItem" onclick="byttSide('logPage')">Logg</div>
               <div class="navBarItem" onclick="byttSide('profilePage')">Min Side</div>
               <div>   
