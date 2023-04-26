@@ -1,6 +1,6 @@
 const model = {
   app: {
-    currentPage: "profilePage",
+    currentPage: "loginPage",
     isAdmin: true,
     loggedInUser: false,
   },
@@ -201,7 +201,8 @@ const model = {
     {
       id: 1,
       Tittel: "Oppg 1: Hva er trygghet?",
-      Tekst: "",
+      Tekst:
+        "Diskuter med teamet, hva trygghet betyr for dere. Hva er det som kan bidra med et tryggere miljø for deg og din sirkel?",
       Type: "DropDown",
       hasCheckmark: false,
       isChecked: null,

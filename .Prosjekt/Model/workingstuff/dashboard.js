@@ -14,10 +14,10 @@ viewBox="0 0 490.3 490.3" xml:space="preserve">
 </svg>`;
 
 function updateDashboard() {
-  console.log("#DASH_UPDATED")
+  console.log("#DASH_UPDATED");
   if (model.app.loggedInUser.klasse === "Admin") {
-    console.log("--> Admin dashboard")
-    let html = /*HTML*/`
+    console.log("--> Admin dashboard");
+    let html = /*HTML*/ `
     <div class="navBar dashboard">
               <div class="navBarLogo" onclick="byttSide('frontPage')">NK</div>
               <div class="navBarItem" onclick="byttSide('topicPage')">Temaer</div>
@@ -33,11 +33,9 @@ function updateDashboard() {
     <div class="navBarItem logOutBtn" onclick="logOut()">${loggOutSvg}</div>
     </div>`;
     return html;
-
-  }
-  else {
-    console.log("--> elev dashboard")
-    let html = /*HTML*/`
+  } else {
+    console.log("--> elev dashboard");
+    let html = /*HTML*/ `
               <div class="navBar dashboard">
               <div class="navBarLogo" onclick="byttSide('frontPage')">NK</div>
               <div class="navBarItem" onclick="byttSide('topicPage')">Temaer</div>
@@ -53,11 +51,10 @@ function updateDashboard() {
               </div>
             </div>
                 `;
-             
+
     return html;
   }
 }
-
 
 function findUser(userID) {
   for (let user of model.users) {
@@ -69,6 +66,6 @@ function findUser(userID) {
 }
 function logOut() {
   model.app.loggedInUser = false;
-  byttSide('loginPage')
+  byttSide("loginPage");
   updateView(); // skal endres til currentPage i ferdig produkt.
 }
