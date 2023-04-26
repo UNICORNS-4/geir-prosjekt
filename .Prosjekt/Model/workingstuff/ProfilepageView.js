@@ -3,7 +3,17 @@ let Progressbar2 = 0;
 let Progressbar3 = 0;
 
 function updateProfilepageView() {
+  if (findUser(model.app.loggedInUser).klasse === "Admin") {
   return /* Html */ `
+  <div class="ProfilepageContainAll">
+  <div id="ProfilePic" ><img id="img1" src="img/${findUser(model.app.loggedInUser).imgSrc}"></div>
+  <div id="ProfileName"><b>${findUser(model.app.loggedInUser).firstname} ${findUser(model.app.loggedInUser).lastname}</b></div>
+  <div id="StartIT"><b>${findUser(model.app.loggedInUser).klasse}</b></div>
+  </div>
+  `;
+  }
+  else {
+    return /* Html */ `
   <div class="ProfilepageContainAll">
   <div id="ProfilePic" ><img id="img1" src="img/${findUser(model.app.loggedInUser).imgSrc}"></div>
   <div id="ProfileName"><b>${findUser(model.app.loggedInUser).firstname} ${findUser(model.app.loggedInUser).lastname}</b></div>
@@ -12,6 +22,7 @@ function updateProfilepageView() {
   <div id="Bars">${updateBars()}</div>
   </div>
   `;
+  }
 }
 
 
@@ -20,7 +31,6 @@ function updateBars() {
     model.app.loggedInUser.utførteOppgaver /
     model.app.loggedInUser.oppgaver /
     100;
-    
     
   let html = /* html */ `
   <div class="ProfilePage-ProgressBars">
