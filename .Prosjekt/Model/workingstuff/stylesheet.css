@@ -334,15 +334,18 @@ button{
     margin-left: 20px
   }
 
+  
+
     /*?------------------------------*/
         /*!-- Log Admin Page --*/
         .Loggsvartekst{
             display: flex;
             flex-direction: column;
             padding-left: 20px;
+            padding-right: 20px;
             padding-top: 5px;
-            background-color: rgb(223, 223, 223);
-            border: 2px solid grey;
+            background-color: rgb(255, 255, 255);
+            border: 2px solid rgb(0, 0, 0);
             width:  300px;
             height: 200px;
             margin-left: 20px;
@@ -353,15 +356,27 @@ button{
 
 /*TODO */
         #VivilviseElevLista:nth-child(even){
-            background-color: #000000;
-            color: aliceblue;
+            background-color: #f5c79d;
+            color: rgb(0, 0, 0);
+            border: 2px solid black;
+            margin: 10px;
+            border-radius: 10px;
+            height: 500px;
         }
+        #elevListeRamme{
+            border: 2px solid black;
+            display: flex;
+        background-color: rgb(255, 255, 255);
+        width: 200px;
+        margin-left: 20px;
+        margin-top: 10px;
+        padding-bottom: 5px;
+        padding-top: 5px;
+        box-shadow: 5px 7px 5px gray;
+        border-radius: 10px;
+        }    
 
-/*TODO */
-        #VivilviseElevLista:nth-child(odd){
-            background-color: #919191;
-            
-        }
+
 
 
     /*?------------------------------*/

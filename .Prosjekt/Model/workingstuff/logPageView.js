@@ -70,7 +70,7 @@ function enElevListe() {
     if (model.users[i].userId !== "admin") {
       html +=
         /*html*/
-        ` <ul onclick="visLoggForBruker(${i})">${model.users[i].firstname}  ${model.users[i].lastname}</ul>`;
+        ` <ul id="elevListeRamme" onclick="visLoggForBruker(${i})">${model.users[i].firstname}  ${model.users[i].lastname}</ul>`;
     }
   }
   return html;
