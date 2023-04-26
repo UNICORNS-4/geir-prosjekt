@@ -44,19 +44,51 @@ const model = {
   elevLogg: "",
   log: [
     {
-      whatHaveYouLearnedToday: "bla bla bla",
-      week: 3,
-      day: 3,
-      answers: [1, 2, 3],
+      whatHaveYouLearnedToday: "Jeg synes den første uken på Get har vært veldig lærerik. Det har vært utfordrende å være i et team med helt nye mennesker, men jeg gleder meg til de neste dagene.",
+      week: 1,
+      day: 5,
+      answers: [7, 6, 6],
       userId: "elev",
       module: 1,
     },
     {
-      whatHaveYouLearnedToday: "bla bla bla",
+      whatHaveYouLearnedToday: "Jeg har blitt litt mer kjent med teamet mitt nå, og de er veldig hyggelige. Det er kjempegøy å kode, selv om det er en veldig bratt læringskurve.",
+      week: 2,
+      day: 3,
+      answers: [7, 7, 7],
+      userId: "elev",
+      module: 1,
+    },
+    {
+      whatHaveYouLearnedToday: "Det har vært spennende å begynne på modul 2. Gleder meg til å jobbe med et ekte kundeprosjekt.",
+      week: 1,
+      day: 4,
+      answers: [8, 6, 7],
+      userId: "Henriette",
+      module: 2,
+    },
+    {
+      whatHaveYouLearnedToday: "Vi er godt inne i kundeprosjektet nå, men model er skikkelig vanskelig. Og vi har slitt med å få til en god gruppedynamikk, men vi har tatt dette opp i gruppa nå, og forhåpentligvis blir det bedre snart.",
       week: 3,
       day: 3,
-      answers: [1, 2, 3],
-      userId: "elev",
+      answers: [6, 4, 3],
+      userId: "Henriette",
+      module: 2,
+    },
+    {
+      whatHaveYouLearnedToday: "Jeg var usikker i dag når jeg starta første dag på GET. Var nervøs, men synes det har gått bra og at lærerne er snille.",
+      week: 1,
+      day: 1,
+      answers: [6, 5, 5],
+      userId: "Knut",
+      module: 1,
+    },
+    {
+      whatHaveYouLearnedToday: "Jeg var litt mindre nervøs i dag, har møtt teamet mitt for første gang, det var fint.",
+      week: 1,
+      day: 2,
+      answers: [7, 7, 8],
+      userId: "Knut",
       module: 1,
     },
   ],
@@ -69,10 +101,10 @@ const model = {
       isRead: false,
     },
     {
-      fromUserId: "terje",
-      toUserId: "per",
-      messageContent: "Hallo, hva er psykologisk trygghet?",
-      timeStamp: "2023-03-31 15:03", // t = '2023-03-31 15:03'; new Date(t)    .toLocaleTimeString()
+      fromUserId: "per",
+      toUserId: "terje",
+      messageContent: "Hei, så fint at du spør. Det skal jeg fortelle deg litt mer om:",
+      timeStamp: "2023-03-31 15:23", // t = '2023-03-31 15:03'; new Date(t)    .toLocaleTimeString()
       isRead: false,
     },
   ],
@@ -111,6 +143,17 @@ const model = {
       imgSrc: "img2.jpeg",
     },
     {
+      userId: "Henriette",
+      firstname: "Henriette",
+      lastname: "Nilsen",
+      phoneNumber: "45783210",
+      postalCode: "3030",
+      eMail: "henriettennilsen@getacademy.no",
+      klasse: "Get IT", //Start IT, Get IT
+      password: "Henriette",
+      imgSrc: "img5.jpeg",
+    },
+    {
       userId: "Per",
       firstname: "Per",
       lastname: "Persson",
@@ -128,20 +171,9 @@ const model = {
       phoneNumber: "47623409",
       postalCode: "3213",
       eMail: "guriolsen@getacademy.no",
-      klasse: "Start IT", //Start IT, Get IT
+      klasse: "Get IT", //Start IT, Get IT
       password: "Guri",
       imgSrc: "img4.jpeg",
-    },
-    {
-      userId: "Henriette",
-      firstname: "Henriette",
-      lastname: "Nilsen",
-      phoneNumber: "45783210",
-      postalCode: "3030",
-      eMail: "henriettennilsen@getacademy.no",
-      klasse: "Start IT", //Start IT, Get IT
-      password: "Henriette",
-      imgSrc: "img5.jpeg",
     },
   ],
   temaer: [
