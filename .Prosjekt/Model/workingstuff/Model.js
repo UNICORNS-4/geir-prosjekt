@@ -1,6 +1,6 @@
 const model = {
   app: {
-    currentPage: "newUserPage",
+    currentPage: "logPage",
     isAdmin: true,
     loggedInUser: false,
   },
@@ -45,7 +45,8 @@ const model = {
   elevLogg: "",
   log: [
     {
-      whatHaveYouLearnedToday: "Jeg synes den første uken på Get har vært veldig lærerik. Det har vært utfordrende å være i et team med helt nye mennesker, men jeg gleder meg til de neste dagene.",
+      whatHaveYouLearnedToday:
+        "Jeg synes den første uken på Get har vært veldig lærerik. Det har vært utfordrende å være i et team med helt nye mennesker, men jeg gleder meg til de neste dagene.",
       week: 1,
       day: 5,
       answers: [7, 6, 6],
@@ -53,7 +54,8 @@ const model = {
       module: 1,
     },
     {
-      whatHaveYouLearnedToday: "Jeg har blitt litt mer kjent med teamet mitt nå, og de er veldig hyggelige. Det er kjempegøy å kode, selv om det er en veldig bratt læringskurve.",
+      whatHaveYouLearnedToday:
+        "Jeg har blitt litt mer kjent med teamet mitt nå, og de er veldig hyggelige. Det er kjempegøy å kode, selv om det er en veldig bratt læringskurve.",
       week: 2,
       day: 3,
       answers: [7, 7, 7],
@@ -61,7 +63,8 @@ const model = {
       module: 1,
     },
     {
-      whatHaveYouLearnedToday: "Det har vært spennende å begynne på modul 2. Gleder meg til å jobbe med et ekte kundeprosjekt.",
+      whatHaveYouLearnedToday:
+        "Det har vært spennende å begynne på modul 2. Gleder meg til å jobbe med et ekte kundeprosjekt.",
       week: 1,
       day: 4,
       answers: [8, 6, 7],
@@ -69,7 +72,8 @@ const model = {
       module: 2,
     },
     {
-      whatHaveYouLearnedToday: "Vi er godt inne i kundeprosjektet nå, men model er skikkelig vanskelig. Og vi har slitt med å få til en god gruppedynamikk, men vi har tatt dette opp i gruppa nå, og forhåpentligvis blir det bedre snart.",
+      whatHaveYouLearnedToday:
+        "Vi er godt inne i kundeprosjektet nå, men model er skikkelig vanskelig. Og vi har slitt med å få til en god gruppedynamikk, men vi har tatt dette opp i gruppa nå, og forhåpentligvis blir det bedre snart.",
       week: 3,
       day: 3,
       answers: [6, 4, 3],
@@ -77,7 +81,8 @@ const model = {
       module: 2,
     },
     {
-      whatHaveYouLearnedToday: "Jeg var usikker i dag når jeg starta første dag på GET. Var nervøs, men synes det har gått bra og at lærerne er snille.",
+      whatHaveYouLearnedToday:
+        "Jeg var usikker i dag når jeg starta første dag på GET. Var nervøs, men synes det har gått bra og at lærerne er snille.",
       week: 1,
       day: 1,
       answers: [6, 5, 5],
@@ -85,7 +90,8 @@ const model = {
       module: 1,
     },
     {
-      whatHaveYouLearnedToday: "Jeg var litt mindre nervøs i dag, har møtt teamet mitt for første gang, det var fint.",
+      whatHaveYouLearnedToday:
+        "Jeg var litt mindre nervøs i dag, har møtt teamet mitt for første gang, det var fint.",
       week: 1,
       day: 2,
       answers: [7, 7, 8],
@@ -104,7 +110,8 @@ const model = {
     {
       fromUserId: "per",
       toUserId: "terje",
-      messageContent: "Hei, så fint at du spør. Det skal jeg fortelle deg litt mer om:",
+      messageContent:
+        "Hei, så fint at du spør. Det skal jeg fortelle deg litt mer om:",
       timeStamp: "2023-03-31 15:23", // t = '2023-03-31 15:03'; new Date(t)    .toLocaleTimeString()
       isRead: false,
     },
