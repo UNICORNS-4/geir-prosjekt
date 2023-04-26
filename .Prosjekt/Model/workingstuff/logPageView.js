@@ -12,11 +12,19 @@ function updateViewLogPage() {
   if (model.app.loggedInUser.klasse === "Admin") {
     //console.log("#LOG_UPDATED")
     //model.users?
-  
+
     let html = "";
-    console.log("ettellerannet" + model.adminUserLog)
-    html = `${enElevListe()}${model.elevLogg}`;
-   /*  if(!model.adminUserLog){
+    console.log("ettellerannet" + model.adminUserLog);
+
+    html = /* Html */ `
+    <ul >
+    ${enElevListe()}${model.elevLogg}
+    </ul>
+   
+    
+   
+    `;
+    /*  if(!model.adminUserLog){
       html = `${enElevListe()}${model.elevLogg}`;
     }
     else{console.log("hei"+model.elevLogg)
@@ -24,11 +32,8 @@ function updateViewLogPage() {
     }
  */
 
+    console.log(html);
 
-
-    console.log(html)
-    
-    
     return html;
   } else {
     let html = /*HTML*/ `
@@ -48,17 +53,9 @@ function updateViewLogPage() {
     </div>
         
       <div>${createQuestionsHtml()}</div>
-<<<<<<< HEAD
 
       <div id ="sendloggcontainer"><button id="sendloggknapp" onclick="saveLog()">Send inn dagens logg</button>
   </div></div>
-=======
-      <button onclick="saveLog()">Send inn dagens logg</button>
-  </div>
-        <div>Tidligere loggføringer
-        <div></div>
-        </div>
->>>>>>> a330944b8978d1e4943ca2660de97de3efd46be5
     `;
     return html;
   }
@@ -70,33 +67,50 @@ function updateViewLogPage() {
 function enElevListe() {
   let html = "";
   for (let i = 0; i < model.users.length; i++) {
-    if(model.users[i].userId !== "admin"){
-    html += /*html*/ 
-    ` <ul onclick="visLoggForBruker(${i})">${model.users[i].firstname}  ${model.users[i].lastname}</ul>`;
-  }
+    if (model.users[i].userId !== "admin") {
+      html +=
+        /*html*/
+        ` <ul onclick="visLoggForBruker(${i})">${model.users[i].firstname}  ${model.users[i].lastname}</ul>`;
+    }
   }
   return html;
 }
 
-function visLoggForBruker(index){
-  let user = model.users[index]
+function visLoggForBruker(index) {
+  let user = model.users[index];
   model.adminUserLog = user;
-  console.log(model.adminUserLog)
-  let logs = model.log.filter(x => x.userId == user.userId)
+  console.log(model.adminUserLog);
+  let logs = model.log.filter((x) => x.userId == user.userId);
   for (let i = 0; i < logs.length; i++) {
-    model.elevLogg+=
-    `
+    model.elevLogg += /* html */ `
     <div>Hva har du lært i dag:${logs[i].whatHaveYouLearnedToday}
     </div>
     <div>en annen verdi:${logs[i].answers}
     </div>
+    
+    </div>
+    <div>en annen verdi:${logs[i].answers}
+    </div>
+   
+    
+
     `;
+  }
+  updateView();
 }
-updateView();
+
+function lastLogEntries() {
+  let html = "";
+  for (let index = 0; index < log.length; index++) {
+    html += /* HTML */ ` 
+    </div>
+    <div>${model.log.whatHaveYouLearnedToday[i]}
+    </div>
+
+    `;
+  }
+  return html;
 }
-
-
-
 
 //hvis bruker er admin vis studenter og utfylt logg
 //hvis bruker er elev vis loggside og current loggutfylling

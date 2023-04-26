@@ -167,8 +167,11 @@ button{
     color: white;
 }
     /*?------------------------------*/
+    
+    
+    
     /*!-- Topic Page --*/
-    /*! Alex sin rute */
+   
 
     #container {
         background-color: #ffffff;
@@ -176,8 +179,7 @@ button{
         padding-right: auto;
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        
+        justify-content: center; 
     }
 
     .BytttemaknapperContainer{
@@ -185,30 +187,28 @@ button{
         width: 500px;
         display: flex;
         justify-content: space-between; /* Avstand mellom knapper  */
-        
-
     }
 
     .Bytttemaknapper{
         
-        background-color: rgb(157, 215, 222);
-        border-radius: 10px;
-        margin-top: 5px; 
+        background-color: rgba(0, 0, 0, 0.557);
+        border-radius: 5px;
+        margin-top: 15px; 
+        color: #ffffff;
         
     }
 
     .colums{
         display: flex;
         flex-direction: column;
-        
         width: auto;
         max-width: 500px;
-        
         border: 2px solid rgb(72, 72, 72);
     }
     #Temaoverskriftnavn{
        font-family: cursive;
-       font-size: x-large;
+       font-size: xx-large;
+       margin-top: 5px;
     }
 
     .Oppgaveoverskrift{
@@ -217,35 +217,49 @@ button{
     }
 
     .Oppgavetekst{
-        background-color: rgb(157, 215, 222);
+        background-color: rgb(255, 205, 151);
     }
 
     #colum0{
-        background-color: rgb(157, 215, 222);
+        background-color: rgb(255, 205, 151);
         margin-top: 5px; /* Avstand mellom boxer  */
-        border-radius: 15px;
+        border-radius:7px;
+        padding-left: 5px;
+        padding-right: 5px;
     } 
 
     #colum1 {
-        background-color: rgb(157, 215, 222);
+        background-color: rgb(255, 205, 151);
         margin-top: 5px; /* Avstand mellom boxer  */
-        border-radius: 15px;
+        border-radius: 7px;
+        padding-left: 5px;
+        padding-right: 5px;
     } 
 
 
     #colum2 {
-        background-color: rgb(157, 215, 222);
+        background-color: rgb(255, 205, 151);
         margin-top: 5px; /* Avstand mellom boxer  */
-        border-radius: 15px;
+        border-radius: 7px;
+        padding-left: 5px;
+        padding-right: 5px;
+        display: flex;
+        
+        
     } 
 
 
     #colum3 {
-        background-color: rgb(157, 215, 222);
+        background-color: rgb(255, 205, 151);
         margin-top: 5px; /* Avstand mellom boxer  */
-        border-radius: 15px;
+        border-radius: 7px;
+        padding-left: 5px;
+        padding-right: 5px;
+        margin-bottom: 50px;
+        padding-bottom: 10px;
     } 
     
+
     
     
 /*?------------------------------*/
@@ -324,18 +338,55 @@ button{
             margin-top: 20px;
             border-radius: 10px;
         }
+        .ProfilepageContainAll{
+            padding: 7%;
+            border: 6px solid black;
+            border-radius: 30px;
+            margin: 7%;
+        }
         #ProfilePic{
             width: auto;
+            border-radius: 25%
         }
         #img1{
-            border: 5px solid rgb(142, 142, 142);
+            border: 5px solid black;
             width: 300px;
             image-rendering: optimizeQuality;
+            border-radius: 10%;
+        }
+        #ProfileName{
+            font-size: large;
         }
         .ProfilePage-ProgressBars{
             display: flex;
             flex-direction: column;
+            background-image: linear-gradient(to right, rgba(255, 194, 125, 0), rgb(255, 197, 139));
         }
+        progress {
+            height: 20px;
+            width: 200px;
+            background: rgb(255, 128, 0);
+            border: solid 1mm rgba(0, 0, 0, 0.807);
+            border-radius: 2cm;
+          }
+          
+          progress {
+            color: lightblue;
+          }
+          
+          progress::-moz-progress-bar {
+            background: lightblue;
+          }
+          
+          progress::-webkit-progress-value {
+            background: rgb(255, 128, 0);
+            border-radius: 3mm;
+          }
+          
+          progress::-webkit-progress-bar {
+            background: white;
+            border-radius: 3mm;
+          }
 
         
     /*?------------------------------*/
