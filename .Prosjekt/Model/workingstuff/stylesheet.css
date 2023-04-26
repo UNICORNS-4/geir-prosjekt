@@ -266,14 +266,15 @@ button{
     /*!-- Log Page --*/
 .LoggPage-container{
     background-color: #ffffff;
-    padding-left: 20px;
+    margin-left: 20%;
     display: flex;
     flex-direction: column;
-    border: 1px transparent black;
+   
 }
 
 #LoggOverskrift{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 15px;
 }
 #Ukerogdager-container{
    max-width: 500px;
@@ -284,9 +285,8 @@ button{
 .ukervalg-container{
    background-color: gainsboro;
    margin-top: 5px; /* Avstand mellom boxer  */
-   border-radius: px;
    width: 500px;
-   height: 2rem;
+   
    padding-top: 4px;
    padding-left: 10px;
 }
@@ -298,7 +298,6 @@ button{
     border-radius: px;
     width: 500px;
     height: 2rem;
-    
     padding-left: 10px;
 
        
@@ -340,7 +339,7 @@ button{
         }
         .ProfilepageContainAll{
             padding: 7%;
-            border: 6px solid black;
+            border: 2px solid rgb(90, 90, 90);
             border-radius: 30px;
             margin: 7%;
         }
@@ -349,7 +348,7 @@ button{
             border-radius: 25%
         }
         #img1{
-            border: 5px solid black;
+            border: 2px solid rgb(90, 90, 90);
             width: 300px;
             image-rendering: optimizeQuality;
             border-radius: 10%;
@@ -390,3 +389,16 @@ button{
 
         
     /*?------------------------------*/
+    /*!-- Elevliste Page --*/ 
+    #Brukervalgelev{
+        display: flex;
+        border: 2px solid;
+        width: 500px;
+        margin-left: 50px;
+        margin-top: 10px;
+        padding-bottom: 5px;
+        padding-top: 5px;
+
+    }
+
+     /*?------------------------------*/
