@@ -27,8 +27,8 @@ function updateDashboard() {
               <div class="navBarItem" onclick="byttSide('profilePage')">Min Side</div>
               <div class="navBarItem" onclick="byttSide('elevListePage')">Elev liste</div>
               <div>   
-                  <div class="navBarUser">${model.app.loggedInUser.firstname} ${model.app.loggedInUser.lastname}</div>
-                  <div class="navBarUserClassIDAdmin">${model.app.loggedInUser.klasse}</div>
+                  <div class="navBarUser">${findUser(model.app.loggedInUser).firstname} ${findUser(model.app.loggedInUser).lastname}</div>
+                  <div class="navBarUserClassIDAdmin">${findUser(model.app.loggedInUser).klasse}</div>
               </div>
     <div class="navBarItem logOutBtn" onclick="logOut()">${loggOutSvg}</div>
     </div>`;
@@ -43,8 +43,8 @@ function updateDashboard() {
               <div class="navBarItem" onclick="byttSide('logPage')">Logg</div>
               <div class="navBarItem" onclick="byttSide('profilePage')">Min Side</div>
               <div>   
-                  <div class="navBarUser">${model.app.loggedInUser.firstname} ${model.app.loggedInUser.lastname}</div>
-                  <div class="navBarUserClassIDUser">${model.app.loggedInUser.klasse}</div>
+                  <div class="navBarUser">${findUser(model.app.loggedInUser).firstname} ${findUser(model.app.loggedInUser).lastname}</div>
+                  <div class="navBarUserClassIDUser">${findUser(model.app.loggedInUser).klasse}</div>
               </div>
               <div class="navBarItem logOutBtn" onclick="byttSide('loginPage')" alt="Log Out">
                 ${loggOutSvg}

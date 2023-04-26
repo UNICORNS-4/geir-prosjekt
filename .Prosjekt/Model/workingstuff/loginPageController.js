@@ -8,7 +8,7 @@ function logIn() {
     model.inputs.loginPage.password ==
       findUser(model.inputs.loginPage.userId).password //!log in eksisterende bruker
   ) {
-    model.app.loggedInUser = findUser(model.inputs.loginPage.userId);
+    model.app.loggedInUser = model.inputs.loginPage.userId;
     model.inputs.loginPage.errorMessage = "";
     byttSide("topicPage");
     console.log("logget inn som -->", model.app.loggedInUser.userId); //? CONSOLE.LOG
