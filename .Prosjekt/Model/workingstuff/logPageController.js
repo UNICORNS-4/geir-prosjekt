@@ -23,7 +23,6 @@ function saveLog() {
     day: model.inputs.logPage.selectedDay,
     answers: [...model.inputs.logPage.answers], // ... = spread operator
     userId: model.app.loggedInUser,
-    module: user.currentModule,
   });
   console.log("#LOG_SAVED");
   console.log(model.log);

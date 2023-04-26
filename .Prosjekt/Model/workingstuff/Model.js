@@ -39,7 +39,7 @@ const model = {
     },
   },
   // data
-  mainQuestions: ["humør", "komm", "teamhumør"],
+  mainQuestions: ["Eget humør", "Kommunikasjon", "Dynamikk i teamet"],
   adminUserLog: "",
   elevLogg: "",
   log: [
