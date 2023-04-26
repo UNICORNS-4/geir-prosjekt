@@ -17,7 +17,7 @@ function updateViewTopicPage() {
 
         <div class = "Oppgaveoverskrift">${oppgaver[0].Tittel}</div> 
         <div class = "Oppgavetekst">${oppgaver[0].Tekst}</div>
-        <div>Se videoen under for å lære mer om tema:<br>${
+        <div id="videoplayer">Se videoen under for å lære mer om tema:<br>${
           oppgaver[0].videoLink || ""
         }</div>
   

@@ -9,7 +9,7 @@ function goToLogPage() {
 }
 
 function updateViewLogPage() {
-  if (model.app.loggedInUser.klasse === "Admin") {
+  if (findUser(model.app.loggedInUser).klasse === "Admin") {
     //console.log("#LOG_UPDATED")
     //model.users?
 
@@ -17,7 +17,7 @@ function updateViewLogPage() {
     console.log("ettellerannet" + model.adminUserLog);
 
     html = /* Html */ `
-    <ul >
+    <ul id="VivilviseElevLista">
     ${enElevListe()}${model.elevLogg}
     </ul>
    
@@ -82,15 +82,21 @@ function visLoggForBruker(index) {
   console.log(model.adminUserLog);
   let logs = model.log.filter((x) => x.userId == user.userId);
   for (let i = 0; i < logs.length; i++) {
-    model.elevLogg += /* html */ `
-    <div>Hva har du lært i dag:${logs[i].whatHaveYouLearnedToday}
+    model.elevLogg = /* html */ `
+    
+    <div>
+
+    <div class ="Loggsvartekst">
+    ${logs[i].whatHaveYouLearnedToday}
     </div>
-    <div>en annen verdi:${logs[i].answers}
+    </div>
+    
+    <div>
+    ${logs[i].answers}
     </div>
     
     </div>
-    <div>en annen verdi:${logs[i].answers}
-    </div>
+    
    
     
 

@@ -6,7 +6,7 @@ const app=document.getElementById("app");
 function updateView(){
     switch(model.app.currentPage){
         case"frontPage":
-            app.innerHTML= updateDashboard();
+            app.innerHTML= updateDashboard() + updateViewFrontPage();
             break;
         case"loginPage":
             app.innerHTML= updateViewLoginPage();
