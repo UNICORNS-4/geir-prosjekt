@@ -53,9 +53,25 @@ const model = {
   chatMessages: [
     {
       chatId: 0,
-      fromUserId: "terje",
+      fromUserId: "",
       toUserId: "admin",
-      messageContent: "Hallo, hva er psykologisk trygghet?",
+      messageContent: "",
+      timeStamp: "2023-03-31 15:03", // t = '2023-03-31 15:03'; new Date(t)    .toLocaleTimeString()
+      isRead: false,
+    },
+    {
+      chatId: 1,
+      fromUserId: "admin",
+      toUserId: "",
+      messageContent: "",
+      timeStamp: "2023-03-31 15:03", // t = '2023-03-31 15:03'; new Date(t)    .toLocaleTimeString()
+      isRead: false,
+    },
+    {
+      chatId: 2,
+      fromUserId: "admin",
+      toUserId: "",
+      messageContent: "",
       timeStamp: "2023-03-31 15:03", // t = '2023-03-31 15:03'; new Date(t)    .toLocaleTimeString()
       isRead: false,
     },
