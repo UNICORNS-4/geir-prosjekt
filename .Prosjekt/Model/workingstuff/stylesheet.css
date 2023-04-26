@@ -338,18 +338,55 @@ button{
             margin-top: 20px;
             border-radius: 10px;
         }
+        .ProfilepageContainAll{
+            padding: 7%;
+            border: 6px solid black;
+            border-radius: 30px;
+            margin: 7%;
+        }
         #ProfilePic{
             width: auto;
+            border-radius: 25%
         }
         #img1{
-            border: 5px solid rgb(142, 142, 142);
+            border: 5px solid black;
             width: 300px;
             image-rendering: optimizeQuality;
+            border-radius: 10%;
+        }
+        #ProfileName{
+            font-size: large;
         }
         .ProfilePage-ProgressBars{
             display: flex;
             flex-direction: column;
+            background-image: linear-gradient(to right, rgba(255, 194, 125, 0), rgb(255, 197, 139));
         }
+        progress {
+            height: 20px;
+            width: 200px;
+            background: rgb(255, 128, 0);
+            border: solid 1mm rgba(0, 0, 0, 0.807);
+            border-radius: 2cm;
+          }
+          
+          progress {
+            color: lightblue;
+          }
+          
+          progress::-moz-progress-bar {
+            background: lightblue;
+          }
+          
+          progress::-webkit-progress-value {
+            background: rgb(255, 128, 0);
+            border-radius: 3mm;
+          }
+          
+          progress::-webkit-progress-bar {
+            background: white;
+            border-radius: 3mm;
+          }
 
         
     /*?------------------------------*/
