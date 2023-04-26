@@ -1,6 +1,6 @@
 const model = {
   app: {
-    currentPage: "loginPage",
+    currentPage: "newUserPage",
     isAdmin: true,
     loggedInUser: false,
   },
@@ -13,6 +13,7 @@ const model = {
       answers: [1, 2, 3],
     },
     newUserPage: {
+      userId: "",
       firstname: "",
       lastname: "",
       phoneNumber: "",
