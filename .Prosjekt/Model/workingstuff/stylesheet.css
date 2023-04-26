@@ -167,8 +167,11 @@ button{
     color: white;
 }
     /*?------------------------------*/
+    
+    
+    
     /*!-- Topic Page --*/
-    /*! Alex sin rute */
+   
 
     #container {
         background-color: #ffffff;
@@ -176,8 +179,7 @@ button{
         padding-right: auto;
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        
+        justify-content: center; 
     }
 
     .BytttemaknapperContainer{
@@ -185,30 +187,28 @@ button{
         width: 500px;
         display: flex;
         justify-content: space-between; /* Avstand mellom knapper  */
-        
-
     }
 
     .Bytttemaknapper{
         
-        background-color: rgb(157, 215, 222);
-        border-radius: 10px;
-        margin-top: 5px; 
+        background-color: rgba(0, 0, 0, 0.557);
+        border-radius: 5px;
+        margin-top: 15px; 
+        color: #ffffff;
         
     }
 
     .colums{
         display: flex;
         flex-direction: column;
-        
         width: auto;
         max-width: 500px;
-        
         border: 2px solid rgb(72, 72, 72);
     }
     #Temaoverskriftnavn{
        font-family: cursive;
-       font-size: x-large;
+       font-size: xx-large;
+       margin-top: 5px;
     }
 
     .Oppgaveoverskrift{
@@ -217,35 +217,49 @@ button{
     }
 
     .Oppgavetekst{
-        background-color: rgb(157, 215, 222);
+        background-color: rgb(255, 205, 151);
     }
 
     #colum0{
-        background-color: rgb(157, 215, 222);
+        background-color: rgb(255, 205, 151);
         margin-top: 5px; /* Avstand mellom boxer  */
-        border-radius: 15px;
+        border-radius:7px;
+        padding-left: 5px;
+        padding-right: 5px;
     } 
 
     #colum1 {
-        background-color: rgb(157, 215, 222);
+        background-color: rgb(255, 205, 151);
         margin-top: 5px; /* Avstand mellom boxer  */
-        border-radius: 15px;
+        border-radius: 7px;
+        padding-left: 5px;
+        padding-right: 5px;
     } 
 
 
     #colum2 {
-        background-color: rgb(157, 215, 222);
+        background-color: rgb(255, 205, 151);
         margin-top: 5px; /* Avstand mellom boxer  */
-        border-radius: 15px;
+        border-radius: 7px;
+        padding-left: 5px;
+        padding-right: 5px;
+        display: flex;
+        
+        
     } 
 
 
     #colum3 {
-        background-color: rgb(157, 215, 222);
+        background-color: rgb(255, 205, 151);
         margin-top: 5px; /* Avstand mellom boxer  */
-        border-radius: 15px;
+        border-radius: 7px;
+        padding-left: 5px;
+        padding-right: 5px;
+        margin-bottom: 50px;
+        padding-bottom: 10px;
     } 
     
+
     
     
 /*?------------------------------*/

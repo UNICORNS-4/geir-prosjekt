@@ -15,7 +15,15 @@ function updateViewLogPage() {
 
     let html = "";
     console.log("ettellerannet" + model.adminUserLog);
-    html = `${enElevListe()}${model.elevLogg}`;
+
+    html = /* Html */ `
+    <ul >
+    ${enElevListe()}${model.elevLogg}
+    </ul>
+   
+    
+   
+    `;
     /*  if(!model.adminUserLog){
       html = `${enElevListe()}${model.elevLogg}`;
     }
