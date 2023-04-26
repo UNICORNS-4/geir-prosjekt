@@ -42,8 +42,8 @@ function updateViewLogPage() {
   <h2 id="LoggOverskrift">Logg</h2>
 
   <div id="Ukerogdager-container">
-    <div class="ukervalg-container">${createWeeksHtml()}</div>
-    <div class="dagervalg-container">${createDaysHtml()}</div>
+    <div id="ukervalg-container">${createWeeksHtml()}</div>
+    <div id="dagervalg-container">${createDaysHtml()}</div>
   </div>
 
     <div id = "textfield-logPage">
@@ -82,15 +82,21 @@ function visLoggForBruker(index) {
   console.log(model.adminUserLog);
   let logs = model.log.filter((x) => x.userId == user.userId);
   for (let i = 0; i < logs.length; i++) {
-    model.elevLogg += /* html */ `
-    <div>Hva har du lært i dag:${logs[i].whatHaveYouLearnedToday}
+    model.elevLogg = /* html */ `
+    
+    <div>
+
+    <div class ="Loggsvartekst">
+    ${logs[i].whatHaveYouLearnedToday}
     </div>
-    <div>en annen verdi:${logs[i].answers}
+    </div>
+    
+    <div>
+    ${logs[i].answers}
     </div>
     
     </div>
-    <div>en annen verdi:${logs[i].answers}
-    </div>
+    
    
     
 
@@ -139,7 +145,7 @@ function createDaysHtml() {
     // let style = model.inputs.logPage.selectedDay == dayNo ? 'background-color: lightgreen' : '';
     let style = "";
     if (model.inputs.logPage.selectedDay == dayNo)
-      style = "background-color: lightgreen";
+      style = "background-color: rgb(160, 215, 222)";
     html += /*HTML*/ `
             <button 
                 onclick="logPageSelectDay(${dayNo})"
@@ -164,14 +170,14 @@ function createQuestionsHtml() {
     let starsHtml = "";
     for (let starNo = 1; starNo < 10; starNo++) {
       starsHtml += /*HTML*/ `
-                <button                     
+                <button id ="Ukerogdager-container"                    
                     onclick="selectStars(${questionIndex}, ${starNo})">
                     ${starNo <= currentValue ? "★" : "☆"}
                 </button>
             `;
     }
     html += /*HTML*/ `
-            <b>${question}</b><br/>
+            <b class ="stjerneknapper">${question}</b><br/>
             <div>
                 ${starsHtml} (${currentValue}/9)
             </div>
