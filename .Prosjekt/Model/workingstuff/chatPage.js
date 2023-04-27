@@ -10,16 +10,15 @@ function updateChatView(){
 
     html += /*HTML*/ `
     <div class="chatPageContainer">
-    <div class="chatterFra">Chatter fra:
+    <div class="chatterFra"><b>Chatter fra:</b>
     <ul class="ulestFra" onclick="openChat(${i}), sendMld(${i})">
         ${chatMessage.isRead ? "Lest" : "Ulest"}:
         ${model.users[i].firstname} ${model.users[i].lastname}
       </ul>
     </div>
-
-    <div class="chatMellomDegOgMeg">Chat mellom deg og ${model.users[i].firstname} ${model.users[i].lastname}
-    <input oninput="${model.inputs.chatPage.newMessageInput} = this.value" type="text">
-    <button onclick="sendMld()">Send</button>
+    <div class="chatMellomDegOgMeg"> ${model.users[i].firstname} ${model.users[i].lastname}
+    <input class="oninputFelt" oninput="${model.inputs.chatPage.newMessageInput} = this.value" type="text">
+    <button class="buttonSend" onclick="sendMld()">Send</button>
     </div>
     </div>
     `;
@@ -27,6 +26,7 @@ function updateChatView(){
   return html;
 }
 console.log("#chatfunction kjørt")
+
 
 function openChat(index){
   let chatMessage = model.chatMessages.find(msg => msg.toUserId == model.users[index].userId);

@@ -10,10 +10,12 @@ button{
 
 /* NAVIGATION BAR CSS */
 #frontpageIMG{
-    width: 100%;
-    
-
+    width: 80%;
+    height: 300px;
 }
+#frontPageBackground{
+    background-color: rgb(118, 134, 225);
+} 
 
 
 .navBar {
@@ -497,10 +499,13 @@ button{
         border: 2px solid black;
         margin: 10px;
         border-radius: 10px;
-        padding: 10px;
+        margin-top: 500px;
+        width: 540px;
+        padding: 5px;
+        
      }
      .chatPageContainer{
-        background-color: #fbc697;
+        background-color: #ffffff;
 
      }
      .chatterFra{
@@ -510,5 +515,18 @@ button{
         
      }
      .ulestFra{
-        background-color:#fbc697;
+        background-color:#fdd8b7;
+        margin-top: 30px;
+        width: 540px;
+        border-radius: 10px;
+     }
+     .oninputFelt{
+        border-radius: 10px;
+        background-color: #ffdec1;
+        margin-left: 150px;
+
+     }
+     .buttonSend{
+        border-radius: 10px;
+        background-color: #faa153;
      }

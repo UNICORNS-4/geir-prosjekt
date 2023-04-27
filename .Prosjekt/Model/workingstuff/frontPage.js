@@ -3,7 +3,7 @@ function updateViewFrontPage() {
   html =
     /*html*/
     `
-    <div><img id="frontpageIMG" src="img/level${findProg()}.png"></div>
+    <div id="frontPageBackground"><img id="frontpageIMG" src="img/level${findProg()}.png"></div>
     `;
   return html;
 }
