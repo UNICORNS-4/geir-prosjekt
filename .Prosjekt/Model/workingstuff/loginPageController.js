@@ -10,8 +10,8 @@ function logIn() {
   ) {
     model.app.loggedInUser = model.inputs.loginPage.userId;
     model.inputs.loginPage.errorMessage = "";
-    byttSide("topicPage");
-    console.log("logget inn som -->", model.app.loggedInUser.userId); //? CONSOLE.LOG
+    byttSide("frontPage");
+    console.log("logget inn som -->", model.app.loggedInUser); //? CONSOLE.LOG
   }
   if (
     model.inputs.loginPage.userId ==

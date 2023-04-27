@@ -15,7 +15,7 @@ viewBox="0 0 490.3 490.3" xml:space="preserve">
 
 function updateDashboard() {
   console.log("#DASH_UPDATED");
-  if (model.app.loggedInUser.klasse === "Admin") {
+  if (findUser(model.app.loggedInUser).klasse === "Admin") {
     console.log("--> Admin dashboard");
     let html = /*HTML*/ `
     <div class="navBar dashboard">
@@ -27,8 +27,12 @@ function updateDashboard() {
               <div class="navBarItem" onclick="byttSide('profilePage')">Min Side</div>
               <div class="navBarItem" onclick="byttSide('elevListePage')">Elev liste</div>
               <div>   
-                  <div class="navBarUser">${findUser(model.app.loggedInUser).firstname} ${findUser(model.app.loggedInUser).lastname}</div>
-                  <div class="navBarUserClassIDAdmin">${findUser(model.app.loggedInUser).klasse}</div>
+                  <div class="navBarUser">${
+                    findUser(model.app.loggedInUser).firstname
+                  } ${findUser(model.app.loggedInUser).lastname}</div>
+                  <div class="navBarUserClassIDAdmin">${
+                    findUser(model.app.loggedInUser).klasse
+                  }</div>
               </div>
     <div class="navBarItem logOutBtn" onclick="logOut()">${loggOutSvg}</div>
     </div>`;
@@ -43,8 +47,12 @@ function updateDashboard() {
               <div class="navBarItem" onclick="byttSide('logPage')">Logg</div>
               <div class="navBarItem" onclick="byttSide('profilePage')">Min Side</div>
               <div>   
-                  <div class="navBarUser">${findUser(model.app.loggedInUser).firstname} ${findUser(model.app.loggedInUser).lastname}</div>
-                  <div class="navBarUserClassIDUser">${findUser(model.app.loggedInUser).klasse}</div>
+                  <div class="navBarUser">${
+                    findUser(model.app.loggedInUser).firstname
+                  } ${findUser(model.app.loggedInUser).lastname}</div>
+                  <div class="navBarUserClassIDUser">${
+                    findUser(model.app.loggedInUser).klasse
+                  }</div>
               </div>
               <div class="navBarItem logOutBtn" onclick="byttSide('loginPage')" alt="Log Out">
                 ${loggOutSvg}
