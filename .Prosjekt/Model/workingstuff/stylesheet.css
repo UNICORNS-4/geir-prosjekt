@@ -10,10 +10,12 @@ button{
 
 /* NAVIGATION BAR CSS */
 #frontpageIMG{
-    width: 100%;
-    
-
+    width: 80%;
+    height: 300px;
 }
+#frontPageBackground{
+    background-color: rgb(118, 134, 225);
+} 
 
 
 .navBar {
