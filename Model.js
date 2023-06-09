@@ -132,7 +132,7 @@ const model = {
       lastname: "Nordmann",
       phoneNumber: "77633743",
       postalCode: "4621",
-      eMail: "admin@getacademy.no",
+      eMail: "admin@gmail.no",
       klasse: "Admin", //Start IT, Get IT
       password: "admin",
       imgSrc: "img0.jpeg",
@@ -143,21 +143,10 @@ const model = {
       lastname: "K. Elevesen",
       phoneNumber: "74368216",
       postalCode: "1613",
-      eMail: "elevelevesen@getacademy.no",
+      eMail: "elevelevesen@gmail.no",
       klasse: "Start IT", //Start IT, Get IT
       password: "elev",
       imgSrc: "img1.jpeg",
-    },
-    {
-      userId: "Knut",
-      firstname: "Knut",
-      lastname: "Knutsen",
-      phoneNumber: "90523412",
-      postalCode: "3234",
-      eMail: "knutknutsen@getacademy.no",
-      klasse: "Start IT", //Start IT, Get IT
-      password: "Knut",
-      imgSrc: "img2.jpeg",
     },
     {
       userId: "Henriette",
@@ -165,21 +154,10 @@ const model = {
       lastname: "Nilsen",
       phoneNumber: "45783210",
       postalCode: "3030",
-      eMail: "henriettennilsen@getacademy.no",
+      eMail: "henriettennilsen@gmail.no",
       klasse: "Get IT", //Start IT, Get IT
       password: "Henriette",
       imgSrc: "img5.jpeg",
-    },
-    {
-      userId: "Per",
-      firstname: "Per",
-      lastname: "Persson",
-      phoneNumber: "93451250",
-      postalCode: "2736",
-      eMail: "perpersson@getacademy.no",
-      klasse: "Start IT", //Start IT, Get IT
-      password: "Per",
-      imgSrc: "img3.jpeg",
     },
     {
       userId: "Guri",
@@ -187,7 +165,7 @@ const model = {
       lastname: "Olsen",
       phoneNumber: "47623409",
       postalCode: "3213",
-      eMail: "guriolsen@getacademy.no",
+      eMail: "guriolsen@gmail.no",
       klasse: "Get IT", //Start IT, Get IT
       password: "Guri",
       imgSrc: "img4.jpeg",
