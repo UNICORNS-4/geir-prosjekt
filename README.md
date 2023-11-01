@@ -1,4 +1,4 @@
-# Geir Nøkkelkompetanse Prosjekt
+# Nøkkelkompetanse Nettside
 En enkel web løsning for online skole hvor lærere kan dele oppgaver med elever. Elever kan fylle inn en logg om hvordan dagen har gått.
 Løsningen er laget med CSS, HTML og vanilla JavaScript.
 
