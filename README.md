@@ -2,7 +2,7 @@
 En enkel web løsning for online skole hvor lærere kan dele oppgaver med elever. Elever kan fylle inn en logg om hvordan dagen har gått.
 Løsningen er laget med CSS, HTML og vanilla JavaScript.
 Klikk linken til github pages og logg inn med:\
-**Brukernavn: admin/elev
+**Brukernavn: admin/elev\
 Passord: admin/elev**
 
 ## Git Rutine
